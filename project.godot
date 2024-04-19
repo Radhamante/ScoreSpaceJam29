@@ -11,5 +11,10 @@ config_version=5
 [application]
 
 config/name="ScoreSpaceJam29"
+run/main_scene="res://Levels/Level1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+LootLocker="*res://Global/LootLocker.gd"
