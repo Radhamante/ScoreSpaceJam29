@@ -13,6 +13,14 @@ var maxMouseDistance = 7
 var target_velocity = Vector3.ZERO
 var isMoving = false
 
+var speed = 0
+var maxSPeed = 12
+
+var maxMouseDistance = 7
+
+var target_velocity = Vector3.ZERO
+var isMoving = false
+
 var mouse_left_down: bool = false
 
 var timer: Timer
@@ -101,6 +109,7 @@ func _process( some_change ):
 			velocity = lerp(velocity, Vector3.ZERO, 0.08)
 			if velocity < Vector3(0.1, 0.1, 0.1):
 				velocity = Vector3.ZERO
+
 			isMoving = false
 
 	else:
@@ -108,6 +117,7 @@ func _process( some_change ):
 		if velocity < Vector3(0.1, 0.1, 0.1):
 			velocity = Vector3.ZERO
 		isMoving = false
+
 		
 	
 	#move_and_slide()
