@@ -2,6 +2,14 @@ extends CharacterBody3D
 
 @export var camera : Camera3D
 
+var speed = 0
+var maxSPeed = 12
+
+var maxMouseDistance = 7
+
+var target_velocity = Vector3.ZERO
+var isMoving = false
+
 var mouse_left_down: bool = false
 func _input( event ):
 	if event is InputEventMouseButton:
@@ -22,16 +30,56 @@ func get_mouse_position():
 	rayQuery.to = rayEnd
 	
 	var rayArray = spaceState.intersect_ray(rayQuery)
-	
 	if rayArray.has("position"):
 		return rayArray["position"]
+		
+func get_mouse_distance(mousePos: Vector3):
+	var distance = global_position.distance_to(mousePos)
+	return distance
+	
 
 func _process( some_change ):
 	if mouse_left_down:
 		var mousePos = get_mouse_position()
-		if mousePos != null:
+
+		if mousePos != null and get_mouse_distance(mousePos) < 2.5:
+			if get_mouse_distance(mousePos) < 1.5:
+				speed = 0
+			else:
+				speed = get_mouse_distance(mousePos)
 			look_at(mousePos, Vector3.UP)
 			rotation.x = 0
+			target_velocity.x = position.direction_to(mousePos).x * speed
+			target_velocity.z = position.direction_to(mousePos).z * speed
+			velocity = lerp(velocity, target_velocity, 0.03)
+			isMoving = true
+			
+		elif mousePos != null and get_mouse_distance(mousePos) > 2.5 and isMoving:
+			if get_mouse_distance(mousePos) <= maxSPeed:
+				speed = maxSPeed 
+			if get_mouse_distance(mousePos) > maxMouseDistance:
+				velocity = lerp(velocity, Vector3.ZERO, 0.08)
+			else:
+				look_at(mousePos, Vector3.UP)
+				rotation.x = 0
+				target_velocity.x = position.direction_to(mousePos).x * speed
+				target_velocity.z = position.direction_to(mousePos).z * speed
+				velocity = lerp(velocity, target_velocity, 0.03)
+			
+		if mousePos == null:
+			velocity = lerp(velocity, Vector3.ZERO, 0.08)
+			isMoving = false
+
+	else:
+		velocity = lerp(velocity, Vector3.ZERO, 0.08)
+		isMoving = false
+	
+	print(speed)
+		
+	
+	#move_and_slide()
+			#print("mouse ", mousePos)
+			#print("distance ", get_mouse_distance(mousePos))
 		
 		#print(mouse_position)
 		#print(position)
