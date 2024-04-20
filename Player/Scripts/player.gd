@@ -8,8 +8,7 @@ extends CharacterBody3D
 @onready var animation_player = $AnimationPlayer
 
 var speed = 0
-var maxSPeed = 12
-
+var maxSPeed = 1.1
 var maxMouseDistance = 7
 
 var target_velocity = Vector3.ZERO
