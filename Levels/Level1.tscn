@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnwp340g2g511"]
-
+[gd_scene load_steps=9 format=3 uid="uid://dnwp340g2g511"]
 
 [ext_resource type="PackedScene" uid="uid://cl5iidi7tnkrv" path="res://Player/B0by/b0by.tscn" id="1_w47eh"]
 [ext_resource type="Script" path="res://Player/Scripts/player.gd" id="2_ocfix"]
+[ext_resource type="PackedScene" uid="uid://d1uue5ypbl6q7" path="res://PNJ/Woman_B/scene/woman_B.tscn" id="3_vg86m"]
+[ext_resource type="PackedScene" uid="uid://mpkr8w1c52vl" path="res://PNJ/Woman_A/scene/woman_A.tscn" id="4_luopc"]
+[ext_resource type="PackedScene" uid="uid://c1gaf8nob54qj" path="res://PNJ/Men_B/scene/men_B.tscn" id="5_fw30w"]
+[ext_resource type="PackedScene" uid="uid://df7ha0eqrnqe7" path="res://PNJ/Men_A/scene/men_A.tscn" id="6_t10ld"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_q6hwb"]
 
@@ -26,7 +29,8 @@ size = Vector3(16, 2, 9)
 transform = Transform3D(0.965926, 0.201319, 0.162659, -0.258819, 0.751333, 0.607051, 0, -0.628465, 0.777837, 0, 6.79624, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 10.7194, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 19.7194, 0)
+fov = 35.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 2.37419, 0, 0, 0, 1, 2.32636, 3.69713, -3.92254)
@@ -42,7 +46,18 @@ transform = Transform3D(1, 0, 0, 0, 2.37419, 0, 0, 0, 1, 2.32636, 3.69713, -3.92
 mesh = SubResource("BoxMesh_q6hwb")
 
 [node name="Rigidbody3D" type="RigidBody3D" parent="MeshInstance3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/Rigidbody3D"]
 shape = SubResource("BoxShape3D_lyouh")
+
+[node name="Woman_B2" parent="." instance=ExtResource("3_vg86m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.80334, 2.5, 1.9185)
+
+[node name="Woman_A2" parent="." instance=ExtResource("4_luopc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64479, 2.5, 2.19176)
+
+[node name="Men_B2" parent="." instance=ExtResource("5_fw30w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 3, -2)
+
+[node name="Men_A" parent="." instance=ExtResource("6_t10ld")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, -1)

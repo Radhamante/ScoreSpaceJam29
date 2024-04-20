@@ -69,6 +69,6 @@ func _process(delta):
 	var collider = move_and_collide(velocity * delta)
 	if collider:
 		if collider.get_collider().has_method("collide"):
-			collider.get_collider().collid()
+			collider.get_collider().collide()
 		target_velocity = Vector3.ZERO
 		collide()
