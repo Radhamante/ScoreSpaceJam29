@@ -13,14 +13,6 @@ var maxMouseDistance = 7
 var target_velocity = Vector3.ZERO
 var isMoving = false
 
-var speed = 0
-var maxSPeed = 12
-
-var maxMouseDistance = 7
-
-var target_velocity = Vector3.ZERO
-var isMoving = false
-
 var mouse_left_down: bool = false
 
 var timer: Timer
