@@ -55,7 +55,6 @@ func get_mouse_distance(mousePos: Vector3):
 	return distance
 	
 func update_anim_condition():
-	print(velocity)
 	if velocity == Vector3.ZERO:
 		animation_tree.set("parameters/conditions/isMoving", false)
 		animation_tree.set("parameters/conditions/IsIdle", true)
@@ -99,18 +98,20 @@ func _process( some_change ):
 			
 		if mousePos == null:
 			velocity = lerp(velocity, Vector3.ZERO, 0.08)
-			if velocity < Vector3(0.1, 0.1, 0.1):
+			if Vector3(-0.1, -0.1, -0.1) < velocity and velocity < Vector3(0.1, 0.1, 0.1):
 				velocity = Vector3.ZERO
 
 			isMoving = false
 
+#Vector3(-0.1, -0.1, -0.1) < velocity and velocity < Vector3(0.1, 0.1, 0.1)
+
 	else:
 		velocity = lerp(velocity, Vector3.ZERO, 0.08)
-		if velocity < Vector3(0.1, 0.1, 0.1):
+		if Vector3(-0.1, -0.1, -0.1) < velocity and velocity < Vector3(0.1, 0.1, 0.1):
 			velocity = Vector3.ZERO
 		isMoving = false
 
-		
+	print(velocity)
 	
 	#move_and_slide()
 			#print("mouse ", mousePos)
