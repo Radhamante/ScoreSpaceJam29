@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://qtex7jstc5jw"]
+
+[ext_resource type="Texture2D" uid="uid://di38x6c0mmux6" path="res://PNJ/Woman_B/Material/T_WomanB_D.png" id="1_dfs2s"]
+
+[resource]
+albedo_texture = ExtResource("1_dfs2s")
