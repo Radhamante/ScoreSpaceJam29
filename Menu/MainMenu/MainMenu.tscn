@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6yabk3jsq3wp"]
+
+[ext_resource type="Script" path="res://Menu/MainMenu/MainMenu.gd" id="1_amaem"]
+[ext_resource type="Theme" uid="uid://ce7tj4libdtkr" path="res://Assets/Themes/buttons.tres" id="1_va41m"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_amaem")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="Start" type="Button" parent="HBoxContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_va41m")
+text = "Start"
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="Leaderboard" type="Button" parent="HBoxContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme = ExtResource("1_va41m")
+text = "Leaderboard"
+
+[node name="MarginContainer4" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="Credits" type="Button" parent="HBoxContainer/VBoxContainer/MarginContainer4"]
+layout_mode = 2
+text = "Credits"
+
+[node name="MarginContainer5" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="Settings" type="Button" parent="HBoxContainer/VBoxContainer/MarginContainer5"]
+layout_mode = 2
+text = "Settings"
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="Exit" type="Button" parent="HBoxContainer/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/MarginContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/MarginContainer2/Leaderboard" to="." method="_on_leaderboard_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/MarginContainer4/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/MarginContainer5/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/MarginContainer3/Exit" to="." method="_on_exit_pressed"]
