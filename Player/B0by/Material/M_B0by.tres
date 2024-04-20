@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://jso7cy1be1kn"]
+
+[ext_resource type="Texture2D" uid="uid://bf51osdlkgine" path="res://Player/B0by/Material/T_B0by_D.png" id="1_gpoxu"]
+[ext_resource type="Texture2D" uid="uid://sk3acaqtrrol" path="res://Player/B0by/Material/T_B0by_E.png" id="2_hvaxo"]
+
+[resource]
+albedo_texture = ExtResource("1_gpoxu")
+emission_enabled = true
+emission_texture = ExtResource("2_hvaxo")
