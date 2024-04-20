@@ -1,9 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnwp340g2g511"]
+[gd_scene load_steps=5 format=3 uid="uid://dnwp340g2g511"]
+
 
 [ext_resource type="PackedScene" uid="uid://cl5iidi7tnkrv" path="res://Player/B0by/b0by.tscn" id="1_w47eh"]
 [ext_resource type="Script" path="res://Player/Scripts/player.gd" id="2_ocfix"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_q6hwb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lyouh"]
 
 [node name="main" type="Node3D"]
 
@@ -37,3 +40,9 @@ camera = NodePath("../Camera3D")
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 2.37419, 0, 0, 0, 1, 2.32636, 3.69713, -3.92254)
 mesh = SubResource("BoxMesh_q6hwb")
+
+[node name="Rigidbody3D" type="RigidBody3D" parent="MeshInstance3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/Rigidbody3D"]
+shape = SubResource("BoxShape3D_lyouh")
