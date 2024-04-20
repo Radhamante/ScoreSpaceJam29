@@ -1,9 +1,11 @@
 extends CharacterBody3D
 
 @export var camera : Camera3D
+
 @onready var animation_tree = $AnimationTree
 @onready var stateMachine = animation_tree.get("parameters/playback")
 
+@onready var animation_player = $AnimationPlayer
 
 var speed = 0
 var maxSPeed = 12
@@ -12,6 +14,7 @@ var maxMouseDistance = 7
 
 var target_velocity = Vector3.ZERO
 var isMoving = false
+var isHit = false
 
 var mouse_left_down: bool = false
 
@@ -55,21 +58,36 @@ func get_mouse_distance(mousePos: Vector3):
 	return distance
 	
 func update_anim_condition():
-	if velocity == Vector3.ZERO:
+	if isHit == true:
 		animation_tree.set("parameters/conditions/isMoving", false)
-		animation_tree.set("parameters/conditions/IsIdle", true)
-		if timer.is_stopped(): timer.start()
-	else:
-		animation_tree.set("parameters/conditions/isMoving", true)
 		animation_tree.set("parameters/conditions/IsIdle", false)
 		animation_tree.set("parameters/conditions/isDancing", false)
-		timer.stop()
-	
+		animation_tree.set("parameters/conditions/isHiting", true)
+		isHit = false
+	else :
+		if velocity == Vector3.ZERO:
+			animation_tree.set("parameters/conditions/isMoving", false)
+			animation_tree.set("parameters/conditions/isHiting", false)
+			animation_tree.set("parameters/conditions/IsIdle", true)
+			if timer.is_stopped(): timer.start()
+		else:
+			animation_tree.set("parameters/conditions/IsIdle", false)
+			animation_tree.set("parameters/conditions/isDancing", false)
+			animation_tree.set("parameters/conditions/isHiting", false)
+			animation_tree.set("parameters/conditions/isMoving", true)
+			timer.stop()
+			
+func collide():
+	isHit = true
+	#timer.stop()
 
-func _process( some_change ):
+func _process( delta ):
+	
 	update_anim_condition()
+	var animHit = stateMachine.get_current_node()
+	#print(animHit)
 		
-	if mouse_left_down:
+	if mouse_left_down and animHit != "Hit":
 		var mousePos = get_mouse_position()
 
 		if mousePos != null and get_mouse_distance(mousePos) < 2.5:
@@ -103,15 +121,26 @@ func _process( some_change ):
 
 			isMoving = false
 
-#Vector3(-0.1, -0.1, -0.1) < velocity and velocity < Vector3(0.1, 0.1, 0.1)
-
 	else:
 		velocity = lerp(velocity, Vector3.ZERO, 0.08)
 		if Vector3(-0.1, -0.1, -0.1) < velocity and velocity < Vector3(0.1, 0.1, 0.1):
 			velocity = Vector3.ZERO
 		isMoving = false
 
-	print(velocity)
+	var collider = move_and_collide(velocity * delta)
+	if collider :
+		collide()
+		#timer.stop()
+		#print("timer stopper ???????????")
+		#animation_tree.set("parameters/conditions/isMoving", false)
+		#animation_tree.set("parameters/conditions/IsIdle", false)
+		#animation_tree.set("parameters/conditions/isHiting", true)
+		#print(collider)
+		
+	if animHit == "Hit":
+		timer.stop()
+		#print(timer.time_left)
+	
 	
 	#move_and_slide()
 			#print("mouse ", mousePos)
