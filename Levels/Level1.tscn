@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dnwp340g2g511"]
+[gd_scene load_steps=4 format=3 uid="uid://dnwp340g2g511"]
 
-[ext_resource type="PackedScene" uid="uid://dpo7001q0nbvh" path="res://Player/Player.tscn" id="2_nkcqu"]
+[ext_resource type="PackedScene" uid="uid://cl5iidi7tnkrv" path="res://Player/B0by/b0by.tscn" id="1_w47eh"]
+[ext_resource type="Script" path="res://Player/Scripts/player.gd" id="2_ocfix"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_q6hwb"]
 
@@ -24,10 +25,11 @@ transform = Transform3D(0.965926, 0.201319, 0.162659, -0.258819, 0.751333, 0.607
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 10.7194, 0)
 
-[node name="Player" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("2_nkcqu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.138, 0)
-camera = NodePath("../Camera3D")
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 2.37419, 0, 0, 0, 1, 2.32636, 3.69713, -3.92254)
 mesh = SubResource("BoxMesh_q6hwb")
+
+[node name="B0by" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_w47eh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+script = ExtResource("2_ocfix")
+camera = NodePath("../Camera3D")

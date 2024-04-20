@@ -1,6 +1,9 @@
 extends CharacterBody3D
 
 @export var camera : Camera3D
+@onready var animation_tree = $AnimationTree
+@onready var stateMachine = animation_tree.get("parameters/playback")
+
 
 var speed = 0
 var maxSPeed = 12
@@ -11,12 +14,26 @@ var target_velocity = Vector3.ZERO
 var isMoving = false
 
 var mouse_left_down: bool = false
+
+var timer: Timer
+
 func _input( event ):
 	if event is InputEventMouseButton:
 		if event.button_index == 1 and event.is_pressed():
 			mouse_left_down = true
 		elif event.button_index == 1 and not event.is_pressed():
 			mouse_left_down = false
+			
+func _ready():
+	timer = Timer.new()
+	timer.set_wait_time(3)
+	timer.set_one_shot(true)
+	add_child(timer)
+	timer.timeout.connect(dance)
+	timer.start()
+	
+func dance():
+	animation_tree.set("parameters/conditions/isDancing", true)
 			
 func get_mouse_position():
 	var mouse_position = get_viewport().get_mouse_position()
@@ -37,8 +54,22 @@ func get_mouse_distance(mousePos: Vector3):
 	var distance = global_position.distance_to(mousePos)
 	return distance
 	
+func update_anim_condition():
+	print(velocity)
+	if velocity == Vector3.ZERO:
+		animation_tree.set("parameters/conditions/isMoving", false)
+		animation_tree.set("parameters/conditions/IsIdle", true)
+		if timer.is_stopped(): timer.start()
+	else:
+		animation_tree.set("parameters/conditions/isMoving", true)
+		animation_tree.set("parameters/conditions/IsIdle", false)
+		animation_tree.set("parameters/conditions/isDancing", false)
+		timer.stop()
+	
 
 func _process( some_change ):
+	update_anim_condition()
+		
 	if mouse_left_down:
 		var mousePos = get_mouse_position()
 
@@ -68,13 +99,15 @@ func _process( some_change ):
 			
 		if mousePos == null:
 			velocity = lerp(velocity, Vector3.ZERO, 0.08)
+			if velocity < Vector3(0.1, 0.1, 0.1):
+				velocity = Vector3.ZERO
 			isMoving = false
 
 	else:
 		velocity = lerp(velocity, Vector3.ZERO, 0.08)
+		if velocity < Vector3(0.1, 0.1, 0.1):
+			velocity = Vector3.ZERO
 		isMoving = false
-	
-	print(speed)
 		
 	
 	#move_and_slide()
