@@ -1,6 +1,5 @@
-[gd_scene load_steps=3 format=3 uid="uid://dnwp340g2g511"]
+[gd_scene load_steps=2 format=3 uid="uid://dnwp340g2g511"]
 
-[ext_resource type="Script" path="res://Levels/Scripts/Camera3D.gd" id="1_8pukl"]
 [ext_resource type="PackedScene" uid="uid://dpo7001q0nbvh" path="res://Player/Player.tscn" id="2_nkcqu"]
 
 [node name="main" type="Node3D"]
@@ -10,20 +9,18 @@ use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-size = Vector3(13, 5, 10)
+size = Vector3(17, 5, 10)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 operation = 2
-size = Vector3(12, 2, 9)
+size = Vector3(16, 2, 9)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.965926, 0.201319, 0.162659, -0.258819, 0.751333, 0.607051, 0, -0.628465, 0.777837, 0, 6.79624, 0)
 
-[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("player")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 5.57775, 0)
-script = ExtResource("1_8pukl")
-player = NodePath("../Player")
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 10.7194, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_nkcqu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.138, 0)
