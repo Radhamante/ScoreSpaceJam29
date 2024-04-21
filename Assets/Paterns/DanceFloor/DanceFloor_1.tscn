@@ -1,87 +1,443 @@
-[gd_scene load_steps=7 format=3 uid="uid://buujpg55ubg74"]
+[gd_scene load_steps=16 format=3 uid="uid://buujpg55ubg74"]
 
 [ext_resource type="PackedScene" uid="uid://d1uue5ypbl6q7" path="res://PNJ/Woman_B/scene/woman_B.tscn" id="1_wajo7"]
 [ext_resource type="PackedScene" uid="uid://mpkr8w1c52vl" path="res://PNJ/Woman_A/scene/woman_A.tscn" id="2_anrwh"]
 [ext_resource type="PackedScene" uid="uid://c1gaf8nob54qj" path="res://PNJ/Men_B/scene/men_B.tscn" id="3_gvsvf"]
 [ext_resource type="PackedScene" uid="uid://df7ha0eqrnqe7" path="res://PNJ/Men_A/scene/men_A.tscn" id="4_7aqjj"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_t506w"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_a6mjv"]
+[ext_resource type="PackedScene" uid="uid://bi4gxeys6eyqk" path="res://Assets/Meshes/Club/Club_Structure/Club_Structures_Floor.tscn" id="5_na3oc"]
+[ext_resource type="PackedScene" uid="uid://dwjm4shrdk8ia" path="res://Assets/Meshes/Club/Club_Structure/Club_Structures_Exit.tscn" id="6_222w4"]
+[ext_resource type="PackedScene" uid="uid://bmjy0a83op8b7" path="res://Assets/Meshes/Club/Club_Structure/Club_Structures_Wall.tscn" id="7_t2u0c"]
+[ext_resource type="PackedScene" uid="uid://08n6wclw8nba" path="res://Assets/Meshes/Club/Club_Structure/Club_Structures_WallCorner.tscn" id="8_h8c41"]
+[ext_resource type="PackedScene" uid="uid://cfhx8o7ficwia" path="res://Assets/Meshes/Club/Club_Furniturs/Club_Furniturs_BarSlice.tscn" id="9_n6xit"]
+[ext_resource type="PackedScene" uid="uid://bcnhd2x0stjjj" path="res://Assets/Meshes/Club/Club_Furniturs/Club_Furniturs_BarEnd.tscn" id="10_xt83d"]
+[ext_resource type="PackedScene" uid="uid://c3efcap2g2bkg" path="res://Assets/Meshes/Club/Club_Furniturs/Club_Furniturs_Shelf.tscn" id="11_xu2cd"]
+[ext_resource type="PackedScene" uid="uid://0qqmostobmc2" path="res://Assets/Meshes/Club/Club_Furniturs/Club_Furniturs_Seats.tscn" id="12_yb0ak"]
+[ext_resource type="PackedScene" uid="uid://cnsa1ccvgril6" path="res://Assets/Meshes/Club/Club_Furniturs/Club_Furniturs_Stool.tscn" id="13_wbsdy"]
+[ext_resource type="PackedScene" uid="uid://da6i3m4q6srjo" path="res://Assets/Meshes/Club/Club_Furniturs/Club_Furniturs_Table.tscn" id="14_u02ti"]
+[ext_resource type="PackedScene" uid="uid://cr1cre88poeci" path="res://Assets/Meshes/Club/Club_Props/Club_Props_Tireuse.tscn" id="15_7wisa"]
 
 [node name="DanceFloor1" type="Node3D"]
 
 [node name="room" type="CSGCombiner3D" parent="."]
 use_collision = true
 
-[node name="Ground" type="CSGBox3D" parent="room"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-size = Vector3(19, 2, 10)
-
-[node name="Walls" type="CSGBox3D" parent="room"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-size = Vector3(19, 4, 10)
-
-[node name="Walls_extruder" type="CSGBox3D" parent="room/Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
-operation = 2
-size = Vector3(19, 4, 9)
-
 [node name="door" type="CSGBox3D" parent="room"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 1.5, -1.5)
 operation = 2
 size = Vector3(1, 3, 4)
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.37419, 0, 0, 0, 1, 2.326, 0, -2.005)
-mesh = SubResource("BoxMesh_t506w")
+[node name="grp_PNJ" type="Node" parent="."]
 
-[node name="Rigidbody3D" type="RigidBody3D" parent="MeshInstance3D2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/Rigidbody3D"]
-shape = SubResource("BoxShape3D_a6mjv")
-
-[node name="Woman_B2" parent="." instance=ExtResource("1_wajo7")]
+[node name="Woman_B2" parent="grp_PNJ" instance=ExtResource("1_wajo7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.80334, 0, 1.9185)
 
-[node name="Woman_A2" parent="." instance=ExtResource("2_anrwh")]
+[node name="Woman_A2" parent="grp_PNJ" instance=ExtResource("2_anrwh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64479, 0, 2.19176)
 
-[node name="Men_B2" parent="." instance=ExtResource("3_gvsvf")]
+[node name="Men_B2" parent="grp_PNJ" instance=ExtResource("3_gvsvf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -2)
 
-[node name="Men_A" parent="." instance=ExtResource("4_7aqjj")]
+[node name="Men_A" parent="grp_PNJ" instance=ExtResource("4_7aqjj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -1)
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.37419, 0, 0, 0, 1, -2.80964, 0, -0.14445)
-mesh = SubResource("BoxMesh_t506w")
-
-[node name="Rigidbody3D" type="RigidBody3D" parent="MeshInstance3D3"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/Rigidbody3D"]
-shape = SubResource("BoxShape3D_a6mjv")
-
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.37419, 0, 0, 0, 1, 4.10102, 0, 2.17989)
-mesh = SubResource("BoxMesh_t506w")
-
-[node name="Rigidbody3D" type="RigidBody3D" parent="MeshInstance3D4"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D4/Rigidbody3D"]
-shape = SubResource("BoxShape3D_a6mjv")
-
-[node name="Woman_B3" parent="." instance=ExtResource("1_wajo7")]
+[node name="Woman_B3" parent="grp_PNJ" instance=ExtResource("1_wajo7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.18145, 0, -0.705033)
 
-[node name="Men_B3" parent="." instance=ExtResource("3_gvsvf")]
+[node name="Men_B3" parent="grp_PNJ" instance=ExtResource("3_gvsvf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.51416, 0, 2.36838)
 
-[node name="Men_A2" parent="." instance=ExtResource("4_7aqjj")]
+[node name="Men_A2" parent="grp_PNJ" instance=ExtResource("4_7aqjj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.55306, 0, -2.6499)
 
-[node name="Woman_A3" parent="." instance=ExtResource("2_anrwh")]
+[node name="Woman_A3" parent="grp_PNJ" instance=ExtResource("2_anrwh")]
 transform = Transform3D(0.999928, 0, 0.012025, 0, 1, 0, -0.012025, 0, 0.999928, 6.95194, 0, 3.80778)
 
-[node name="Men_B4" parent="." instance=ExtResource("3_gvsvf")]
+[node name="Men_B4" parent="grp_PNJ" instance=ExtResource("3_gvsvf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.40474, 0, -3.36717)
+
+[node name="grp_Environement" type="Node" parent="."]
+
+[node name="grp_Ground" type="Node" parent="grp_Environement"]
+
+[node name="ClubStructuresFloor" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -0.1, -5)
+
+[node name="ClubStructuresFloor2" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -0.1, -3)
+
+[node name="ClubStructuresFloor3" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -0.1, -1)
+
+[node name="ClubStructuresFloor46" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -0.1, -3)
+
+[node name="ClubStructuresFloor47" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -0.1, -1)
+
+[node name="ClubStructuresFloor4" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -0.1, 1)
+
+[node name="ClubStructuresFloor5" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -0.1, 3)
+
+[node name="ClubStructuresFloor6" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.1, -5)
+
+[node name="ClubStructuresFloor7" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.1, -3)
+
+[node name="ClubStructuresFloor8" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.1, -1)
+
+[node name="ClubStructuresFloor9" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.1, 1)
+
+[node name="ClubStructuresFloor10" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.1, 3)
+
+[node name="ClubStructuresFloor11" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.1, -5)
+
+[node name="ClubStructuresFloor12" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.1, -3)
+
+[node name="ClubStructuresFloor13" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.1, -1)
+
+[node name="ClubStructuresFloor14" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.1, 1)
+
+[node name="ClubStructuresFloor15" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.1, 3)
+
+[node name="ClubStructuresFloor16" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.1, -5)
+
+[node name="ClubStructuresFloor17" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.1, -3)
+
+[node name="ClubStructuresFloor18" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.1, -1)
+
+[node name="ClubStructuresFloor19" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.1, 1)
+
+[node name="ClubStructuresFloor20" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.1, 3)
+
+[node name="ClubStructuresFloor21" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.1, -5)
+
+[node name="ClubStructuresFloor22" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.1, -3)
+
+[node name="ClubStructuresFloor23" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.1, -1)
+
+[node name="ClubStructuresFloor24" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.1, 1)
+
+[node name="ClubStructuresFloor25" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.1, 3)
+
+[node name="ClubStructuresFloor26" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.1, -5)
+
+[node name="ClubStructuresFloor27" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.1, -3)
+
+[node name="ClubStructuresFloor28" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.1, -1)
+
+[node name="ClubStructuresFloor29" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.1, 1)
+
+[node name="ClubStructuresFloor30" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.1, 3)
+
+[node name="ClubStructuresFloor31" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.1, -5)
+
+[node name="ClubStructuresFloor32" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.1, -3)
+
+[node name="ClubStructuresFloor33" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.1, -1)
+
+[node name="ClubStructuresFloor34" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.1, 1)
+
+[node name="ClubStructuresFloor35" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.1, 3)
+
+[node name="ClubStructuresFloor36" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -0.1, -5)
+
+[node name="ClubStructuresFloor37" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -0.1, -3)
+
+[node name="ClubStructuresFloor38" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -0.1, -1)
+
+[node name="ClubStructuresFloor39" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -0.1, 1)
+
+[node name="ClubStructuresFloor40" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -0.1, 3)
+
+[node name="ClubStructuresFloor41" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -0.1, -5)
+
+[node name="ClubStructuresFloor42" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -0.1, -3)
+
+[node name="ClubStructuresFloor43" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -0.1, -1)
+
+[node name="ClubStructuresFloor48" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -0.1, -3)
+
+[node name="ClubStructuresFloor49" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -0.1, -1)
+
+[node name="ClubStructuresFloor44" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -0.1, 1)
+
+[node name="ClubStructuresFloor45" parent="grp_Environement/grp_Ground" instance=ExtResource("5_na3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -0.1, 3)
+
+[node name="grp_Wall" type="Node" parent="grp_Environement"]
+
+[node name="ClubStructuresExit" parent="grp_Environement/grp_Wall" instance=ExtResource("6_222w4")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 9, 0, 1)
+
+[node name="ClubStructuresExit2" parent="grp_Environement/grp_Wall" instance=ExtResource("6_222w4")]
+transform = Transform3D(1, 0, 1.78814e-07, 0, 1, 0, -1.78814e-07, 0, 1, -9, 0, -3)
+
+[node name="ClubStructuresWall2" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 9, 0, 3)
+
+[node name="ClubStructuresWall3" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 9, 0, 5)
+
+[node name="ClubStructuresWall" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 9, 0, -3)
+
+[node name="ClubStructuresWall4" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 9, 0, -5)
+
+[node name="ClubStructuresWall5" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 7, 0, -5)
+
+[node name="ClubStructuresWall6" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 5, 0, -5)
+
+[node name="ClubStructuresWall7" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 3, 0, -5)
+
+[node name="ClubStructuresWall8" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 0, -5)
+
+[node name="ClubStructuresWall9" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -1, 0, -5)
+
+[node name="ClubStructuresWall10" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3, 0, -5)
+
+[node name="ClubStructuresWall11" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -5, 0, -5)
+
+[node name="ClubStructuresWall12" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -7, 0, -5)
+
+[node name="ClubStructuresWall13" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(1, -1.13133e-08, 1.3411e-07, 1.13133e-08, 1, 1.48943e-09, -1.3411e-07, -1.48943e-09, 1, -9, 0, -5)
+
+[node name="ClubStructuresWall14" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(1, -1.13133e-08, 1.3411e-07, 1.13133e-08, 1, 1.48943e-09, -1.3411e-07, -1.48943e-09, 1, -9, 0, 1)
+
+[node name="ClubStructuresWall15" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(1, -1.13133e-08, 1.3411e-07, 1.13133e-08, 1, 1.48943e-09, -1.3411e-07, -1.48943e-09, 1, -9, 0, 3)
+
+[node name="ClubStructuresWall16" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(-1.77822e-07, -1.48943e-09, 1, 1.13133e-08, 1, 1.48943e-09, -1, 1.13133e-08, -1.77822e-07, -9, 0, 5)
+
+[node name="ClubStructuresWall17" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(-1.77822e-07, -1.48943e-09, 1, 1.13133e-08, 1, 1.48943e-09, -1, 1.13133e-08, -1.77822e-07, -7, 0, 5)
+
+[node name="ClubStructuresWall18" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(-1.77822e-07, -1.48943e-09, 1, 1.13133e-08, 1, 1.48943e-09, -1, 1.13133e-08, -1.77822e-07, -5, 0, 5)
+
+[node name="ClubStructuresWall19" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(-1.77822e-07, -1.48943e-09, 1, 1.13133e-08, 1, 1.48943e-09, -1, 1.13133e-08, -1.77822e-07, -3, 0, 5)
+
+[node name="ClubStructuresWall20" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(-1.77822e-07, -1.48943e-09, 1, 1.13133e-08, 1, 1.48943e-09, -1, 1.13133e-08, -1.77822e-07, -1, 0, 5)
+
+[node name="ClubStructuresWall21" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(-1.77822e-07, -1.48943e-09, 1, 1.13133e-08, 1, 1.48943e-09, -1, 1.13133e-08, -1.77822e-07, 1, 0, 5)
+
+[node name="ClubStructuresWall22" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(-1.77822e-07, -1.48943e-09, 1, 1.13133e-08, 1, 1.48943e-09, -1, 1.13133e-08, -1.77822e-07, 3, 0, 5)
+
+[node name="ClubStructuresWall23" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(-1.77822e-07, -1.48943e-09, 1, 1.13133e-08, 1, 1.48943e-09, -1, 1.13133e-08, -1.77822e-07, 5, 0, 5)
+
+[node name="ClubStructuresWall24" parent="grp_Environement/grp_Wall" instance=ExtResource("7_t2u0c")]
+transform = Transform3D(-1.77822e-07, -1.48943e-09, 1, 1.13133e-08, 1, 1.48943e-09, -1, 1.13133e-08, -1.77822e-07, 7, 0, 5)
+
+[node name="ClubStructuresWallCorner" parent="grp_Environement/grp_Wall" instance=ExtResource("8_h8c41")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.90255, -0.00828528, -5.17556)
+
+[node name="ClubStructuresWallCorner2" parent="grp_Environement/grp_Wall" instance=ExtResource("8_h8c41")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -9.17522, -0.00828528, 4.89977)
+
+[node name="ClubStructuresWallCorner3" parent="grp_Environement/grp_Wall" instance=ExtResource("8_h8c41")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 8.89972, -0.00828528, 5.17365)
+
+[node name="ClubStructuresWallCorner4" parent="grp_Environement/grp_Wall" instance=ExtResource("8_h8c41")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.17192, -0.00828528, -4.89891)
+
+[node name="grp_Pillars" type="Node" parent="grp_Environement"]
+
+[node name="Pillar_00" type="Node3D" parent="grp_Environement/grp_Pillars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 1)
+
+[node name="ClubStructuresWallCorner" parent="grp_Environement/grp_Pillars/Pillar_00" instance=ExtResource("8_h8c41")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.279765, -2.44156e-05, 0.00452292)
+
+[node name="ClubStructuresWallCorner2" parent="grp_Environement/grp_Pillars/Pillar_00" instance=ExtResource("8_h8c41")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.274767, -2.44156e-05, 0.00452292)
+
+[node name="ClubStructuresWallCorner3" parent="grp_Environement/grp_Pillars/Pillar_00" instance=ExtResource("8_h8c41")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.00249946, -2.44156e-05, -0.272743)
+
+[node name="ClubStructuresWallCorner4" parent="grp_Environement/grp_Pillars/Pillar_00" instance=ExtResource("8_h8c41")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00249946, -2.44156e-05, 0.281789)
+
+[node name="Pillar_01" type="Node3D" parent="grp_Environement/grp_Pillars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -3)
+
+[node name="ClubStructuresWallCorner" parent="grp_Environement/grp_Pillars/Pillar_01" instance=ExtResource("8_h8c41")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.279765, -2.44156e-05, 0.00452292)
+
+[node name="ClubStructuresWallCorner2" parent="grp_Environement/grp_Pillars/Pillar_01" instance=ExtResource("8_h8c41")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.274767, -2.44156e-05, 0.00452292)
+
+[node name="ClubStructuresWallCorner3" parent="grp_Environement/grp_Pillars/Pillar_01" instance=ExtResource("8_h8c41")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.00249946, -2.44156e-05, -0.272743)
+
+[node name="ClubStructuresWallCorner4" parent="grp_Environement/grp_Pillars/Pillar_01" instance=ExtResource("8_h8c41")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00249946, -2.44156e-05, 0.281789)
+
+[node name="Pillar_02" type="Node3D" parent="grp_Environement/grp_Pillars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="ClubStructuresWallCorner" parent="grp_Environement/grp_Pillars/Pillar_02" instance=ExtResource("8_h8c41")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.279765, -2.44156e-05, 0.00452292)
+
+[node name="ClubStructuresWallCorner2" parent="grp_Environement/grp_Pillars/Pillar_02" instance=ExtResource("8_h8c41")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.274767, -2.44156e-05, 0.00452292)
+
+[node name="ClubStructuresWallCorner3" parent="grp_Environement/grp_Pillars/Pillar_02" instance=ExtResource("8_h8c41")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.00249946, -2.44156e-05, -0.272743)
+
+[node name="ClubStructuresWallCorner4" parent="grp_Environement/grp_Pillars/Pillar_02" instance=ExtResource("8_h8c41")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00249946, -2.44156e-05, 0.281789)
+
+[node name="Pillar_03" type="Node3D" parent="grp_Environement/grp_Pillars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1)
+
+[node name="ClubStructuresWallCorner" parent="grp_Environement/grp_Pillars/Pillar_03" instance=ExtResource("8_h8c41")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.279765, -2.44156e-05, 0.00452292)
+
+[node name="ClubStructuresWallCorner2" parent="grp_Environement/grp_Pillars/Pillar_03" instance=ExtResource("8_h8c41")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.274767, -2.44156e-05, 0.00452292)
+
+[node name="ClubStructuresWallCorner3" parent="grp_Environement/grp_Pillars/Pillar_03" instance=ExtResource("8_h8c41")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.00249946, -2.44156e-05, -0.272743)
+
+[node name="ClubStructuresWallCorner4" parent="grp_Environement/grp_Pillars/Pillar_03" instance=ExtResource("8_h8c41")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00249946, -2.44156e-05, 0.281789)
+
+[node name="grp_Bar" type="Node" parent="grp_Environement"]
+
+[node name="ClubFurnitursBarSlice" parent="grp_Environement/grp_Bar" instance=ExtResource("9_n6xit")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.14228, 0, 3)
+
+[node name="ClubFurnitursBarSlice2" parent="grp_Environement/grp_Bar" instance=ExtResource("9_n6xit")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.14228, 0, 3)
+
+[node name="ClubFurnitursBarSlice3" parent="grp_Environement/grp_Bar" instance=ExtResource("9_n6xit")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.14228, 0, 3)
+
+[node name="ClubFurnitursBarEnd" parent="grp_Environement/grp_Bar" instance=ExtResource("10_xt83d")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.14228, 0, 2.20442)
+
+[node name="grp_Shelf" type="Node" parent="grp_Environement"]
+
+[node name="ClubFurnitursShelf" parent="grp_Environement/grp_Shelf" instance=ExtResource("11_xu2cd")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, 1.51147, 5.06097)
+
+[node name="ClubFurnitursShelf2" parent="grp_Environement/grp_Shelf" instance=ExtResource("11_xu2cd")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 1.51147, 5.06097)
+
+[node name="ClubFurnitursShelf3" parent="grp_Environement/grp_Shelf" instance=ExtResource("11_xu2cd")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, 1.05768, 5.06097)
+
+[node name="ClubFurnitursShelf4" parent="grp_Environement/grp_Shelf" instance=ExtResource("11_xu2cd")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 1.05768, 5.06097)
+
+[node name="grp_Seats" type="Node" parent="grp_Environement"]
+
+[node name="ClubFurnitursSeats" parent="grp_Environement/grp_Seats" instance=ExtResource("12_yb0ak")]
+transform = Transform3D(0.999339, 0, -0.0363646, 0, 1, 0, 0.0363646, 0, 0.999339, -6, 0, -4.94118)
+
+[node name="ClubFurnitursSeats5" parent="grp_Environement/grp_Seats" instance=ExtResource("12_yb0ak")]
+transform = Transform3D(0.0363648, 0, 0.999339, 0, 1, 0, -0.999339, 0, 0.0363648, 1.41247, 0, -2.86831)
+
+[node name="ClubFurnitursSeats2" parent="grp_Environement/grp_Seats" instance=ExtResource("12_yb0ak")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+
+[node name="ClubFurnitursSeats3" parent="grp_Environement/grp_Seats" instance=ExtResource("12_yb0ak")]
+transform = Transform3D(-0.999709, 0, 0.0241182, 0, 1, 0, -0.0241182, 0, -0.999709, 4, 0, 5)
+
+[node name="ClubFurnitursSeats4" parent="grp_Environement/grp_Seats" instance=ExtResource("12_yb0ak")]
+transform = Transform3D(0.0506975, 0, -0.998714, 0, 1, 0, 0.998714, 0, 0.0506975, 6.25357, 0, 2.65597)
+
+[node name="grp_Stool" type="Node" parent="grp_Environement"]
+
+[node name="ClubFurnitursStool" parent="grp_Environement/grp_Stool" instance=ExtResource("13_wbsdy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.15766, 0, 1.75493)
+
+[node name="ClubFurnitursStool2" parent="grp_Environement/grp_Stool" instance=ExtResource("13_wbsdy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.03319, 0, 1.82131)
+
+[node name="ClubFurnitursStool3" parent="grp_Environement/grp_Stool" instance=ExtResource("13_wbsdy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96129, 0, 1.91945)
+
+[node name="ClubFurnitursStool4" parent="grp_Environement/grp_Stool" instance=ExtResource("13_wbsdy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 1.69684)
+
+[node name="ClubFurnitursStool5" parent="grp_Environement/grp_Stool" instance=ExtResource("13_wbsdy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.84515, 0, 1.57103)
+
+[node name="ClubFurnitursStool6" parent="grp_Environement/grp_Stool" instance=ExtResource("13_wbsdy")]
+transform = Transform3D(0.844019, 0.536313, 2.3443e-08, 0, -4.37114e-08, 1, 0.536313, -0.844019, -3.68933e-08, -2.73793, 0.134435, 1.25781)
+
+[node name="grp_Tables" type="Node" parent="grp_Environement"]
+
+[node name="ClubFurnitursTable" parent="grp_Environement/grp_Tables" instance=ExtResource("14_u02ti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.80809, 0, -2.81938)
+
+[node name="ClubFurnitursTable2" parent="grp_Environement/grp_Tables" instance=ExtResource("14_u02ti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.38865, 0, -2.69401)
+
+[node name="ClubFurnitursTable3" parent="grp_Environement/grp_Tables" instance=ExtResource("14_u02ti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.66182, 0, 2.32078)
+
+[node name="ClubPropsTireuse" parent="grp_Environement" instance=ExtResource("15_7wisa")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.23498, 1.07437, 2.87028)
+
+[node name="ClubPropsTireuse2" parent="grp_Environement" instance=ExtResource("15_7wisa")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.23498, 1.07437, 2.87028)

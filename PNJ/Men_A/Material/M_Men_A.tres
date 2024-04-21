@@ -3,4 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bh3bmhx61vs0t" path="res://PNJ/Men_A/Material/T_Men_A_D.png" id="1_ulm8j"]
 
 [resource]
+albedo_color = Color(8, 8, 8, 0.704)
 albedo_texture = ExtResource("1_ulm8j")
+rim_tint = 0.0
+backlight = Color(0.980392, 0.815686, 0, 1)
