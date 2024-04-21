@@ -1,13 +1,18 @@
-[gd_scene load_steps=12 format=3 uid="uid://dnwp340g2g511"]
+[gd_scene load_steps=17 format=3 uid="uid://dnwp340g2g511"]
 
 [ext_resource type="Script" path="res://Player/B0by/AudioListener3D.gd" id="1_a0j1y"]
 [ext_resource type="PackedScene" uid="uid://cl5iidi7tnkrv" path="res://Player/B0by/b0by.tscn" id="1_w47eh"]
 [ext_resource type="Script" path="res://Player/Scripts/player.gd" id="2_ocfix"]
 [ext_resource type="PackedScene" uid="uid://i6rxufkcmlht" path="res://Assets/Paterns/Bathroom/Bathroom_1.tscn" id="6_u4irm"]
 [ext_resource type="Script" path="res://Levels/Scripts/Level_manager.gd" id="7_dvurq"]
-[ext_resource type="Script" path="res://Levels/Area3D.gd" id="7_ga7pg"]
+[ext_resource type="Script" path="res://Levels/Scripts/Area3D.gd" id="7_ga7pg"]
 [ext_resource type="PackedScene" uid="uid://buujpg55ubg74" path="res://Assets/Paterns/DanceFloor/DanceFloor_1.tscn" id="7_mwuip"]
 [ext_resource type="PackedScene" uid="uid://y841h8lnc7fx" path="res://Assets/Paterns/Outside/Outside_1.tscn" id="8_fqq6w"]
+[ext_resource type="Script" path="res://Levels/Dubstep.gd" id="10_cul0n"]
+[ext_resource type="AudioStream" uid="uid://7jf2kd5vt3gr" path="res://Assets/Sounds/Music/ETB_Dubstep.mp3" id="10_ioxbw"]
+[ext_resource type="AudioStream" uid="uid://d4cocxvqbwkkc" path="res://Assets/Sounds/Music/ETB_Dubstep_etouff2.mp3" id="10_xsqrk"]
+[ext_resource type="Script" path="res://Levels/Reverb_bath.gd" id="11_fcyne"]
+[ext_resource type="Script" path="res://Levels/Reverb_Out.gd" id="13_g3423"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dffdd"]
 size = Vector3(1, 4, 10)
@@ -42,10 +47,13 @@ player = NodePath("../B0by")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("BoxShape3D_dffdd")
 
-[node name="LevelManager" type="Node3D" parent="." node_paths=PackedStringArray("camera")]
+[node name="LevelManager" type="Node3D" parent="." node_paths=PackedStringArray("camera", "normal", "bath", "out")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 script = ExtResource("7_dvurq")
 camera = NodePath("../Camera3D")
+normal = NodePath("../musics_manger/Dubstep")
+bath = NodePath("../musics_manger/Reverb_bath")
+out = NodePath("../musics_manger/Reverb_Out")
 
 [node name="Bathroom1" parent="." instance=ExtResource("6_u4irm")]
 
@@ -65,6 +73,31 @@ directional_shadow_mode = 0
 [node name="DanceFloor1" parent="." instance=ExtResource("7_mwuip")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5476, 0, 0)
 
+[node name="musics_manger" type="Node3D" parent="."]
+
+[node name="Dubstep" type="AudioStreamPlayer" parent="musics_manger"]
+stream = ExtResource("10_ioxbw")
+volume_db = -80.0
+autoplay = true
+bus = &"Music"
+script = ExtResource("10_cul0n")
+
+[node name="Reverb_bath" type="AudioStreamPlayer" parent="musics_manger"]
+stream = ExtResource("10_xsqrk")
+autoplay = true
+bus = &"Music"
+script = ExtResource("11_fcyne")
+
+[node name="Reverb_Out" type="AudioStreamPlayer" parent="musics_manger"]
+stream = ExtResource("10_xsqrk")
+volume_db = -80.0
+autoplay = true
+bus = &"Music"
+script = ExtResource("13_g3423")
+
 [connection signal="boby_entered" from="Area3D" to="LevelManager" method="_on_area_3d_boby_entered"]
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Area3D" to="LevelManager" method="_on_area_3d_body_entered"]
+[connection signal="finished" from="musics_manger/Dubstep" to="musics_manger/Dubstep" method="_on_finished"]
+[connection signal="finished" from="musics_manger/Reverb_bath" to="musics_manger/Reverb_bath" method="_on_finished"]
+[connection signal="finished" from="musics_manger/Reverb_Out" to="musics_manger/Reverb_Out" method="_on_finished"]
