@@ -16,7 +16,7 @@ func _ready():
 func move_camera():
 	#FAIRE UN LERP ?
 	camera_target_position.x += roomSize
-	print()
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -26,9 +26,6 @@ func _process(delta):
 
 	#print(body)
 	#pass # Replace with function body.
-
-
-
 
 func _on_area_3d_boby_entered(boby, area):
 	move_camera()

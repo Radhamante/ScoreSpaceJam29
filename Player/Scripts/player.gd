@@ -18,6 +18,7 @@ var isHit = false
 var mouse_left_down: bool = false
 
 var timer: Timer
+var rdMov_Timer : Timer
 
 func _input( event ):
 	if event is InputEventMouseButton:
@@ -28,11 +29,17 @@ func _input( event ):
 			
 func _ready():
 	timer = Timer.new()
-	timer.set_wait_time(3)
+	timer.set_wait_time(10)
 	timer.set_one_shot(true)
 	add_child(timer)
 	timer.timeout.connect(dance)
 	timer.start()
+	
+	rdMov_Timer = Timer.new()
+	rdMov_Timer.set_wait_time(2)
+	add_child(rdMov_Timer)
+	rdMov_Timer.timeout.connect(random_movement)
+	rdMov_Timer.start()
 	
 func dance():
 	animation_tree.set("parameters/conditions/isDancing", true)
@@ -76,6 +83,29 @@ func update_anim_condition():
 			animation_tree.set("parameters/conditions/isMoving", true)
 			timer.stop()
 			
+func random_movement(mouse_position: Vector3):
+	var axis = ["x", "z"]
+	var rdAxis = axis.pick_random()
+	#var rdValue = randi_range(0, 1)
+	var distance = get_mouse_distance(mouse_position)
+	var rdValue = randf_range(-distance*2, distance*2)
+	var offset = Vector3.ZERO
+	#if rdAxis == "x":
+		#mouse_position.x += rdValue
+	#elif rdAxis == "z":
+		#mouse_position.z += rdValue
+	print("try randomize movement - axis : ", rdAxis, "value :", rdValue)
+	if rdAxis == "x":
+		offset.x += rdValue
+	elif rdAxis == "z":
+		offset.z += rdValue
+	
+	return offset
+		
+	#return mouse_position
+	#apply_impulse(Vector3(rdValue, 0, rdValue), velocity)
+	#apply_central_impulse()
+
 func collide():
 	isHit = true
 
@@ -91,7 +121,7 @@ func _process( delta ):
 			if get_mouse_distance(mousePos) < 1.5:
 				speed = 0
 			else:
-				speed = get_mouse_distance(mousePos)
+				speed = get_mouse_distance(mousePos) / 3
 			look_at(mousePos, Vector3.UP)
 			rotation.x = 0
 			target_velocity.x = position.direction_to(mousePos).x * speed
@@ -107,9 +137,11 @@ func _process( delta ):
 			else:
 				look_at(mousePos, Vector3.UP)
 				rotation.x = 0
+				#mousePos = random_movement(mousePos)
+				var offset = random_movement(mousePos)
 				target_velocity.x = position.direction_to(mousePos).x * speed
 				target_velocity.z = position.direction_to(mousePos).z * speed
-				velocity = lerp(velocity, target_velocity, 0.03)
+				velocity = lerp(velocity, (target_velocity + offset) , 0.03)
 			
 		if mousePos == null:
 			velocity = lerp(velocity, Vector3.ZERO, 0.08)
