@@ -23,5 +23,3 @@ func get_score():
 func _process(delta):
 	if scoreRunning:
 		score += delta
-		#print(score)
-	#pass
