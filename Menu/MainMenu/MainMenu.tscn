@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6yabk3jsq3wp"]
+[gd_scene load_steps=6 format=3 uid="uid://c6yabk3jsq3wp"]
 
 [ext_resource type="Script" path="res://Menu/MainMenu/MainMenu.gd" id="1_amaem"]
 [ext_resource type="Theme" uid="uid://ce7tj4libdtkr" path="res://Assets/Themes/buttons.tres" id="1_va41m"]
+[ext_resource type="Theme" uid="uid://cpqshmuj7vjgs" path="res://Assets/Themes/Title.tres" id="2_lswhj"]
+[ext_resource type="FontFile" uid="uid://k5isp4l7fpea" path="res://Assets/Fonts/flottflott.regular.ttf" id="4_6rfxy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y658a"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -11,6 +16,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_amaem")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1156.0
+offset_bottom = 618.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_y658a")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
@@ -22,55 +32,74 @@ alignment = 1
 layout_mode = 2
 alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+[node name="MarginContainer7" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="Start" type="Button" parent="HBoxContainer/VBoxContainer/MarginContainer"]
+[node name="MarginContainer6" type="MarginContainer" parent="HBoxContainer/VBoxContainer/MarginContainer7"]
+layout_mode = 2
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_right = 30
+
+[node name="Title" type="Label" parent="HBoxContainer/VBoxContainer/MarginContainer7"]
+layout_mode = 2
+theme = ExtResource("2_lswhj")
+text = "Escape the bathroom"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="Start" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
 theme = ExtResource("1_va41m")
+theme_override_fonts/font = ExtResource("4_6rfxy")
+theme_override_font_sizes/font_size = 64
 text = "Start"
 
-[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="Leaderboard" type="Button" parent="HBoxContainer/VBoxContainer/MarginContainer2"]
+[node name="Leaderboard" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer/MarginContainer2"]
 layout_mode = 2
 theme = ExtResource("1_va41m")
 text = "Leaderboard"
 
-[node name="MarginContainer4" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+[node name="MarginContainer4" type="MarginContainer" parent="HBoxContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="Credits" type="Button" parent="HBoxContainer/VBoxContainer/MarginContainer4"]
+[node name="Credits" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer/MarginContainer4"]
 layout_mode = 2
+theme = ExtResource("1_va41m")
 text = "Credits"
 
-[node name="MarginContainer5" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+[node name="MarginContainer5" type="MarginContainer" parent="HBoxContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="Settings" type="Button" parent="HBoxContainer/VBoxContainer/MarginContainer5"]
+[node name="Settings" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer/MarginContainer5"]
 layout_mode = 2
+theme = ExtResource("1_va41m")
 text = "Settings"
 
-[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+[node name="MarginContainer6" type="MarginContainer" parent="HBoxContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/margin_top = 15
-theme_override_constants/margin_bottom = 15
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_right = 30
 
-[node name="Exit" type="Button" parent="HBoxContainer/VBoxContainer/MarginContainer3"]
-layout_mode = 2
-text = "Exit"
-
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/MarginContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/MarginContainer2/Leaderboard" to="." method="_on_leaderboard_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/MarginContainer4/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/MarginContainer5/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/MarginContainer3/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/VBoxContainer/MarginContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/VBoxContainer/MarginContainer2/Leaderboard" to="." method="_on_leaderboard_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/VBoxContainer/MarginContainer4/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/VBoxContainer/MarginContainer5/Settings" to="." method="_on_settings_pressed"]

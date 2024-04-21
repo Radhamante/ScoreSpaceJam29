@@ -20,13 +20,14 @@ func convert_time(time_in_seconds: float) -> String:
 
 func _create_entry(name: String, score: float):
 	var one_entry = HBoxContainer.new()
+	one_entry.alignment = BoxContainer.ALIGNMENT_CENTER
 	var name_label = Label.new()
 	var score_label = Label.new()
 	
-	one_entry.add_child(name_label)
+	one_entry.add_child(name_label )
 	one_entry.add_child(score_label)
 	
-	name_label.text = name
+	name_label.text = name + " - "
 	score_label.text = convert_time(score)
 	
 	leaderboard.add_child(one_entry)
@@ -37,7 +38,8 @@ var leaderboard_http = HTTPRequest.new()
 var submit_score_http = HTTPRequest.new()
 
 func _ready():
-	_authentication_request()
+	#_authenti<cation_request()
+	pass
 
 func _process(_delta):
 	pass
@@ -71,15 +73,17 @@ func _authentication_request():
 	# Create a HTTPRequest node for authentication
 	auth_http = HTTPRequest.new()
 	add_child(auth_http)
-	auth_http.request_completed.connect(_on_authentication_request_completed)
 	# Send request
 	auth_http.request("https://api.lootlocker.io/game/v2/session/guest", headers, HTTPClient.METHOD_POST, JSON.stringify(data))
+	var res = await auth_http.request_completed
+	_on_authentication_request_completed(res[3])
 	# Print what we're sending, for debugging purposes:
 	print(data)
 
 
-func _on_authentication_request_completed(result, response_code, headers, body):
+func _on_authentication_request_completed(body):
 	var json = JSON.new()
+	print("AUTH COMPLETE : ", body.get_string_from_utf8())
 	json.parse(body.get_string_from_utf8())
 	
 	# Save the player_identifier to file
@@ -115,15 +119,13 @@ func get_leaderboards():
 
 func _on_leaderboard_request_completed( body):
 	var json = JSON.new()
+	print(body.get_string_from_utf8())
 	json.parse(body.get_string_from_utf8())
 	
 	# Formatting as a leaderboard
 	var leaderboardFormatted = ""
 	
-	var children = leaderboard.get_children()
-	for c in children:
-		leaderboard.remove_child(c)
-		c.queue_free()
+	leaderboard = VBoxContainer.new()
 		
 	for n in json.get_data().items.size():
 		_create_entry(json.get_data().items[n].metadata, json.get_data().items[n].score)
