@@ -3,7 +3,7 @@ extends Node
 
 @export var camera: Camera3D
 
-var roomSize = 17
+var roomSize = 19
 var camera_target_position: Vector3 
 #var camera_initPos = camera.global_position
 

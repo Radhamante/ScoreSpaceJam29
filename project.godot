@@ -20,6 +20,14 @@ config/icon="res://icon.svg"
 LootLocker="*res://Global/LootLocker.gd"
 ScoreManager="*res://Global/Score_manager.gd"
 
+[display]
+
+window/size/viewport_width=1156
+window/size/viewport_height=618
+window/size/resizable=false
+window/size/window_width_override=1156
+window/size/window_height_override=618
+
 [input]
 
 mouse_down={
