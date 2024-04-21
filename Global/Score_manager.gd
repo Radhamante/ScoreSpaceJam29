@@ -1,7 +1,9 @@
 extends Node
 
-var scoreRunning: bool = false
-var score: float = 0.0
+var scoreRunning: bool = true
+
+var seconds: float = 0.0
+var min: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,12 +16,12 @@ func stop_score():
 	scoreRunning = false
 	
 func reset_score():
-	score = 0.0
-	
-func get_score():
-	return 
+	seconds = 0.0
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if scoreRunning:
-		score += delta
+		seconds += delta
+	if seconds >= 59.99:
+		min += 1
+		reset_score()
