@@ -1,6 +1,5 @@
-extends Camera3D
+extends Label
 
-@export var player: CharacterBody3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -9,6 +8,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#position = player.position
-	#position.y = 10
-	#
+	var score_minutes = ScoreManager.min
+
+	if score_minutes < 10:
+		text = ("0%s." %str(score_minutes))
+		print("inf a 10")
+	elif score_minutes >= 10:
+		text = str(score_minutes)
+		print("sup a 10")

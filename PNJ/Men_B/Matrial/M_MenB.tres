@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bpqqduxx5n02n"]
+
+[ext_resource type="Texture2D" uid="uid://cvyukoj6vo106" path="res://PNJ/Men_B/Matrial/T_MenB_D.png" id="1_ocf4b"]
+
+[resource]
+albedo_texture = ExtResource("1_ocf4b")

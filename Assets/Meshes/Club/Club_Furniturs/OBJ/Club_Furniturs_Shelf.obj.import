@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://r0pcya100hht"
+path="res://.godot/imported/Club_Furniturs_Shelf.obj-0fd4d873dd955bfc9d20ca230d4bfd7b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Club_Furniturs_Shelf.obj-0fd4d873dd955bfc9d20ca230d4bfd7b.mesh"]
+
+source_file="res://Assets/Meshes/Club/Club_Furniturs/OBJ/Club_Furniturs_Shelf.obj"
+dest_files=["res://.godot/imported/Club_Furniturs_Shelf.obj-0fd4d873dd955bfc9d20ca230d4bfd7b.mesh", "res://.godot/imported/Club_Furniturs_Shelf.obj-0fd4d873dd955bfc9d20ca230d4bfd7b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

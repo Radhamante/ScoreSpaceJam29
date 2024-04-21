@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cxr0o7hest1w2"
+path="res://.godot/imported/Chiote_Props_Mirror.obj-87a17310c475daf04dfaea831483dc9c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Chiote_Props_Mirror.obj-87a17310c475daf04dfaea831483dc9c.mesh"]
+
+source_file="res://Assets/Meshes/chiote/Chiote_Props/OBJ/Chiote_Props_Mirror.obj"
+dest_files=["res://.godot/imported/Chiote_Props_Mirror.obj-87a17310c475daf04dfaea831483dc9c.mesh", "res://.godot/imported/Chiote_Props_Mirror.obj-87a17310c475daf04dfaea831483dc9c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

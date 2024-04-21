@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmjy0a83op8b7"]
+
+[ext_resource type="Material" uid="uid://i5n8ikawhvjj" path="res://Assets/Material/Club/Club_Structure/M_ClubStructure.tres" id="1_xk2mq"]
+[ext_resource type="ArrayMesh" uid="uid://bi35mx4xl221r" path="res://Assets/Meshes/Club/Club_Structure/OBJ/Club_Structures_Wall.obj" id="2_sx3bt"]
+[ext_resource type="Material" uid="uid://bcsfcsau1b2jv" path="res://Assets/Material/M_BlackUnlit.tres" id="3_ymxhc"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hwclr"]
+data = PackedVector3Array(0, 0.2102, 2, -0.0755, 0.2102, 2, 0, 0.2102, 0, 0, 0.2102, 0, -0.0755, 0.2102, 2, -0.0755, 0.2102, 0, -0.0755, 0.2102, 0, -0.0755, 0.2102, 2, -0.0755, 2.1, 0, -0.0755, 2.1, 0, -0.0755, 0.2102, 2, -0.0755, 2.1, 2, 0, 0, 0, 0, 0, 2, 0, 0.2102, 0, 0, 0.2102, 0, 0, 0, 2, 0, 0.2102, 2, -0.2755, 2.1, 0, -0.0755, 2.1, 0, -0.2755, 2.1, 2, -0.2755, 2.1, 2, -0.0755, 2.1, 0, -0.0755, 2.1, 2, -0.1763, 2.1056, 2, -0.2755, 2.1056, 2, -0.1763, 2.1056, 0, -0.1763, 2.1056, 0, -0.2755, 2.1056, 2, -0.2755, 2.1056, 0)
+
+[node name="ClubStructuresWall" type="StaticBody3D"]
+
+[node name="ClubStructuresWall" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_sx3bt")
+surface_material_override/0 = ExtResource("1_xk2mq")
+surface_material_override/1 = ExtResource("3_ymxhc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_hwclr")

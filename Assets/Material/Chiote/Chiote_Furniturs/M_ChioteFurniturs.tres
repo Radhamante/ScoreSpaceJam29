@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://d4jydjs6f4dg1"]
+
+[ext_resource type="Texture2D" uid="uid://bx5232tp33cyj" path="res://Assets/Material/Chiote/Chiote_Furniturs/T_ChioteTexture_D.png" id="1_f1mjr"]
+[ext_resource type="Texture2D" uid="uid://c8d3ffdba7vp3" path="res://Assets/Material/Chiote/Chiote_Furniturs/T_ChioteTexture_N.png" id="2_ikqf8"]
+
+[resource]
+albedo_texture = ExtResource("1_f1mjr")
+normal_enabled = true
+normal_texture = ExtResource("2_ikqf8")

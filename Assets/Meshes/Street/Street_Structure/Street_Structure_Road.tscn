@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://beenbww70on33"]
+
+[ext_resource type="ArrayMesh" uid="uid://c27b0wcomwtt1" path="res://Assets/Meshes/Street/Street_Structure/OLD/Street_Structure_Road.obj" id="1_pf0cs"]
+[ext_resource type="Material" uid="uid://bkjurxr06tke7" path="res://Assets/Material/Street/M_StreetAssets.tres" id="2_t6mv3"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qrxxk"]
+data = PackedVector3Array(0, 0, 2, -2, 0, 2, 0, 0, 0, 0, 0, 0, -2, 0, 2, -2, 0, 0)
+
+[node name="StreetStructureRoad" type="StaticBody3D"]
+
+[node name="StreetStructureRoad" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_pf0cs")
+surface_material_override/0 = ExtResource("2_t6mv3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_qrxxk")
