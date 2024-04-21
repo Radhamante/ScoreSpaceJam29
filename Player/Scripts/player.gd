@@ -7,17 +7,23 @@ extends CharacterBody3D
 
 @onready var animation_player = $AnimationPlayer
 
+#Speed
+@export var maxSpeed: float = 1.1
+@export var maxMouseDistance: float = 7.0
 var speed = 0
-var maxSPeed = 1.1
-var maxMouseDistance = 7
 
+#Movement
 var target_velocity = Vector3.ZERO
 var isMoving = false
 var isHit = false
 
 var mouse_left_down: bool = false
 
+#Timers
 var timer: Timer
+var rdMov_Timer : Timer
+@export var danseTimer: int = 10
+@export var staggerTimer: int = 2
 
 func _input( event ):
 	if event is InputEventMouseButton:
@@ -28,11 +34,17 @@ func _input( event ):
 			
 func _ready():
 	timer = Timer.new()
-	timer.set_wait_time(3)
+	timer.set_wait_time(danseTimer)
 	timer.set_one_shot(true)
 	add_child(timer)
 	timer.timeout.connect(dance)
 	timer.start()
+	
+	rdMov_Timer = Timer.new()
+	rdMov_Timer.set_wait_time(staggerTimer)
+	add_child(rdMov_Timer)
+	rdMov_Timer.timeout.connect(random_movement)
+	rdMov_Timer.start()
 	
 func dance():
 	animation_tree.set("parameters/conditions/isDancing", true)
@@ -76,6 +88,20 @@ func update_anim_condition():
 			animation_tree.set("parameters/conditions/isMoving", true)
 			timer.stop()
 			
+func random_movement(mouse_position: Vector3):
+	var axis = ["x", "z"]
+	var rdAxis = axis.pick_random()
+	var distance = get_mouse_distance(mouse_position)
+	var rdValue = randf_range(-distance*2, distance*2)
+	var offset = Vector3.ZERO
+
+	if rdAxis == "x":
+		offset.x += rdValue
+	elif rdAxis == "z":
+		offset.z += rdValue
+	
+	return offset
+
 func collide():
 	isHit = true
 
@@ -91,7 +117,7 @@ func _process( delta ):
 			if get_mouse_distance(mousePos) < 1.5:
 				speed = 0
 			else:
-				speed = get_mouse_distance(mousePos)
+				speed = get_mouse_distance(mousePos) / 3
 			look_at(mousePos, Vector3.UP)
 			rotation.x = 0
 			target_velocity.x = position.direction_to(mousePos).x * speed
@@ -100,16 +126,18 @@ func _process( delta ):
 			isMoving = true
 			
 		elif mousePos != null and get_mouse_distance(mousePos) > 2.5 and isMoving:
-			if get_mouse_distance(mousePos) <= maxSPeed:
-				speed = maxSPeed 
+			if get_mouse_distance(mousePos) <= maxSpeed:
+				speed = maxSpeed 
 			if get_mouse_distance(mousePos) > maxMouseDistance:
 				velocity = lerp(velocity, Vector3.ZERO, 0.08)
 			else:
 				look_at(mousePos, Vector3.UP)
 				rotation.x = 0
+				#mousePos = random_movement(mousePos)
+				var offset = random_movement(mousePos)
 				target_velocity.x = position.direction_to(mousePos).x * speed
 				target_velocity.z = position.direction_to(mousePos).z * speed
-				velocity = lerp(velocity, target_velocity, 0.03)
+				velocity = lerp(velocity, (target_velocity + offset) , 0.03)
 			
 		if mousePos == null:
 			velocity = lerp(velocity, Vector3.ZERO, 0.08)
@@ -125,13 +153,12 @@ func _process( delta ):
 		isMoving = false
 
 	var collider = move_and_collide(velocity * delta)
+	
 	if collider :
 		collide()
-		print(collider.get_collider())
 		
 	if animHit == "Hit":
 		timer.stop()
-		#print(timer.time_left)
 
 
 const SPEED = 5.0

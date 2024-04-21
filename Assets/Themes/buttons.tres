@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://k5isp4l7fpea" path="res://Assets/Fonts/flottflott.regular.ttf" id="1_6mmdc"]
 [ext_resource type="FontFile" uid="uid://bphhg0ru26gbt" path="res://Assets/Fonts/neo-retro.ttf" id="1_cba60"]
-[ext_resource type="StyleBox" uid="uid://yrwxtvhwimpy" path="res://Assets/Themes/button_style_box_flat.tres" id="2_supi4"]
+[ext_resource type="StyleBox" path="res://Assets/Themes/button_style_box_flat.tres" id="2_supi4"]
 
 [resource]
 default_font = ExtResource("1_cba60")
