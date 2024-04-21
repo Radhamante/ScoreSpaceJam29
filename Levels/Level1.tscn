@@ -22,11 +22,11 @@ ambient_light_energy = 11.85
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 19.7194, 0)
+current = true
 fov = 35.0
 
 [node name="AudioListener3D" type="AudioListener3D" parent="Camera3D" node_paths=PackedStringArray("player")]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0.0684059, 1.38115, 0.00968366)
-current = true
 script = ExtResource("1_a0j1y")
 player = NodePath("../../B0by")
 
@@ -49,9 +49,6 @@ camera = NodePath("../Camera3D")
 
 [node name="Bathroom1" parent="." instance=ExtResource("6_u4irm")]
 
-[node name="DanceFloor1" parent="." instance=ExtResource("7_mwuip")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, 0)
-
 [node name="Outside_1" parent="." instance=ExtResource("8_fqq6w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 0, 0)
 
@@ -64,6 +61,9 @@ transform = Transform3D(-0.5, 0.433013, -0.75, 2.18557e-08, 0.866025, 0.5, 0.866
 shadow_enabled = true
 shadow_opacity = 0.5
 directional_shadow_mode = 0
+
+[node name="DanceFloor1" parent="." instance=ExtResource("7_mwuip")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5476, 0, 0)
 
 [connection signal="boby_entered" from="Area3D" to="LevelManager" method="_on_area_3d_boby_entered"]
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
