@@ -4,10 +4,13 @@ extends CharacterBody3D
 @onready var state_machine = animation_tree.get("parameters/playback")
 var timer: Timer
 
+@onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
+
 var rng = RandomNumberGenerator.new()
 var isDrunk = randi() % 2
 
 func _ready():
+	nav_agent.get_navigation_map()
 	timer = Timer.new()
 	timer.set_wait_time(3)
 	add_child(timer)
@@ -66,6 +69,15 @@ func _process(delta):
 	else:
 		target_velocity = Vector3.ZERO
 	velocity = lerp(velocity, target_velocity, 0.05)
+	
+	nav_agent.set_target_position(global_position + target_velocity)
+	var next_nav_point = nav_agent.get_next_path_position()
+	velocity = (next_nav_point - global_transform.origin).normalized()
+	rotation.y = lerp_angle(rotation.y, atan2(velocity.x, velocity.z), delta * 10.0)
+	
+	if not nav_agent.is_target_reachable():
+		target_velocity = Vector3.ZERO
+	
 	var collider = move_and_collide(velocity * delta)
 	if collider:
 		if collider.get_collider().has_method("collide"):

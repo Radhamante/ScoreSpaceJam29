@@ -6,7 +6,9 @@ var game_API_key = "dev_7c33b0dd7a8148069ede5f47dbbf81ec"
 var development_mode = true
 var leaderboard_key = "ScoreSpaceJam"
 var session_token = ""
-var score = 0
+var score := .0
+var player_name = "Paul"
+var player_identifier = ""
 
 @onready var leaderboard = VBoxContainer.new()
 
@@ -28,7 +30,7 @@ func _create_entry(name: String, score: float):
 	one_entry.add_child(score_label)
 	
 	name_label.text = name + " - "
-	score_label.text = convert_time(score)
+	score_label.text = convert_time(score/1000)
 	
 	leaderboard.add_child(one_entry)
 
@@ -38,7 +40,7 @@ var leaderboard_http = HTTPRequest.new()
 var submit_score_http = HTTPRequest.new()
 
 func _ready():
-	#_authenti<cation_request()
+	_authentication_request()
 	pass
 
 func _process(_delta):
@@ -47,7 +49,6 @@ func _process(_delta):
 func _authentication_request():
 	# Check if a player session exists
 	var player_session_exists = false
-	var player_identifier : String
 	var file = FileAccess.open("user://LootLocker.data", FileAccess.READ)
 	if file != null:
 		player_identifier = file.get_as_text()
@@ -134,8 +135,8 @@ func _on_leaderboard_request_completed( body):
 	leaderboard_http.queue_free()
 
 
-func _upload_score(score: int):
-	var data = { "score": str(score), "metadata": "michel" }
+func _upload_score():
+	var data = { "score": str(score), "metadata": player_name if player_name != "" else player_identifier }
 	var headers = ["Content-Type: application/json", "x-session-token:"+session_token]
 	submit_score_http = HTTPRequest.new()
 	add_child(submit_score_http)
