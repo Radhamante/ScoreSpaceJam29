@@ -1,0 +1,18 @@
+[gd_resource type="ArrayMesh" load_steps=2 format=3 uid="uid://cylslpt7ixjiv"]
+
+[ext_resource type="Material" uid="uid://bkjurxr06tke7" path="res://Assets/Material/Street/M_StreetAssets.tres" id="1_5dph6"]
+
+[resource]
+_surfaces = [{
+"aabb": AABB(-2, 0, 0, 2.00001, 1e-05, 2.00001),
+"attribute_data": PackedByteArray(230, 10, 32, 86, 230, 10, 133, 2, 128, 94, 32, 86, 128, 94, 133, 2),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0),
+"material": ExtResource("1_5dph6"),
+"name": "Lit",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(254, 255, 0, 0, 254, 255, 84, 213, 0, 0, 0, 0, 254, 255, 84, 213, 254, 255, 0, 0, 0, 0, 84, 213, 0, 0, 0, 0, 0, 0, 84, 213, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42)
+}]

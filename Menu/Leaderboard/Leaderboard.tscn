@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://x1fvbw5pmyo"]
+[gd_scene load_steps=6 format=3 uid="uid://x1fvbw5pmyo"]
 
 [ext_resource type="Script" path="res://Menu/Leaderboard/Leaderboard.gd" id="1_bkob0"]
+[ext_resource type="Theme" uid="uid://b10t8khyondu5" path="res://Assets/Themes/main_text.tres" id="1_yuf8p"]
+[ext_resource type="Theme" uid="uid://cpqshmuj7vjgs" path="res://Assets/Themes/Title.tres" id="3_4e78i"]
+[ext_resource type="Theme" uid="uid://ce7tj4libdtkr" path="res://Assets/Themes/buttons.tres" id="4_u16tt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qd07i"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="Leaderboard" type="Control"]
 layout_mode = 3
@@ -9,7 +15,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_yuf8p")
 script = ExtResource("1_bkob0")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1156.0
+offset_bottom = 618.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qd07i")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
@@ -21,8 +33,21 @@ alignment = 1
 layout_mode = 2
 alignment = 1
 
+[node name="Leaderboard" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_4e78i")
+text = "Leaderboard
+"
+horizontal_alignment = 1
+
 [node name="Scoreboard" type="VBoxContainer" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Scoreboard"]
+layout_mode = 2
+text = "Loading..."
+horizontal_alignment = 1
 
 [node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -34,8 +59,9 @@ layout_mode = 2
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="Back" type="Button" parent="HBoxContainer/VBoxContainer/MarginContainer3"]
+[node name="Back" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("4_u16tt")
 text = "Back"
 
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/MarginContainer3/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cind6tl1fjrut"]
+[gd_scene load_steps=3 format=3 uid="uid://cind6tl1fjrut"]
 
-[ext_resource type="ArrayMesh" uid="uid://blfyvtai6lfux" path="res://Assets/Meshes/Street/Street_Structure/OLD/Street_Structure_Exit.obj" id="1_n24a3"]
-[ext_resource type="Material" uid="uid://bkjurxr06tke7" path="res://Assets/Material/Street/M_StreetAssets.tres" id="2_q617p"]
-[ext_resource type="Material" uid="uid://bcsfcsau1b2jv" path="res://Assets/Material/M_BlackUnlit.tres" id="3_dns11"]
+[ext_resource type="ArrayMesh" uid="uid://e8b3gfjye880" path="res://Assets/Meshes/Street/Street_Structure/TRES/Street_Structure_Exit.tres" id="1_q67nj"]
 
-[node name="StreetStructureExit" type="Node3D"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_uekod"]
+data = PackedVector3Array(-0.0755, 0.2102, 1, -0.0755, 0.2102, 0, 0, 0.2102, 1, 0, 0.2102, 1, -0.0755, 0.2102, 0, 0, 0.2102, 0, -0.0755, 0, 1, -0.0755, 0.2102, 1, 0, 0, 1, 0, 0, 1, -0.0755, 0.2102, 1, 0, 0.2102, 1, 0, 0.2102, 0, 0, 0, 0, 0, 0.2102, 1, 0, 0.2102, 1, 0, 0, 0, 0, 0, 1, -0.0755, 2.1, 0, -0.0755, 2.1, 4, -0.2755, 2.1, 0, -0.2755, 2.1, 0, -0.0755, 2.1, 4, -0.2755, 2.1, 4, -0.0755, 2.1, 0, -0.0755, 1.8835, 1, -0.0755, 2.1, 4, -0.0755, 2.1, 4, -0.0755, 1.8835, 1, -0.0755, 1.8835, 3, -0.0755, 0, 0, -0.0755, 0, 1, -0.0755, 2.1, 0, -0.0755, 2.1, 0, -0.0755, 0, 1, -0.0755, 1.8835, 1, -0.2755, 1.8835, 1, -0.0755, 1.8835, 1, -0.2755, 0, 1, -0.2755, 0, 1, -0.0755, 1.8835, 1, -0.0755, 0, 1, -0.2755, 1.8835, 1, -0.2755, 1.8835, 3, -0.0755, 1.8835, 1, -0.0755, 1.8835, 1, -0.2755, 1.8835, 3, -0.0755, 1.8835, 3, -0.0755, 0, 3, -0.0755, 1.8835, 3, -0.2755, 0, 3, -0.2755, 0, 3, -0.0755, 1.8835, 3, -0.2755, 1.8835, 3, -0.0755, 1.8835, 3, -0.0755, 0, 3, -0.0755, 2.1, 4, -0.0755, 2.1, 4, -0.0755, 0, 3, -0.0755, 0, 4, 0, 0.2102, 4, -0.0755, 0.2102, 4, 0, 0.2102, 3, 0, 0.2102, 3, -0.0755, 0.2102, 4, -0.0755, 0.2102, 3, 0, 0.2102, 3, -0.0755, 0.2102, 3, 0, 0, 3, 0, 0, 3, -0.0755, 0.2102, 3, -0.0755, 0, 3, 0, 0, 3, 0, 0, 4, 0, 0.2102, 3, 0, 0.2102, 3, 0, 0, 4, 0, 0.2102, 4, -0.3347, 1.9106, 2.0636, -0.3347, 0, 2.0636, -0.3347, 1.9106, 1.9364, -0.3347, 1.9106, 1.9364, -0.3347, 0, 2.0636, -0.3347, 0, 1.9364, -0.2075, 1.9106, 2.0636, -0.2075, 0, 2.0636, -0.3347, 1.9106, 2.0636, -0.3347, 1.9106, 2.0636, -0.2075, 0, 2.0636, -0.3347, 0, 2.0636, -0.2075, 1.9106, 1.9364, -0.2075, 0, 1.9364, -0.2075, 1.9106, 2.0636, -0.2075, 1.9106, 2.0636, -0.2075, 0, 1.9364, -0.2075, 0, 2.0636, -0.3347, 1.9106, 1.9364, -0.3347, 0, 1.9364, -0.2075, 1.9106, 1.9364, -0.2075, 1.9106, 1.9364, -0.3347, 0, 1.9364, -0.2075, 0, 1.9364, -0.2755, 2.1056, 3.9999, -0.2755, 2.1056, 0, -0.1763, 2.1056, 3.9999, -0.1763, 2.1056, 3.9999, -0.2755, 2.1056, 0, -0.1763, 2.1056, 0)
+
+[node name="StreetStructureExit" type="StaticBody3D"]
 
 [node name="StreetStructureExit" type="MeshInstance3D" parent="."]
-mesh = ExtResource("1_n24a3")
-surface_material_override/0 = ExtResource("2_q617p")
-surface_material_override/1 = ExtResource("3_dns11")
+mesh = ExtResource("1_q67nj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_uekod")
