@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c5waoi26eylmd"]
 
-[ext_resource type="ArrayMesh" uid="uid://brgvwjdl7eb0m" path="res://Assets/Meshes/Street/Street_Structure/TRES/Street_Structure_Floor.tres" id="1_mdybm"]
+[ext_resource type="ArrayMesh" uid="uid://ddix85lktyfyl" path="res://Assets/Meshes/Street/Street_Structure/TRES/Street_Structure_Floor.tres" id="1_mdybm"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6ruks"]
 data = PackedVector3Array(-2, 0.1, 2, -2, 0, 2, -2, 0.1, 0, -2, 0.1, 0, -2, 0, 2, -2, 0, 0, 0, 0.1, 2, 0, 0, 2, -2, 0.1, 2, -2, 0.1, 2, 0, 0, 2, -2, 0, 2, 0, 0.1, 0, 0, 0, 0, 0, 0.1, 2, 0, 0.1, 2, 0, 0, 0, 0, 0, 2, -2, 0.1, 0, 0, 0.1, 0, -2, 0.1, 2, -2, 0.1, 2, 0, 0.1, 0, 0, 0.1, 2, -2, 0.1, 0, -2, 0, 0, 0, 0.1, 0, 0, 0.1, 0, -2, 0, 0, 0, 0, 0)

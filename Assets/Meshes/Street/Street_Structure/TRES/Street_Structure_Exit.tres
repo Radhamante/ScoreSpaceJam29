@@ -1,4 +1,4 @@
-[gd_resource type="ArrayMesh" load_steps=3 format=3 uid="uid://b2qbjvv7obv7v"]
+[gd_resource type="ArrayMesh" load_steps=3 format=3 uid="uid://e8b3gfjye880"]
 
 [ext_resource type="Material" uid="uid://bkjurxr06tke7" path="res://Assets/Material/Street/M_StreetAssets.tres" id="1_tkkff"]
 [ext_resource type="Material" uid="uid://bcsfcsau1b2jv" path="res://Assets/Material/M_BlackUnlit.tres" id="2_olgyy"]

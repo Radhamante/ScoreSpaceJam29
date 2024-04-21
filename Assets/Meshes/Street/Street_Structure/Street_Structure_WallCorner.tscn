@@ -1,15 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://c51p80fvvrea3"]
 
-[ext_resource type="ArrayMesh" uid="uid://cbkj2afmgvkje" path="res://Assets/Meshes/Street/Street_Structure/TRES/Street_Structure_WallCorner.tres" id="1_8gtwv"]
+[ext_resource type="ArrayMesh" uid="uid://dm0ftl5r6eo4n" path="res://Assets/Meshes/Street/Street_Structure/TRES/Street_Structure_WallCorner.tres" id="1_8gtwv"]
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_50uw2"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_w8t21"]
 data = PackedVector3Array(-0.0755, 0.2102, 0, -0.0755, 0.2102, 0.2, -0.0755, 2.1, 0, -0.0755, 2.1, 0, -0.0755, 0.2102, 0.2, -0.0755, 2.1, 0.2, 0, 0.2102, 0.2755, -0.0755, 0.2102, 0.2, 0, 0.2102, 0, 0, 0.2102, 0, -0.0755, 0.2102, 0.2, -0.0755, 0.2102, 0, 0, 0, 0, 0, 0, 0.2755, 0, 0.2102, 0, 0, 0.2102, 0, 0, 0, 0.2755, 0, 0.2102, 0.2755, -0.2755, 0.2102, 0.2755, -0.2755, 0.2102, 0.2, 0, 0.2102, 0.2755, 0, 0.2102, 0.2755, -0.2755, 0.2102, 0.2, -0.0755, 0.2102, 0.2, 0, 0, 0.2755, -0.2755, 0, 0.2755, 0, 0.2102, 0.2755, 0, 0.2102, 0.2755, -0.2755, 0, 0.2755, -0.2755, 0.2102, 0.2755, -0.0755, 0.2102, 0.2, -0.2755, 0.2102, 0.2, -0.0755, 2.1, 0.2, -0.0755, 2.1, 0.2, -0.2755, 0.2102, 0.2, -0.2755, 2.1, 0.2, -0.2755, 2.1, 0, -0.0755, 2.1, 0, -0.2755, 2.1, 0.2, -0.2755, 2.1, 0.2, -0.0755, 2.1, 0, -0.0755, 2.1, 0.2, -0.1763, 2.1056, 0.0992, -0.2755, 2.1056, 0.0992, -0.1763, 2.1056, 0, -0.1763, 2.1056, 0, -0.2755, 2.1056, 0.0992, -0.2755, 2.1056, 0)
 
 [node name="StreetStructureWallCorner" type="StaticBody3D"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("ConcavePolygonShape3D_50uw2")
-
 [node name="StreetStructureWallCorner" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0274, -0.0124874, -0.00473642)
 mesh = ExtResource("1_8gtwv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_w8t21")
