@@ -78,13 +78,11 @@ func update_anim_condition():
 			
 func collide():
 	isHit = true
-	#timer.stop()
 
 func _process( delta ):
 	
 	update_anim_condition()
 	var animHit = stateMachine.get_current_node()
-	#print(animHit)
 		
 	if mouse_left_down and animHit != "Hit":
 		var mousePos = get_mouse_position()
@@ -129,24 +127,12 @@ func _process( delta ):
 	var collider = move_and_collide(velocity * delta)
 	if collider :
 		collide()
-		#timer.stop()
-		#print("timer stopper ???????????")
-		#animation_tree.set("parameters/conditions/isMoving", false)
-		#animation_tree.set("parameters/conditions/IsIdle", false)
-		#animation_tree.set("parameters/conditions/isHiting", true)
-		#print(collider)
+		print(collider.get_collider())
 		
 	if animHit == "Hit":
 		timer.stop()
 		#print(timer.time_left)
-	
-	
-	#move_and_slide()
-			#print("mouse ", mousePos)
-			#print("distance ", get_mouse_distance(mousePos))
-		
-		#print(mouse_position)
-		#print(position)
+
 
 const SPEED = 5.0
 
