@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d1xbworsw33mi"
+path="res://.godot/imported/not what you think.mp3-eed9b1dfcfd1e77e6a9f732940d43e01.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/not what you think.mp3"
+dest_files=["res://.godot/imported/not what you think.mp3-eed9b1dfcfd1e77e6a9f732940d43e01.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

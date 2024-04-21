@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://buujpg55ubg74"]
+
+[ext_resource type="PackedScene" uid="uid://d1uue5ypbl6q7" path="res://PNJ/Woman_B/scene/woman_B.tscn" id="1_wajo7"]
+[ext_resource type="PackedScene" uid="uid://mpkr8w1c52vl" path="res://PNJ/Woman_A/scene/woman_A.tscn" id="2_anrwh"]
+[ext_resource type="PackedScene" uid="uid://c1gaf8nob54qj" path="res://PNJ/Men_B/scene/men_B.tscn" id="3_gvsvf"]
+[ext_resource type="PackedScene" uid="uid://df7ha0eqrnqe7" path="res://PNJ/Men_A/scene/men_A.tscn" id="4_7aqjj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_t506w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a6mjv"]
+
+[node name="DanceFloor1" type="Node3D"]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+size = Vector3(17, 5, 10)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.608643, 1.5, 0)
+operation = 2
+size = Vector3(17.2173, 2, 9)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.25403, 1.5, 0)
+operation = 2
+size = Vector3(2.14966, 2, 3.22363)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.37419, 0, 0, 0, 1, 2.32636, 3.69713, -2.00499)
+mesh = SubResource("BoxMesh_t506w")
+
+[node name="Rigidbody3D" type="RigidBody3D" parent="MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/Rigidbody3D"]
+shape = SubResource("BoxShape3D_a6mjv")
+
+[node name="Woman_B2" parent="." instance=ExtResource("1_wajo7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.80334, 2.5, 1.9185)
+
+[node name="Woman_A2" parent="." instance=ExtResource("2_anrwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64479, 2.5, 2.19176)
+
+[node name="Men_B2" parent="." instance=ExtResource("3_gvsvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 3, -2)
+
+[node name="Men_A" parent="." instance=ExtResource("4_7aqjj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, -1)
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.37419, 0, 0, 0, 1, -2.80964, 3.69713, -0.14445)
+mesh = SubResource("BoxMesh_t506w")
+
+[node name="Rigidbody3D" type="RigidBody3D" parent="MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/Rigidbody3D"]
+shape = SubResource("BoxShape3D_a6mjv")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.37419, 0, 0, 0, 1, 4.10102, 3.69713, 2.17989)
+mesh = SubResource("BoxMesh_t506w")
+
+[node name="Rigidbody3D" type="RigidBody3D" parent="MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D4/Rigidbody3D"]
+shape = SubResource("BoxShape3D_a6mjv")
+
+[node name="Woman_B3" parent="." instance=ExtResource("1_wajo7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.18145, 2.5, -0.705033)
+
+[node name="Men_B3" parent="." instance=ExtResource("3_gvsvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.51416, 3, 2.36838)
+
+[node name="Men_A2" parent="." instance=ExtResource("4_7aqjj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.55306, 3, -2.6499)
+
+[node name="Woman_A3" parent="." instance=ExtResource("2_anrwh")]
+transform = Transform3D(0.999928, 0, 0.012025, 0, 1, 0, -0.012025, 0, 0.999928, 6.95194, 2.5, 3.80778)
+
+[node name="Men_B4" parent="." instance=ExtResource("3_gvsvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.40474, 3, -3.36717)

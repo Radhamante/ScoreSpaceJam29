@@ -24,7 +24,19 @@ alignment = 1
 [node name="Scoreboard" type="VBoxContainer" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+[node name="one_entry" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/Scoreboard"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer/Scoreboard/one_entry"]
+layout_mode = 2
+text = "2:31"
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Scoreboard/one_entry"]
+layout_mode = 2
+text = "Nom"
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/VBoxContainer/Scoreboard"]
 layout_mode = 2
 theme_override_constants/margin_left = 90
 theme_override_constants/margin_right = 90
