@@ -20,18 +20,6 @@
 
 [node name="Bathroom1" type="Node3D"]
 
-[node name="room" type="CSGCombiner3D" parent="."]
-visible = false
-use_collision = true
-
-[node name="Walls" type="CSGBox3D" parent="room"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-size = Vector3(19, 4, 10)
-
-[node name="Walls_extruder" type="CSGBox3D" parent="room/Walls"]
-operation = 2
-size = Vector3(18, 4, 9)
-
 [node name="grp_PNJ" type="Node3D" parent="."]
 
 [node name="Woman_B2" parent="grp_PNJ" instance=ExtResource("1_r48w7")]
