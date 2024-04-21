@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://buujpg55ubg74"]
+[gd_scene load_steps=23 format=3 uid="uid://buujpg55ubg74"]
 
 [ext_resource type="PackedScene" uid="uid://d1uue5ypbl6q7" path="res://PNJ/Woman_B/scene/woman_B.tscn" id="1_wajo7"]
 [ext_resource type="PackedScene" uid="uid://mpkr8w1c52vl" path="res://PNJ/Woman_A/scene/woman_A.tscn" id="2_anrwh"]
@@ -15,6 +15,13 @@
 [ext_resource type="PackedScene" uid="uid://cnsa1ccvgril6" path="res://Assets/Meshes/Club/Club_Furniturs/Club_Furniturs_Stool.tscn" id="13_wbsdy"]
 [ext_resource type="PackedScene" uid="uid://da6i3m4q6srjo" path="res://Assets/Meshes/Club/Club_Furniturs/Club_Furniturs_Table.tscn" id="14_u02ti"]
 [ext_resource type="PackedScene" uid="uid://cr1cre88poeci" path="res://Assets/Meshes/Club/Club_Props/Club_Props_Tireuse.tscn" id="15_7wisa"]
+[ext_resource type="PackedScene" uid="uid://ckbyukbncait3" path="res://Assets/Meshes/Club/Club_Props/Bottle/Club_Props_Bottle_B.tscn" id="16_8xy3a"]
+[ext_resource type="PackedScene" uid="uid://cts53bmxaq2d0" path="res://Assets/Meshes/Club/Club_Props/Bottle/Club_Props_Bottle_A.tscn" id="17_evokg"]
+[ext_resource type="PackedScene" uid="uid://b24sg4vgu736o" path="res://Assets/Meshes/Club/Club_Props/Bottle/Club_Props_Bottle_C.tscn" id="18_wel81"]
+[ext_resource type="PackedScene" uid="uid://c7igo6eleurhk" path="res://Assets/Meshes/Club/Club_Props/Bottle/Club_Props_Bottle_D.tscn" id="19_gkkwg"]
+[ext_resource type="PackedScene" uid="uid://ddh4i7mr8fdn7" path="res://Assets/Meshes/Club/Club_Props/Bottle/Club_Props_Bottle_E.tscn" id="20_2emjl"]
+[ext_resource type="PackedScene" uid="uid://g1gngxbhpfi3" path="res://Assets/Meshes/Club/Club_Props/Bottle/Club_Props_Bottle_F.tscn" id="21_vymsn"]
+[ext_resource type="Material" uid="uid://bcsfcsau1b2jv" path="res://Assets/Material/M_BlackUnlit.tres" id="22_gluuu"]
 
 [node name="DanceFloor1" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
@@ -364,6 +371,36 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0024
 [node name="ClubStructuresWallCorner4" parent="grp_Environement/grp_Pillars/Pillar_03" instance=ExtResource("8_h8c41")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00249946, -2.44156e-05, 0.281789)
 
+[node name="Pillar_04" type="Node3D" parent="grp_Environement/grp_Pillars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="ClubStructuresWallCorner" parent="grp_Environement/grp_Pillars/Pillar_04" instance=ExtResource("8_h8c41")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.279765, -2.44156e-05, 0.00452292)
+
+[node name="ClubStructuresWallCorner2" parent="grp_Environement/grp_Pillars/Pillar_04" instance=ExtResource("8_h8c41")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.274767, -2.44156e-05, 0.00452292)
+
+[node name="ClubStructuresWallCorner3" parent="grp_Environement/grp_Pillars/Pillar_04" instance=ExtResource("8_h8c41")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.00249946, -2.44156e-05, -0.272743)
+
+[node name="ClubStructuresWallCorner4" parent="grp_Environement/grp_Pillars/Pillar_04" instance=ExtResource("8_h8c41")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00249946, -2.44156e-05, 0.281789)
+
+[node name="Pillar_05" type="Node3D" parent="grp_Environement/grp_Pillars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1)
+
+[node name="ClubStructuresWallCorner" parent="grp_Environement/grp_Pillars/Pillar_05" instance=ExtResource("8_h8c41")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.279765, -2.44156e-05, 0.00452292)
+
+[node name="ClubStructuresWallCorner2" parent="grp_Environement/grp_Pillars/Pillar_05" instance=ExtResource("8_h8c41")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.274767, -2.44156e-05, 0.00452292)
+
+[node name="ClubStructuresWallCorner3" parent="grp_Environement/grp_Pillars/Pillar_05" instance=ExtResource("8_h8c41")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.00249946, -2.44156e-05, -0.272743)
+
+[node name="ClubStructuresWallCorner4" parent="grp_Environement/grp_Pillars/Pillar_05" instance=ExtResource("8_h8c41")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00249946, -2.44156e-05, 0.281789)
+
 [node name="grp_Bar" type="Node3D" parent="grp_Environement"]
 
 [node name="ClubFurnitursBarSlice" parent="grp_Environement/grp_Bar" instance=ExtResource("9_n6xit")]
@@ -440,8 +477,243 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.38865, 0, -2.69401)
 [node name="ClubFurnitursTable3" parent="grp_Environement/grp_Tables" instance=ExtResource("14_u02ti")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.66182, 0, 2.32078)
 
-[node name="ClubPropsTireuse" parent="grp_Environement" instance=ExtResource("15_7wisa")]
+[node name="grp_Tireuses" type="Node3D" parent="grp_Environement"]
+
+[node name="ClubPropsTireuse" parent="grp_Environement/grp_Tireuses" instance=ExtResource("15_7wisa")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.23498, 1.07437, 2.87028)
 
-[node name="ClubPropsTireuse2" parent="grp_Environement" instance=ExtResource("15_7wisa")]
+[node name="ClubPropsTireuse2" parent="grp_Environement/grp_Tireuses" instance=ExtResource("15_7wisa")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.23498, 1.07437, 2.87028)
+
+[node name="grp_Bottles" type="Node3D" parent="grp_Environement"]
+
+[node name="ClubPropsBottleB" parent="grp_Environement/grp_Bottles" instance=ExtResource("16_8xy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.58396, 1.55573, 4.6876)
+
+[node name="ClubPropsBottleB2" parent="grp_Environement/grp_Bottles" instance=ExtResource("16_8xy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3341, 1.55573, 4.85681)
+
+[node name="ClubPropsBottleB3" parent="grp_Environement/grp_Bottles" instance=ExtResource("16_8xy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2315, 1.55573, 4.75557)
+
+[node name="ClubPropsBottleB4" parent="grp_Environement/grp_Bottles" instance=ExtResource("16_8xy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.75021, 1.07956, 2.6673)
+
+[node name="ClubPropsBottleB5" parent="grp_Environement/grp_Bottles" instance=ExtResource("16_8xy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.05254, 0.352233, -2.5505)
+
+[node name="ClubPropsBottleB6" parent="grp_Environement/grp_Bottles" instance=ExtResource("16_8xy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.93886, 0.352233, -2.80966)
+
+[node name="ClubPropsBottleB7" parent="grp_Environement/grp_Bottles" instance=ExtResource("16_8xy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.80962, 0.352233, 2.00257)
+
+[node name="ClubPropsBottleA" parent="grp_Environement/grp_Bottles" instance=ExtResource("17_evokg")]
+transform = Transform3D(0.519221, 0, 0.85464, 0, 1, 0, -0.85464, 0, 0.519221, -3.25978, 1.56204, 4.89284)
+
+[node name="ClubPropsBottleA2" parent="grp_Environement/grp_Bottles" instance=ExtResource("17_evokg")]
+transform = Transform3D(0.679915, 0, -0.733291, 0, 1, 0, 0.733291, 0, 0.679915, -4.68891, 1.56204, 4.74785)
+
+[node name="ClubPropsBottleA3" parent="grp_Environement/grp_Bottles" instance=ExtResource("17_evokg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.58859, 1.56204, 4.87212)
+
+[node name="ClubPropsBottleA4" parent="grp_Environement/grp_Bottles" instance=ExtResource("17_evokg")]
+transform = Transform3D(0.722786, 0, -0.691072, 0, 1, 0, 0.691072, 0, 0.722786, -3.01682, 1.07917, 2.49148)
+
+[node name="ClubPropsBottleA5" parent="grp_Environement/grp_Bottles" instance=ExtResource("17_evokg")]
+transform = Transform3D(0.722786, 0, -0.691072, 0, 1, 0, 0.691072, 0, 0.722786, 3.64138, 0.359385, -2.80716)
+
+[node name="ClubPropsBottleC" parent="grp_Environement/grp_Bottles" instance=ExtResource("18_wel81")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.08424, 1.06392, 2.84586)
+
+[node name="ClubPropsBottleC2" parent="grp_Environement/grp_Bottles" instance=ExtResource("18_wel81")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.71493, 1.55475, 4.79801)
+
+[node name="ClubPropsBottleC3" parent="grp_Environement/grp_Bottles" instance=ExtResource("18_wel81")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50605, 1.55475, 4.79801)
+
+[node name="ClubPropsBottleC4" parent="grp_Environement/grp_Bottles" instance=ExtResource("18_wel81")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1643, 1.55475, 4.79801)
+
+[node name="ClubPropsBottleC5" parent="grp_Environement/grp_Bottles" instance=ExtResource("18_wel81")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.42933, 1.55475, 4.79801)
+
+[node name="ClubPropsBottleC6" parent="grp_Environement/grp_Bottles" instance=ExtResource("18_wel81")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.12412, 1.0472, 2.53131)
+
+[node name="ClubPropsBottleC7" parent="grp_Environement/grp_Bottles" instance=ExtResource("18_wel81")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.37325, 0.373136, 2.25679)
+
+[node name="ClubPropsBottleC8" parent="grp_Environement/grp_Bottles" instance=ExtResource("18_wel81")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.65239, 0.373136, 2.8371)
+
+[node name="ClubPropsBottleD" parent="grp_Environement/grp_Bottles" instance=ExtResource("19_gkkwg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9957, 1.54663, 4.82464)
+
+[node name="ClubPropsBottleD2" parent="grp_Environement/grp_Bottles" instance=ExtResource("19_gkkwg")]
+transform = Transform3D(0.818731, 0, -0.574177, 0, 1, 0, 0.574177, 0, 0.818731, -6.9461, 1.54663, 4.68728)
+
+[node name="ClubPropsBottleD3" parent="grp_Environement/grp_Bottles" instance=ExtResource("19_gkkwg")]
+transform = Transform3D(0.818731, 0, -0.574177, 0, 1, 0, 0.574177, 0, 0.818731, -6.42042, 1.09538, 2.46795)
+
+[node name="ClubPropsBottleD4" parent="grp_Environement/grp_Bottles" instance=ExtResource("19_gkkwg")]
+transform = Transform3D(0.818731, 0, -0.574177, 0, 1, 0, 0.574177, 0, 0.818731, 4.08471, 0.371551, 2.28522)
+
+[node name="ClubPropsBottleE" parent="grp_Environement/grp_Bottles" instance=ExtResource("20_2emjl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.21056, 1.54709, 4.69409)
+
+[node name="ClubPropsBottleE2" parent="grp_Environement/grp_Bottles" instance=ExtResource("20_2emjl")]
+transform = Transform3D(0.616088, 0, -0.787678, 0, 1, 0, 0.787678, 0, 0.616088, -6.72632, 1.54709, 4.8281)
+
+[node name="ClubPropsBottleE3" parent="grp_Environement/grp_Bottles" instance=ExtResource("20_2emjl")]
+transform = Transform3D(0.616088, 0, -0.787678, 0, 1, 0, 0.787678, 0, 0.616088, -3.58215, 1.05247, 2.65516)
+
+[node name="ClubPropsBottleE5" parent="grp_Environement/grp_Bottles" instance=ExtResource("20_2emjl")]
+transform = Transform3D(0.616088, 0, -0.787678, 0, 1, 0, 0.787678, 0, 0.616088, 4.02544, 0.377468, -2.77815)
+
+[node name="ClubPropsBottleE4" parent="grp_Environement/grp_Bottles" instance=ExtResource("20_2emjl")]
+transform = Transform3D(-0.742199, -0.334876, -0.580516, 0.616088, 0, -0.787678, 0.263774, -0.942262, 0.206313, -4.52892, 1.08482, 2.65257)
+
+[node name="ClubPropsBottleF" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.19501, 1.07443, 2.75415)
+
+[node name="ClubPropsBottleF2" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.78846, 1.07443, 2.45558)
+
+[node name="ClubPropsBottleF3" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.96063, 1.07443, 2.75783)
+
+[node name="ClubPropsBottleF4" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.55409, 1.07443, 2.40397)
+
+[node name="ClubPropsBottleF5" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2334, 1.07443, 2.37817)
+
+[node name="ClubPropsBottleF6" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.58987, 1.07443, 2.75415)
+
+[node name="ClubPropsBottleF7" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.93498, 1.07443, 2.42659)
+
+[node name="ClubPropsBottleF8" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2099, 1.07443, 2.61376)
+
+[node name="ClubPropsBottleF9" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.23774, 0.380425, -3.13078)
+
+[node name="ClubPropsBottleF10" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8986, 0.380425, -2.75064)
+
+[node name="ClubPropsBottleF11" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47254, 0.380425, -2.14316)
+
+[node name="ClubPropsBottleF12" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.31228, 0.380425, -2.2177)
+
+[node name="ClubPropsBottleF13" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.65515, 0.380425, -2.87735)
+
+[node name="ClubPropsBottleF14" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.76282, 0.380425, -3.29103)
+
+[node name="ClubPropsBottleF15" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.46467, 0.380425, -2.43758)
+
+[node name="ClubPropsBottleF16" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.12805, 0.380425, -2.54566)
+
+[node name="ClubPropsBottleF17" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.29949, 0.380425, -2.60156)
+
+[node name="ClubPropsBottleF18" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.25476, 0.380425, -3.13078)
+
+[node name="ClubPropsBottleF19" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.09588, 0.380425, 2.07627)
+
+[node name="ClubPropsBottleF20" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.45889, 0.380425, 2.03484)
+
+[node name="ClubPropsBottleF21" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.48305, 0.380425, 2.1574)
+
+[node name="ClubPropsBottleF22" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97066, 0.380425, 2.70253)
+
+[node name="ClubPropsBottleF23" parent="grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.27486, 0.380425, 2.54365)
+
+[node name="grp_Light" type="Node3D" parent="."]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="grp_Light"]
+transform = Transform3D(0.10996, 0.847669, 0.519005, -7.71341e-09, -0.522171, 0.852841, 0.993936, -0.0937783, -0.0574179, -2.84947, 5.11, -2.24203)
+light_color = Color(1, 0.258824, 0.2, 1)
+light_energy = 8.976
+spot_range = 21.0144
+spot_angle = 40.2204
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="grp_Light"]
+transform = Transform3D(0.653179, -0.438268, -0.617477, 0.244249, -0.649932, 0.719674, -0.716728, -0.620895, -0.317475, 2.67667, 5.34406, -1.64262)
+light_color = Color(1, 0, 0, 1)
+light_energy = 5.188
+spot_range = 21.0144
+spot_attenuation = 0.784584
+spot_angle = 40.2204
+spot_angle_attenuation = 0.68302
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="grp_Light"]
+transform = Transform3D(0.367077, 0.869055, 0.331661, 0.243472, -0.433886, 0.867447, 0.897762, -0.237669, -0.37086, -0.391927, 5.68517, 2.20388)
+light_color = Color(0, 0.870588, 0.913725, 1)
+light_energy = 4.478
+spot_range = 15.0032
+spot_attenuation = 0.784584
+spot_angle = 44.6902
+spot_angle_attenuation = 0.68302
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="grp_Light"]
+transform = Transform3D(0.367077, 0.869055, 0.331661, 0.243472, -0.433886, 0.867447, 0.897762, -0.237669, -0.37086, -4.79852, 5.68517, 3.41902)
+light_color = Color(0, 0.870588, 0.913725, 1)
+light_energy = 4.478
+spot_range = 15.0032
+spot_attenuation = 0.784584
+spot_angle = 44.6902
+spot_angle_attenuation = 0.68302
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="grp_Light"]
+transform = Transform3D(0.450064, -0.741701, -0.497315, 0.243509, -0.433866, 0.867446, -0.859154, -0.511507, -0.0146564, -9.63939, 1.9833, -2.04967)
+light_color = Color(0, 0.870588, 0.913725, 1)
+light_energy = 6.783
+spot_range = 15.0032
+spot_attenuation = 0.784584
+spot_angle = 30.7662
+spot_angle_attenuation = 0.68302
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="grp_Light"]
+transform = Transform3D(-0.450064, 0.741701, 0.497315, 0.243509, -0.433866, 0.867446, 0.859154, 0.511507, 0.0146564, 9.75552, 1.9833, -0.791707)
+light_color = Color(0.85098, 0.780392, 0, 1)
+light_energy = 6.783
+spot_range = 15.0032
+spot_attenuation = 0.784584
+spot_angle = 30.7662
+spot_angle_attenuation = 0.68302
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="grp_Light"]
+transform = Transform3D(-0.584266, -0.726377, -0.361953, 0.449678, -0.661026, 0.600694, -0.675591, 0.188203, 0.712851, -1.37271, 4.77119, 2.62407)
+light_color = Color(0.894118, 0.34902, 1, 1)
+light_energy = 6.651
+spot_range = 15.0032
+spot_attenuation = 0.784584
+spot_angle = 44.6902
+spot_angle_attenuation = 0.68302
+
+[node name="grp_BlackBox" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="grp_BlackBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.22138, 1.01375, -9.14133)
+material_override = ExtResource("22_gluuu")
+size = Vector3(20.7183, 2.22922, 7.8877)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="grp_BlackBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0396595, 1.01375, 9.12766)
+material_override = ExtResource("22_gluuu")
+size = Vector3(18.6316, 2.22922, 7.8877)

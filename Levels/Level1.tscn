@@ -50,7 +50,7 @@ camera = NodePath("../Camera3D")
 [node name="Bathroom1" parent="." instance=ExtResource("6_u4irm")]
 
 [node name="Outside_1" parent="." instance=ExtResource("8_fqq6w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xaqwb")
@@ -58,6 +58,7 @@ camera_attributes = SubResource("CameraAttributesPhysical_ue00r")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.5, 0.433013, -0.75, 2.18557e-08, 0.866025, 0.5, 0.866025, 0.25, -0.433013, -1.88449, 6.01392, 0)
+visible = false
 shadow_enabled = true
 shadow_opacity = 0.5
 directional_shadow_mode = 0

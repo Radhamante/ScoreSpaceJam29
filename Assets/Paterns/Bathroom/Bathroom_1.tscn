@@ -53,11 +53,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -1)
 [node name="SpotLight3D" type="SpotLight3D" parent="grp_Lighting/grp_Room_1"]
 transform = Transform3D(0.862886, -0.301952, 0.405281, -0.0320212, 0.76763, 0.640093, -0.504383, -0.565305, 0.652708, -2.53193, 4.66416, 4.38313)
 light_color = Color(1, 0, 0, 1)
+light_energy = 1.145
 spot_range = 18.6025
 spot_angle = 36.8522
 
 [node name="SpotLight3D5" type="SpotLight3D" parent="grp_Lighting/grp_Room_1"]
-transform = Transform3D(0.00230615, 0.710421, -0.703773, -0.0323856, 0.703459, 0.709997, 0.999473, 0.0211548, 0.0246297, -2.34768, 1.76065, -0.0179441)
+transform = Transform3D(0.00230615, 0.710421, -0.703773, -0.0323856, 0.703459, 0.709998, 0.999473, 0.0211548, 0.0246297, -2.34768, 1.76065, -0.0179441)
 light_color = Color(1, 0, 0, 1)
 spot_range = 6.32288
 spot_angle = 35.5007
@@ -107,6 +108,7 @@ spot_angle_attenuation = 0.90125
 [node name="SpotLight3D2" type="SpotLight3D" parent="grp_Lighting/grp_Room_2"]
 transform = Transform3D(1, 0, 0, 0, 0.72721, 0.686415, 0, -0.686415, 0.72721, 2.60966, 5.52566, 3.44165)
 light_color = Color(0.952941, 0, 0.72549, 1)
+light_energy = 1.415
 spot_range = 11.9995
 spot_angle = 39.1558
 
@@ -164,6 +166,7 @@ spot_angle = 40.1586
 [node name="SpotLight3D3" type="SpotLight3D" parent="grp_Lighting/grp_Room_3"]
 transform = Transform3D(0.182442, -0.978608, -0.0950902, -0.719014, -0.198757, 0.665969, -0.670622, -0.0531294, -0.739894, 7.87635, 4.25361, -5.38421)
 light_color = Color(0, 0.823529, 0.882353, 1)
+light_energy = 1.905
 spot_range = 33.3048
 spot_attenuation = 1.07177
 spot_angle = 28.4477

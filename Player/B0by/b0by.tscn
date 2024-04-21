@@ -4488,7 +4488,7 @@ skin = SubResource("Skin_g7pld")
 surface_material_override/0 = ExtResource("1_6lhqv")
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(0.989725, -0.122967, -0.0729688, 0.100418, 0.234459, 0.966926, -0.101792, -0.964317, 0.244398, -6.6336, -2.23763, -138.679)
+transform = Transform3D(0.989725, -0.122967, -0.0729689, 0.100418, 0.23446, 0.966925, -0.101791, -0.964317, 0.244399, -6.6336, -2.2376, -138.679)
 bone_name = "mixamorig_Head"
 bone_idx = 5
 

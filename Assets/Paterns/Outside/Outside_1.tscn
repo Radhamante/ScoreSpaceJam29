@@ -1,22 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://y841h8lnc7fx"]
+[gd_scene load_steps=11 format=3 uid="uid://y841h8lnc7fx"]
 
 [ext_resource type="PackedScene" uid="uid://d1uue5ypbl6q7" path="res://PNJ/Woman_B/scene/woman_B.tscn" id="1_g7cav"]
 [ext_resource type="PackedScene" uid="uid://mpkr8w1c52vl" path="res://PNJ/Woman_A/scene/woman_A.tscn" id="2_0hoiu"]
 [ext_resource type="PackedScene" uid="uid://c1gaf8nob54qj" path="res://PNJ/Men_B/scene/men_B.tscn" id="3_jxnnb"]
 [ext_resource type="PackedScene" uid="uid://df7ha0eqrnqe7" path="res://PNJ/Men_A/scene/men_A.tscn" id="4_e54b2"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_t506w"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_a6mjv"]
+[ext_resource type="PackedScene" uid="uid://c5waoi26eylmd" path="res://Assets/Meshes/Street/Street_Structure/Street_Structure_Floor.tscn" id="5_abd48"]
+[ext_resource type="PackedScene" uid="uid://beenbww70on33" path="res://Assets/Meshes/Street/Street_Structure/Street_Structure_Road.tscn" id="6_eekis"]
+[ext_resource type="PackedScene" uid="uid://cind6tl1fjrut" path="res://Assets/Meshes/Street/Street_Structure/Street_Structure_Exit.tscn" id="7_3d752"]
+[ext_resource type="PackedScene" uid="uid://pw7btcdjpgyh" path="res://Assets/Meshes/Street/Street_Structure/Street_Structure_Wall.tscn" id="8_6l7t5"]
+[ext_resource type="PackedScene" uid="uid://dwb04qo4ebhs3" path="res://Assets/Meshes/Street/Street_Props/Street_Props_Lamp.tscn" id="9_7qj4x"]
+[ext_resource type="Material" uid="uid://bcsfcsau1b2jv" path="res://Assets/Material/M_BlackUnlit.tres" id="10_df344"]
 
 [node name="Outside_1" type="Node3D"]
 
 [node name="room" type="CSGCombiner3D" parent="."]
 use_collision = true
-
-[node name="Ground" type="CSGBox3D" parent="room"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-size = Vector3(19, 2, 10)
 
 [node name="Walls" type="CSGBox3D" parent="room"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
@@ -33,47 +31,328 @@ visible = false
 operation = 2
 size = Vector3(1, 3, 4)
 
-[node name="Woman_B2" parent="." instance=ExtResource("1_g7cav")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.222154, 0, -3.28904)
+[node name="grp_PNJ" type="Node3D" parent="."]
 
-[node name="Woman_A2" parent="." instance=ExtResource("2_0hoiu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64479, 0, -2.87427)
-
-[node name="Men_B2" parent="." instance=ExtResource("3_jxnnb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.58136, 0, -2.87729)
-
-[node name="Men_A" parent="." instance=ExtResource("4_e54b2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.26577, 0, -3.09891)
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.37419, 0, 0, 0, 1, -5.44225, 0, 2.8102)
-mesh = SubResource("BoxMesh_t506w")
-
-[node name="Rigidbody3D" type="RigidBody3D" parent="MeshInstance3D3"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/Rigidbody3D"]
-shape = SubResource("BoxShape3D_a6mjv")
-
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.37419, 0, 0, 0, 1, -5.89898, 0, -2.82011)
-mesh = SubResource("BoxMesh_t506w")
-
-[node name="Rigidbody3D" type="RigidBody3D" parent="MeshInstance3D4"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D4/Rigidbody3D"]
-shape = SubResource("BoxShape3D_a6mjv")
-
-[node name="Woman_B3" parent="." instance=ExtResource("1_g7cav")]
+[node name="Woman_B3" parent="grp_PNJ" instance=ExtResource("1_g7cav")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.963128, 0, -3.52665)
 
-[node name="Men_B3" parent="." instance=ExtResource("3_jxnnb")]
+[node name="Men_B3" parent="grp_PNJ" instance=ExtResource("3_jxnnb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.51416, 0, -2.39605)
 
-[node name="Men_A2" parent="." instance=ExtResource("4_e54b2")]
+[node name="Men_A2" parent="grp_PNJ" instance=ExtResource("4_e54b2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.62235, 0, -3.07121)
 
-[node name="Woman_A3" parent="." instance=ExtResource("2_0hoiu")]
+[node name="Woman_A3" parent="grp_PNJ" instance=ExtResource("2_0hoiu")]
 transform = Transform3D(0.999928, 0, 0.012025, 0, 1, 0, -0.012025, 0, 0.999928, -3.18602, 0, -2.57656)
 
-[node name="Men_B4" parent="." instance=ExtResource("3_jxnnb")]
+[node name="Men_B4" parent="grp_PNJ" instance=ExtResource("3_jxnnb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.44185, 0, -3.36717)
+
+[node name="Woman_B2" parent="grp_PNJ" instance=ExtResource("1_g7cav")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.222154, 0, -3.28904)
+
+[node name="Woman_A2" parent="grp_PNJ" instance=ExtResource("2_0hoiu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64479, 0, -2.87427)
+
+[node name="Men_B2" parent="grp_PNJ" instance=ExtResource("3_jxnnb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.58136, 0, -2.87729)
+
+[node name="Men_A" parent="grp_PNJ" instance=ExtResource("4_e54b2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.26577, 0, -3.09891)
+
+[node name="grp_Environement" type="Node3D" parent="."]
+
+[node name="grp_Ground" type="Node3D" parent="grp_Environement"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.103797, 0)
+
+[node name="StreetStructureFloor" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -5)
+
+[node name="StreetStructureFloor2" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -3)
+
+[node name="StreetStructureFloor3" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -1)
+
+[node name="StreetStructureFloor4" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 1)
+
+[node name="StreetStructureFloor5" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 3)
+
+[node name="StreetStructureFloor28" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(0.247772, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -5)
+
+[node name="StreetStructureFloor29" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(0.247772, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -3)
+
+[node name="StreetStructureFloor30" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(0.247772, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -1)
+
+[node name="StreetStructureFloor31" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(0.247772, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 1)
+
+[node name="StreetStructureFloor32" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(0.247772, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 3)
+
+[node name="StreetStructureFloor36" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(-0.247772, 0, 8.74228e-08, 0, 1, 0, -2.16609e-08, 0, -1, 9, 0, -1)
+
+[node name="StreetStructureFloor37" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(-0.247772, 0, 8.74228e-08, 0, 1, 0, -2.16609e-08, 0, -1, 9, 0, -3)
+
+[node name="StreetStructureFloor6" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5)
+
+[node name="StreetStructureFloor7" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -3)
+
+[node name="StreetStructureFloor8" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -1)
+
+[node name="StreetStructureFloor9" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 1)
+
+[node name="StreetStructureFloor10" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 3)
+
+[node name="StreetStructureFloor11" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -5)
+
+[node name="StreetStructureFloor12" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -3)
+
+[node name="StreetStructureFloor16" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -5)
+
+[node name="StreetStructureFloor17" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -3)
+
+[node name="StreetStructureFloor18" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -5)
+
+[node name="StreetStructureFloor19" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3)
+
+[node name="StreetStructureFloor20" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -5)
+
+[node name="StreetStructureFloor21" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
+
+[node name="StreetStructureFloor22" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -5)
+
+[node name="StreetStructureFloor23" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -3)
+
+[node name="StreetStructureFloor24" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -5)
+
+[node name="StreetStructureFloor25" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -3)
+
+[node name="StreetStructureFloor26" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -5)
+
+[node name="StreetStructureFloor27" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -3)
+
+[node name="StreetStructureFloor13" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1)
+
+[node name="StreetStructureFloor14" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1)
+
+[node name="StreetStructureFloor15" parent="grp_Environement/grp_Ground" instance=ExtResource("5_abd48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3)
+
+[node name="StreetStructureRoad" parent="grp_Environement/grp_Ground" instance=ExtResource("6_eekis")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="StreetStructureRoad2" parent="grp_Environement/grp_Ground" instance=ExtResource("6_eekis")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="StreetStructureRoad3" parent="grp_Environement/grp_Ground" instance=ExtResource("6_eekis")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
+
+[node name="StreetStructureRoad4" parent="grp_Environement/grp_Ground" instance=ExtResource("6_eekis")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+
+[node name="StreetStructureRoad5" parent="grp_Environement/grp_Ground" instance=ExtResource("6_eekis")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="StreetStructureRoad6" parent="grp_Environement/grp_Ground" instance=ExtResource("6_eekis")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
+
+[node name="StreetStructureRoad7" parent="grp_Environement/grp_Ground" instance=ExtResource("6_eekis")]
+transform = Transform3D(0.999965, 0, -0.00834258, 0, 1, 0, 0.00834258, 0, 0.999965, -0.99993, 0, 2.98331)
+
+[node name="StreetStructureRoad8" parent="grp_Environement/grp_Ground" instance=ExtResource("6_eekis")]
+transform = Transform3D(0.999965, 0, -0.00834258, 0, 1, 0, 0.00834258, 0, 0.999965, 1, 0, 3)
+
+[node name="StreetStructureRoad9" parent="grp_Environement/grp_Ground" instance=ExtResource("6_eekis")]
+transform = Transform3D(0.999965, 0, -0.00834258, 0, 1, 0, 0.00834258, 0, 0.999965, 2.99993, 0, 3.01669)
+
+[node name="StreetStructureRoad10" parent="grp_Environement/grp_Ground" instance=ExtResource("6_eekis")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1)
+
+[node name="StreetStructureRoad11" parent="grp_Environement/grp_Ground" instance=ExtResource("6_eekis")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -1)
+
+[node name="StreetStructureRoad12" parent="grp_Environement/grp_Ground" instance=ExtResource("6_eekis")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -1)
+
+[node name="StreetStructureRoad13" parent="grp_Environement/grp_Ground" instance=ExtResource("6_eekis")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 1)
+
+[node name="StreetStructureRoad14" parent="grp_Environement/grp_Ground" instance=ExtResource("6_eekis")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 1)
+
+[node name="StreetStructureRoad15" parent="grp_Environement/grp_Ground" instance=ExtResource("6_eekis")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 1)
+
+[node name="StreetStructureRoad16" parent="grp_Environement/grp_Ground" instance=ExtResource("6_eekis")]
+transform = Transform3D(0.999965, 0, -0.00834258, 0, 1, 0, 0.00834258, 0, 0.999965, 5.00007, 0, 2.98331)
+
+[node name="StreetStructureRoad17" parent="grp_Environement/grp_Ground" instance=ExtResource("6_eekis")]
+transform = Transform3D(0.999965, 0, -0.00834258, 0, 1, 0, 0.00834258, 0, 0.999965, 7, 0, 3)
+
+[node name="StreetStructureRoad18" parent="grp_Environement/grp_Ground" instance=ExtResource("6_eekis")]
+transform = Transform3D(0.999965, 0, -0.00834258, 0, 1, 0, 0.00834258, 0, 0.999965, 8.99993, 0, 3.01669)
+
+[node name="StreetStructureRoad19" parent="grp_Environement/grp_Ground" instance=ExtResource("6_eekis")]
+transform = Transform3D(-0.251842, 0, -8.74228e-08, 0, 1, 0, 2.20168e-08, 0, -1, 8.99997, 0, 5.01112)
+
+[node name="StreetStructureRoad20" parent="grp_Environement/grp_Ground" instance=ExtResource("6_eekis")]
+transform = Transform3D(-0.251842, 0, -8.74228e-08, 0, 1, 0, 2.20168e-08, 0, -1, 8.99997, 0, 3.01112)
+
+[node name="StreetStructureRoad21" parent="grp_Environement/grp_Ground" instance=ExtResource("6_eekis")]
+transform = Transform3D(-0.25186, 0, 0.00839456, 0, 1, 0, -0.00210121, 0, -1.00621, 8.99999, 0, 0.994438)
+
+[node name="grp_Wall" type="Node3D" parent="grp_Environement"]
+
+[node name="StreetStructureExit" parent="grp_Environement/grp_Wall" instance=ExtResource("7_3d752")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.1563, 0, -3)
+
+[node name="StreetStructureWall" parent="grp_Environement/grp_Wall" instance=ExtResource("8_6l7t5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.1563, 0, -5)
+
+[node name="StreetStructureWall13" parent="grp_Environement/grp_Wall" instance=ExtResource("8_6l7t5")]
+transform = Transform3D(0.549635, 0, -0.835405, 0, 1, 0, 0.835405, 0, 0.549635, -7.60241, -0.0105784, -5.85941)
+
+[node name="StreetStructureWall4" parent="grp_Environement/grp_Wall" instance=ExtResource("8_6l7t5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7, 0, -5)
+
+[node name="StreetStructureWall5" parent="grp_Environement/grp_Wall" instance=ExtResource("8_6l7t5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5, 0, -5)
+
+[node name="StreetStructureWall6" parent="grp_Environement/grp_Wall" instance=ExtResource("8_6l7t5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 0, -5)
+
+[node name="StreetStructureWall7" parent="grp_Environement/grp_Wall" instance=ExtResource("8_6l7t5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, 0, -5)
+
+[node name="StreetStructureWall8" parent="grp_Environement/grp_Wall" instance=ExtResource("8_6l7t5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -5)
+
+[node name="StreetStructureWall9" parent="grp_Environement/grp_Wall" instance=ExtResource("8_6l7t5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 0, -5)
+
+[node name="StreetStructureWall10" parent="grp_Environement/grp_Wall" instance=ExtResource("8_6l7t5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 0, -5)
+
+[node name="StreetStructureWall11" parent="grp_Environement/grp_Wall" instance=ExtResource("8_6l7t5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7, 0, -5)
+
+[node name="StreetStructureWall12" parent="grp_Environement/grp_Wall" instance=ExtResource("8_6l7t5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9, 0, -5)
+
+[node name="StreetStructureWall2" parent="grp_Environement/grp_Wall" instance=ExtResource("8_6l7t5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.1563, 0, 1)
+
+[node name="StreetStructureWall3" parent="grp_Environement/grp_Wall" instance=ExtResource("8_6l7t5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.1563, 0, 3)
+
+[node name="grp_StreetLamp" type="Node3D" parent="grp_Environement"]
+
+[node name="StreetPropsLamp" parent="grp_Environement/grp_StreetLamp" instance=ExtResource("9_7qj4x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 1)
+
+[node name="StreetPropsLamp2" parent="grp_Environement/grp_StreetLamp" instance=ExtResource("9_7qj4x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -3)
+
+[node name="StreetPropsLamp3" parent="grp_Environement/grp_StreetLamp" instance=ExtResource("9_7qj4x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -3)
+
+[node name="StreetPropsLamp4" parent="grp_Environement/grp_StreetLamp" instance=ExtResource("9_7qj4x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3)
+
+[node name="StreetPropsLamp5" parent="grp_Environement/grp_StreetLamp" instance=ExtResource("9_7qj4x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -3)
+
+[node name="grp_BlackBox" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="grp_BlackBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.143005, 1.02676, -7.4281)
+material_override = ExtResource("10_df344")
+size = Vector3(19.3241, 2.17676, 4.34155)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="grp_BlackBox"]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -8.61927, 1.02676, -5.74514)
+material_override = ExtResource("10_df344")
+size = Vector3(2.05222, 2.17676, 0.587769)
+
+[node name="grp_Light" type="Node3D" parent="."]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="grp_Light"]
+transform = Transform3D(-0.319361, -0.833081, 0.451646, 0.553271, 0.223021, 0.802591, -0.76935, 0.506199, 0.389696, 1.41652, 8.87621, 1.0443)
+light_color = Color(0.682353, 0.619608, 1, 1)
+light_energy = 7.716
+spot_range = 22.1955
+spot_angle = 42.9839
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="grp_Light"]
+transform = Transform3D(-0.200179, -0.979288, -0.0303998, -0.0399948, -0.0228344, 0.998939, -0.978943, 0.201183, -0.0345955, -6.99203, 4.51568, 1.01104)
+light_color = Color(0.811765, 0.670588, 0, 1)
+light_energy = 8.904
+spot_range = 22.1955
+spot_attenuation = 1.07177
+spot_angle = 25.8806
+spot_angle_attenuation = 2.92817
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="grp_Light"]
+transform = Transform3D(-0.200179, -0.979288, -0.0303998, -0.0399948, -0.0228344, 0.998939, -0.978943, 0.201183, -0.0345955, -6.95896, 4.51568, -2.98955)
+light_color = Color(0.811765, 0.670588, 0, 1)
+light_energy = 8.904
+spot_range = 22.1955
+spot_attenuation = 1.07177
+spot_angle = 25.8806
+spot_angle_attenuation = 2.92817
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="grp_Light"]
+transform = Transform3D(-0.119374, -0.701659, -0.702442, -0.165593, -0.68352, 0.7109, -0.978943, 0.201183, -0.0345954, -10.2455, 1.43031, -1.0803)
+light_color = Color(0.811765, 0, 0, 1)
+light_energy = 9.214
+spot_range = 6.84317
+spot_attenuation = 1.07177
+spot_angle = 40.0275
+spot_angle_attenuation = 2.92817
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="grp_Light"]
+transform = Transform3D(-0.200179, -0.979288, -0.0303998, -0.0399948, -0.0228344, 0.998939, -0.978943, 0.201183, -0.0345955, -3.06489, 4.51568, -3.061)
+light_color = Color(0.811765, 0.670588, 0, 1)
+light_energy = 8.904
+spot_range = 22.1955
+spot_attenuation = 1.07177
+spot_angle = 25.8806
+spot_angle_attenuation = 2.92817
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="grp_Light"]
+transform = Transform3D(-0.200179, -0.979288, -0.0303998, -0.0399948, -0.0228344, 0.998939, -0.978943, 0.201183, -0.0345955, 1.0614, 4.51568, -3.00741)
+light_color = Color(0.811765, 0.670588, 0, 1)
+light_energy = 8.904
+spot_range = 22.1955
+spot_attenuation = 1.07177
+spot_angle = 25.8806
+spot_angle_attenuation = 2.92817
