@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dr1idgwpplb2g"
+path="res://.godot/imported/Club_Props_Bottle_D.obj-dd44b0bcabf051c8ce5dfaaf519b7940.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Club_Props_Bottle_D.obj-dd44b0bcabf051c8ce5dfaaf519b7940.mesh"]
+
+source_file="res://Assets/Meshes/Club/Club_Props/Bottle/OBJ/Club_Props_Bottle_D.obj"
+dest_files=["res://.godot/imported/Club_Props_Bottle_D.obj-dd44b0bcabf051c8ce5dfaaf519b7940.mesh", "res://.godot/imported/Club_Props_Bottle_D.obj-dd44b0bcabf051c8ce5dfaaf519b7940.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

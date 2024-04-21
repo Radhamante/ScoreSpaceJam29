@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr1cre88poeci"]
+
+[ext_resource type="Material" uid="uid://coryajqlywk10" path="res://Assets/Material/Club/Club_Props/M_ClubProps.tres" id="1_kfcv6"]
+[ext_resource type="ArrayMesh" uid="uid://5c5ye0cxfq8d" path="res://Assets/Meshes/Club/Club_Props/OBJ/Club_Props_Tireuse.obj" id="2_527jg"]
+
+[node name="ClubPropsTireuse" type="Node3D"]
+
+[node name="ClubPropsTireuse" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_kfcv6")
+mesh = ExtResource("2_527jg")

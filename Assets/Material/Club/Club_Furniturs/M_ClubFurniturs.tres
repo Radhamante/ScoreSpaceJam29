@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://du5b3koffwdf2"]
+
+[ext_resource type="Texture2D" uid="uid://bmbqtn4qwnxuj" path="res://Assets/Material/Club/Club_Furniturs/T_ClubFurniturs_D.png" id="1_woa6v"]
+[ext_resource type="Texture2D" uid="uid://dqa45d0aaxqds" path="res://Assets/Material/Club/Club_Furniturs/T_ClubFurniturs_N.png" id="2_hmd2q"]
+
+[resource]
+albedo_texture = ExtResource("1_woa6v")
+normal_enabled = true
+normal_texture = ExtResource("2_hmd2q")

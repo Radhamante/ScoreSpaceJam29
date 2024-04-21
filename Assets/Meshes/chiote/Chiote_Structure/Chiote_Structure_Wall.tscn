@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://ha6blkjp454"]
+
+[ext_resource type="Material" uid="uid://j1otbjmoin67" path="res://Assets/Material/Chiote/Chiote_Structure/M_ChioteStructure.tres" id="1_6wi71"]
+[ext_resource type="ArrayMesh" uid="uid://dfy4m7fjc2w8j" path="res://Assets/Meshes/chiote/Chiote_Structure/OBJ/Chiote_Structure_Wall.obj" id="2_s0qqa"]
+[ext_resource type="Material" uid="uid://bcsfcsau1b2jv" path="res://Assets/Material/M_BlackUnlit.tres" id="3_3504o"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_3f1fu"]
+data = PackedVector3Array(0, 0.2102, 2, -0.0755, 0.2102, 2, 0, 0.2102, 0, 0, 0.2102, 0, -0.0755, 0.2102, 2, -0.0755, 0.2102, 0, -0.0755, 0.2102, 0, -0.0755, 0.2102, 2, -0.0755, 2.1, 0, -0.0755, 2.1, 0, -0.0755, 0.2102, 2, -0.0755, 2.1, 2, 0, 0, 0, 0, 0, 2, 0, 0.2102, 0, 0, 0.2102, 0, 0, 0, 2, 0, 0.2102, 2, -0.2755, 2.1, 0, -0.0755, 2.1, 0, -0.2755, 2.1, 2, -0.2755, 2.1, 2, -0.0755, 2.1, 0, -0.0755, 2.1, 2, -0.1763, 2.1056, 2, -0.2755, 2.1056, 2, -0.1763, 2.1056, 0, -0.1763, 2.1056, 0, -0.2755, 2.1056, 2, -0.2755, 2.1056, 0)
+
+[node name="ChioteStructureWall" type="StaticBody3D"]
+
+[node name="ChioteStructureWall" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_s0qqa")
+surface_material_override/0 = ExtResource("1_6wi71")
+surface_material_override/1 = ExtResource("3_3504o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_3f1fu")

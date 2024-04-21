@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://j1otbjmoin67"]
+
+[ext_resource type="Texture2D" uid="uid://b7l2g4li6xpit" path="res://Assets/Material/Chiote/Chiote_Structure/T_ChioteStructure_D.png" id="1_t6rmy"]
+[ext_resource type="Texture2D" uid="uid://cxvuxwt4oe70r" path="res://Assets/Material/Chiote/Chiote_Structure/T_ChioteStructure_N.png" id="2_1c673"]
+
+[resource]
+albedo_texture = ExtResource("1_t6rmy")
+normal_enabled = true
+normal_texture = ExtResource("2_1c673")

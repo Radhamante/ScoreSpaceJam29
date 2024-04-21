@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b3h1r6dlfbln"
+path="res://.godot/imported/Chiote_Structure_WallCorner.obj-2265b603b0ab0f7172f2d9cba6c51603.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Chiote_Structure_WallCorner.obj-2265b603b0ab0f7172f2d9cba6c51603.mesh"]
+
+source_file="res://Assets/Meshes/chiote/Chiote_Structure/OBJ/Chiote_Structure_WallCorner.obj"
+dest_files=["res://.godot/imported/Chiote_Structure_WallCorner.obj-2265b603b0ab0f7172f2d9cba6c51603.mesh", "res://.godot/imported/Chiote_Structure_WallCorner.obj-2265b603b0ab0f7172f2d9cba6c51603.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

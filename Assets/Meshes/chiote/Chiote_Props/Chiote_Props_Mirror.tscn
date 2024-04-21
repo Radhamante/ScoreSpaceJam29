@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpemrlblkvehp"]
+
+[ext_resource type="Material" uid="uid://cunjqqstfemkm" path="res://Assets/Material/Chiote/Chiote_Props/M_ChioteProps.tres" id="1_x4l3w"]
+[ext_resource type="ArrayMesh" uid="uid://cxr0o7hest1w2" path="res://Assets/Meshes/chiote/Chiote_Props/OBJ/Chiote_Props_Mirror.obj" id="2_sl66y"]
+
+[node name="ChiotePropsMirror" type="Node3D"]
+
+[node name="ChiotePropsMirror" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_sl66y")
+surface_material_override/0 = ExtResource("1_x4l3w")
