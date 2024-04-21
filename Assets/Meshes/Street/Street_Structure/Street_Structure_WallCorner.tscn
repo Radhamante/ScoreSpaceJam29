@@ -1,18 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://c51p80fvvrea3"]
+[gd_scene load_steps=3 format=3 uid="uid://c51p80fvvrea3"]
 
-[ext_resource type="ArrayMesh" uid="uid://b1fjjnu6i7uyy" path="res://Assets/Meshes/Street/Street_Structure/OLD/Street_Structure_WallCorner.obj" id="1_fpl3p"]
-[ext_resource type="Material" uid="uid://bkjurxr06tke7" path="res://Assets/Material/Street/M_StreetAssets.tres" id="2_gucq0"]
-[ext_resource type="Material" uid="uid://bcsfcsau1b2jv" path="res://Assets/Material/M_BlackUnlit.tres" id="3_vv8ex"]
+[ext_resource type="ArrayMesh" uid="uid://cbkj2afmgvkje" path="res://Assets/Meshes/Street/Street_Structure/TRES/Street_Structure_WallCorner.tres" id="1_8gtwv"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_50uw2"]
 data = PackedVector3Array(-0.0755, 0.2102, 0, -0.0755, 0.2102, 0.2, -0.0755, 2.1, 0, -0.0755, 2.1, 0, -0.0755, 0.2102, 0.2, -0.0755, 2.1, 0.2, 0, 0.2102, 0.2755, -0.0755, 0.2102, 0.2, 0, 0.2102, 0, 0, 0.2102, 0, -0.0755, 0.2102, 0.2, -0.0755, 0.2102, 0, 0, 0, 0, 0, 0, 0.2755, 0, 0.2102, 0, 0, 0.2102, 0, 0, 0, 0.2755, 0, 0.2102, 0.2755, -0.2755, 0.2102, 0.2755, -0.2755, 0.2102, 0.2, 0, 0.2102, 0.2755, 0, 0.2102, 0.2755, -0.2755, 0.2102, 0.2, -0.0755, 0.2102, 0.2, 0, 0, 0.2755, -0.2755, 0, 0.2755, 0, 0.2102, 0.2755, 0, 0.2102, 0.2755, -0.2755, 0, 0.2755, -0.2755, 0.2102, 0.2755, -0.0755, 0.2102, 0.2, -0.2755, 0.2102, 0.2, -0.0755, 2.1, 0.2, -0.0755, 2.1, 0.2, -0.2755, 0.2102, 0.2, -0.2755, 2.1, 0.2, -0.2755, 2.1, 0, -0.0755, 2.1, 0, -0.2755, 2.1, 0.2, -0.2755, 2.1, 0.2, -0.0755, 2.1, 0, -0.0755, 2.1, 0.2, -0.1763, 2.1056, 0.0992, -0.2755, 2.1056, 0.0992, -0.1763, 2.1056, 0, -0.1763, 2.1056, 0, -0.2755, 2.1056, 0.0992, -0.2755, 2.1056, 0)
 
 [node name="StreetStructureWallCorner" type="StaticBody3D"]
 
-[node name="StreetStructureWallCorner" type="MeshInstance3D" parent="."]
-mesh = ExtResource("1_fpl3p")
-surface_material_override/0 = ExtResource("2_gucq0")
-surface_material_override/1 = ExtResource("3_vv8ex")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("ConcavePolygonShape3D_50uw2")
+
+[node name="StreetStructureWallCorner" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0274, -0.0124874, -0.00473642)
+mesh = ExtResource("1_8gtwv")
