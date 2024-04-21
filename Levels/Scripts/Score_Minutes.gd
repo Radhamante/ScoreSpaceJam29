@@ -1,0 +1,18 @@
+extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	var score_minutes = ScoreManager.min
+
+	if score_minutes < 10:
+		text = ("0%s." %str(score_minutes))
+		print("inf a 10")
+	elif score_minutes >= 10:
+		text = str(score_minutes)
+		print("sup a 10")
