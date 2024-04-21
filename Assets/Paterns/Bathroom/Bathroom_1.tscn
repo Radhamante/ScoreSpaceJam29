@@ -32,7 +32,7 @@ size = Vector3(19, 4, 10)
 operation = 2
 size = Vector3(18, 4, 9)
 
-[node name="grp_PNJ" type="Node" parent="."]
+[node name="grp_PNJ" type="Node3D" parent="."]
 
 [node name="Woman_B2" parent="grp_PNJ" instance=ExtResource("1_r48w7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.80334, 0, 1.9185)
@@ -46,9 +46,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -2)
 [node name="Men_A" parent="grp_PNJ" instance=ExtResource("4_ssnn7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -1)
 
-[node name="grp_Lighting" type="Node" parent="."]
+[node name="grp_Lighting" type="Node3D" parent="."]
 
-[node name="grp_Room_1" type="Node" parent="grp_Lighting"]
+[node name="grp_Room_1" type="Node3D" parent="grp_Lighting"]
 
 [node name="SpotLight3D" type="SpotLight3D" parent="grp_Lighting/grp_Room_1"]
 transform = Transform3D(0.862886, -0.301952, 0.405281, -0.0320212, 0.76763, 0.640093, -0.504383, -0.565305, 0.652708, -2.53193, 4.66416, 4.38313)
@@ -102,7 +102,7 @@ spot_attenuation = 1.68179
 spot_angle = 14.1698
 spot_angle_attenuation = 0.90125
 
-[node name="grp_Room_2" type="Node" parent="grp_Lighting"]
+[node name="grp_Room_2" type="Node3D" parent="grp_Lighting"]
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="grp_Lighting/grp_Room_2"]
 transform = Transform3D(1, 0, 0, 0, 0.72721, 0.686415, 0, -0.686415, 0.72721, 2.60966, 5.52566, 3.44165)
@@ -159,7 +159,7 @@ light_energy = 0.605
 spot_range = 6.32288
 spot_angle = 40.1586
 
-[node name="grp_Room_3" type="Node" parent="grp_Lighting"]
+[node name="grp_Room_3" type="Node3D" parent="grp_Lighting"]
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="grp_Lighting/grp_Room_3"]
 transform = Transform3D(0.182442, -0.978608, -0.0950902, -0.719014, -0.198757, 0.665969, -0.670622, -0.0531294, -0.739894, 7.87635, 4.25361, -5.38421)
@@ -177,15 +177,15 @@ spot_range = 6.32288
 spot_angle = 24.8914
 
 [node name="SpotLight3D6" type="SpotLight3D" parent="grp_Lighting/grp_Room_3"]
-transform = Transform3D(0.00663992, -0.875741, 0.482735, -0.0317814, 0.482317, 0.87542, -0.999473, -0.0211547, -0.0246298, 10.0721, 1.76065, -2.18152)
+transform = Transform3D(0.00663992, -0.875741, 0.482735, -0.0317814, 0.482317, 0.87542, -0.999473, -0.0211547, -0.0246297, 8.92207, 1.76065, -2.18152)
 light_color = Color(1, 0, 0, 1)
 light_energy = 3.305
 spot_range = 6.32288
 spot_angle = 35.5007
 
-[node name="grp_Environement" type="Node" parent="."]
+[node name="grp_Environement" type="Node3D" parent="."]
 
-[node name="grp_Ground" type="Node" parent="grp_Environement"]
+[node name="grp_Ground" type="Node3D" parent="grp_Environement"]
 
 [node name="ChioteStructureFloor" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, -0.1, -5)
@@ -314,7 +314,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, -0.
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, -0.1, -3)
 
 [node name="ChioteStructureFloor46" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9, -0.1, -3)
+transform = Transform3D(-4.37114e-08, 0, 0.137703, 0, 1, 0, -1, 0, -6.0192e-09, 9, -0.1, -3)
 
 [node name="ChioteStructureFloor43" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, -0.1, -1)
@@ -325,7 +325,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, -0.
 [node name="ChioteStructureFloor45" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, -0.1, 3)
 
-[node name="grp_Walls" type="Node" parent="grp_Environement"]
+[node name="grp_Walls" type="Node3D" parent="grp_Environement"]
 
 [node name="ChioteStructureWall" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 9, 0, 2)
@@ -450,12 +450,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48, 0, -2)
 [node name="ChioteStructureExit4" parent="grp_Environement/grp_Walls" instance=ExtResource("8_as80r")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.88, 0, 2)
 
-[node name="grp_Exit" type="Node" parent="grp_Environement/grp_Walls"]
+[node name="grp_Exit" type="Node3D" parent="grp_Environement/grp_Walls"]
 
 [node name="ChioteStructureExit" parent="grp_Environement/grp_Walls/grp_Exit" instance=ExtResource("8_as80r")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 9.075, 0, 0)
 
-[node name="grp_Cabinets" type="Node" parent="grp_Environement"]
+[node name="grp_Cabinets" type="Node3D" parent="grp_Environement"]
 
 [node name="grp_Cabine_00" type="Node3D" parent="grp_Environement/grp_Cabinets"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, 0.28)
@@ -567,7 +567,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.2, 0
 [node name="ChiotePropsChiote" parent="grp_Environement/grp_Cabinets/grp_Cabine_12" instance=ExtResource("12_axfaw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20555, 0, 0)
 
-[node name="grp_Evier" type="Node" parent="grp_Environement"]
+[node name="grp_Evier" type="Node3D" parent="grp_Environement"]
 
 [node name="Evier_00" type="Node3D" parent="grp_Environement/grp_Evier"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.475, 0.56, -2.082)
@@ -650,7 +650,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.447639, 0)
 [node name="ChiotePropsMirror" parent="grp_Environement/grp_Evier/Evier_08" instance=ExtResource("14_0b8ff")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.0141177)
 
-[node name="grp_BlackBox" type="Node" parent="grp_Environement"]
+[node name="grp_BlackBox" type="Node3D" parent="grp_Environement"]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6285, 1.07418, -2.59547)
@@ -685,11 +685,6 @@ material = ExtResource("15_qqshh")
 [node name="CSGBox3D6" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72649, 1.07418, 6.56285)
 size = Vector3(11, 2.10913, 8.76177)
-material = ExtResource("15_qqshh")
-
-[node name="CSGBox3D15" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2649, -5.32554, -1.19322)
-size = Vector3(2.15137, 14.9086, 23.7798)
 material = ExtResource("15_qqshh")
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
@@ -738,7 +733,7 @@ visible = false
 size = Vector3(20.4367, 2.10913, 3.24803)
 material = ExtResource("15_qqshh")
 
-[node name="grp_Props" type="Node" parent="grp_Environement"]
+[node name="grp_Props" type="Node3D" parent="grp_Environement"]
 
 [node name="ClubPropsBottleB" type="MeshInstance3D" parent="grp_Environement/grp_Props"]
 transform = Transform3D(1.02678, -1.50452, 6.57647e-08, 0, -7.96202e-08, -1.8215, 1.50452, 1.02678, -4.48818e-08, -2.43976, 0.0323585, 0.785572)
