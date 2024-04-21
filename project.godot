@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 LootLocker="*res://Global/LootLocker.gd"
+ScoreManager="*res://Global/Score_manager.gd"
 
 [input]
 
