@@ -18,6 +18,7 @@ grow_vertical = 2
 script = ExtResource("1_amaem")
 
 [node name="Panel" type="Panel" parent="."]
+layout_mode = 0
 offset_right = 1156.0
 offset_bottom = 618.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_y658a")
