@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bm7eb0uke5o5v"
+path="res://.godot/imported/candy make fly.mp3-00687d538cf13515c6530e77e2df59e3.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/candy make fly.mp3"
+dest_files=["res://.godot/imported/candy make fly.mp3-00687d538cf13515c6530e77e2df59e3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

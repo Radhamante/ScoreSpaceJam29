@@ -1,0 +1,79 @@
+[gd_scene load_steps=26 format=3 uid="uid://cgxrtgjl65bj8"]
+
+[ext_resource type="AudioStream" uid="uid://d2s5osjhq2332" path="res://Assets/Sounds/aou.mp3" id="1_lccc7"]
+[ext_resource type="AudioStream" uid="uid://dru72s6qyhpnq" path="res://Assets/Sounds/are we here to club.mp3" id="2_2x81e"]
+[ext_resource type="AudioStream" uid="uid://ctrfpxbmu7ohw" path="res://Assets/Sounds/hi mom.mp3" id="3_56nis"]
+[ext_resource type="AudioStream" uid="uid://bc1gij6h3hfs6" path="res://Assets/Sounds/jolie coca.mp3" id="4_ypymn"]
+[ext_resource type="AudioStream" uid="uid://bofh4aftcun46" path="res://Assets/Sounds/mom.mp3" id="5_mtosq"]
+[ext_resource type="AudioStream" uid="uid://d1xbworsw33mi" path="res://Assets/Sounds/not what you think.mp3" id="6_d2cad"]
+[ext_resource type="AudioStream" uid="uid://cemdhad7y34pl" path="res://Assets/Sounds/o ye bebeb.mp3" id="7_25c4s"]
+[ext_resource type="AudioStream" uid="uid://cn7or0rompp3a" path="res://Assets/Sounds/oh boy.mp3" id="8_7d7qx"]
+[ext_resource type="AudioStream" uid="uid://bepbdrkmfdchm" path="res://Assets/Sounds/pantie.mp3" id="9_kmss2"]
+[ext_resource type="AudioStream" uid="uid://cda3r12oq5e2k" path="res://Assets/Sounds/pink candy.mp3" id="10_c4l87"]
+[ext_resource type="AudioStream" uid="uid://doe22p47qp4xr" path="res://Assets/Sounds/slip.mp3" id="11_65vey"]
+[ext_resource type="AudioStream" uid="uid://g5fa2egnqudd" path="res://Assets/Sounds/timoti.mp3" id="12_uijhh"]
+[ext_resource type="AudioStream" uid="uid://bm7eb0uke5o5v" path="res://Assets/Sounds/candy make fly.mp3" id="13_1ran1"]
+[ext_resource type="AudioStream" uid="uid://b3axpljrnp338" path="res://Assets/Sounds/touch nose.mp3" id="14_g12sx"]
+[ext_resource type="AudioStream" uid="uid://b7rt11le36c6r" path="res://Assets/Sounds/turtle.mp3" id="15_xic4y"]
+[ext_resource type="AudioStream" uid="uid://d30vb1wn1saem" path="res://Assets/Sounds/urf.mp3" id="16_2jy48"]
+[ext_resource type="AudioStream" uid="uid://cahkggn8jayr8" path="res://Assets/Sounds/candy make me fly.mp3" id="17_4ximi"]
+[ext_resource type="AudioStream" uid="uid://bjqukdscu2d5w" path="res://Assets/Sounds/dance spaheti.mp3" id="18_tujy7"]
+[ext_resource type="AudioStream" uid="uid://cjp8asujpqywy" path="res://Assets/Sounds/drunk grenadine.mp3" id="19_16hpx"]
+[ext_resource type="AudioStream" uid="uid://4wat7d0donr2" path="res://Assets/Sounds/erk.mp3" id="20_5hkqx"]
+[ext_resource type="AudioStream" uid="uid://b4hdjujowqjlj" path="res://Assets/Sounds/gné.mp3" id="21_7nqod"]
+[ext_resource type="AudioStream" uid="uid://dmsfs21n2asja" path="res://Assets/Sounds/gnéé.mp3" id="22_ecu8r"]
+[ext_resource type="AudioStream" uid="uid://44nyg0a65cxg" path="res://Assets/Sounds/gooving.mp3" id="23_ati80"]
+[ext_resource type="Script" path="res://PNJ/Scripts/PNJ_sounds.gd" id="24_14f17"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_07pre"]
+streams_count = 23
+stream_0/stream = ExtResource("1_lccc7")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_2x81e")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("13_1ran1")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("17_4ximi")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("18_tujy7")
+stream_4/weight = 1.0
+stream_5/stream = ExtResource("19_16hpx")
+stream_5/weight = 1.0
+stream_6/stream = ExtResource("20_5hkqx")
+stream_6/weight = 1.0
+stream_7/stream = ExtResource("21_7nqod")
+stream_7/weight = 1.0
+stream_8/stream = ExtResource("22_ecu8r")
+stream_8/weight = 1.0
+stream_9/stream = ExtResource("23_ati80")
+stream_9/weight = 1.0
+stream_10/stream = ExtResource("3_56nis")
+stream_10/weight = 1.0
+stream_11/stream = ExtResource("4_ypymn")
+stream_11/weight = 1.0
+stream_12/stream = ExtResource("5_mtosq")
+stream_12/weight = 1.0
+stream_13/stream = ExtResource("6_d2cad")
+stream_13/weight = 1.0
+stream_14/stream = ExtResource("7_25c4s")
+stream_14/weight = 1.0
+stream_15/stream = ExtResource("8_7d7qx")
+stream_15/weight = 1.0
+stream_16/stream = ExtResource("9_kmss2")
+stream_16/weight = 1.0
+stream_17/stream = ExtResource("10_c4l87")
+stream_17/weight = 1.0
+stream_18/stream = ExtResource("11_65vey")
+stream_18/weight = 1.0
+stream_19/stream = ExtResource("12_uijhh")
+stream_19/weight = 1.0
+stream_20/stream = ExtResource("14_g12sx")
+stream_20/weight = 1.0
+stream_21/stream = ExtResource("15_xic4y")
+stream_21/weight = 1.0
+stream_22/stream = ExtResource("16_2jy48")
+stream_22/weight = 1.0
+
+[node name="PnjSounds" type="AudioStreamPlayer"]
+stream = SubResource("AudioStreamRandomizer_07pre")
+script = ExtResource("24_14f17")

@@ -8,6 +8,29 @@ var leaderboard_key = "ScoreSpaceJam"
 var session_token = ""
 var score = 0
 
+@onready var leaderboard = VBoxContainer.new()
+
+func convert_time(time_in_seconds: float) -> String:
+	var minutes = int(time_in_seconds / 60)
+	var seconds = int(time_in_seconds) % 60
+	var milliseconds = int((time_in_seconds - int(time_in_seconds)) * 1000)
+	
+	return str(minutes).pad_zeros(2) + ":" + str(seconds).pad_zeros(2) + ":" + str(milliseconds).pad_zeros(3)
+
+
+func _create_entry(name: String, score: float):
+	var one_entry = HBoxContainer.new()
+	var name_label = Label.new()
+	var score_label = Label.new()
+	
+	one_entry.add_child(name_label)
+	one_entry.add_child(score_label)
+	
+	name_label.text = name
+	score_label.text = convert_time(score)
+	
+	leaderboard.add_child(one_entry)
+
 # HTTP Request node can only handle one call per node
 var auth_http = HTTPRequest.new()
 var leaderboard_http = HTTPRequest.new()
@@ -72,38 +95,38 @@ func _on_authentication_request_completed(result, response_code, headers, body):
 	
 	# Clear node
 	auth_http.queue_free()
-	# Get leaderboards
-	_get_leaderboards()
 
 
-func _get_leaderboards():
-	print("Getting leaderboards")
+func get_leaderboards():
 	var url = "https://api.lootlocker.io/game/leaderboards/"+leaderboard_key+"/list?count=10"
 	var headers = ["Content-Type: application/json", "x-session-token:"+session_token]
 	
 	# Create a request node for getting the highscore
 	leaderboard_http = HTTPRequest.new()
 	add_child(leaderboard_http)
-	leaderboard_http.request_completed.connect(_on_leaderboard_request_completed)
+	leaderboard_http.request(url, headers, HTTPClient.METHOD_GET, "")
+	var a = await leaderboard_http.request_completed
+	_on_leaderboard_request_completed(a[3])
+	 
+	return leaderboard
+	#leaderboard_http.request_completed.connect(_on_leaderboard_request_completed)
 	
 	# Send request
-	leaderboard_http.request(url, headers, HTTPClient.METHOD_GET, "")
 
-func _on_leaderboard_request_completed(result, response_code, headers, body):
+func _on_leaderboard_request_completed( body):
 	var json = JSON.new()
 	json.parse(body.get_string_from_utf8())
 	
-	# Print data
-	print(json.get_data())
-	
 	# Formatting as a leaderboard
 	var leaderboardFormatted = ""
+	
+	var children = leaderboard.get_children()
+	for c in children:
+		leaderboard.remove_child(c)
+		c.queue_free()
+		
 	for n in json.get_data().items.size():
-		leaderboardFormatted += str(json.get_data().items[n].rank)+str(". ")
-		leaderboardFormatted += str(json.get_data().items[n].player.id)+str(" - ")
-		leaderboardFormatted += str(json.get_data().items[n].score)+str("\n")
-	# Print the formatted leaderboard to the console
-	print(leaderboardFormatted)
+		_create_entry(json.get_data().items[n].metadata, json.get_data().items[n].score)
 	
 	# Clear node
 	leaderboard_http.queue_free()
