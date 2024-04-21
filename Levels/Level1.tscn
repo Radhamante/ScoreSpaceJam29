@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dnwp340g2g511"]
+[gd_scene load_steps=12 format=3 uid="uid://dnwp340g2g511"]
 
 [ext_resource type="Script" path="res://Player/B0by/AudioListener3D.gd" id="1_a0j1y"]
 [ext_resource type="PackedScene" uid="uid://cl5iidi7tnkrv" path="res://Player/B0by/b0by.tscn" id="1_w47eh"]
