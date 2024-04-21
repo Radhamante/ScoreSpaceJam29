@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c77wuugghkjuj"]
+
+[ext_resource type="ArrayMesh" uid="uid://bedjfdto1lbrm" path="res://Assets/Meshes/chiote/Chiote_Furniturs/OBJ/Chiote_Furniturs_Cabine.obj" id="1_xaa1t"]
+[ext_resource type="Material" uid="uid://d4jydjs6f4dg1" path="res://Assets/Material/Chiote/Chiote_Furniturs/M_ChioteFurniturs.tres" id="2_lmk52"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_q65g2"]
+data = PackedVector3Array(-1.786, 2.1, 0.6, -1.786, 0, 0.6, -1.786, 2.1, -0.6, -1.786, 2.1, -0.6, -1.786, 0, 0.6, -1.786, 0, -0.6, -1.786, 2.1, -0.6, -1.786, 0, -0.6, -0.101, 2.1, -0.6, -0.101, 2.1, -0.6, -1.786, 0, -0.6, -0.101, 0, -0.6, -0.101, 2.1, 0.6, -0.101, 0, 0.6, -1.786, 2.1, 0.6, -1.786, 2.1, 0.6, -0.101, 0, 0.6, -1.786, 0, 0.6, -1.701, 2.1, -0.5, -1.701, 2.1, 0.5, -1.786, 2.1, -0.6, -1.786, 2.1, -0.6, -1.701, 2.1, 0.5, -1.786, 2.1, 0.6, -0.101, 2.1, -0.5, -1.701, 2.1, -0.5, -0.101, 2.1, -0.6, -0.101, 2.1, -0.6, -1.701, 2.1, -0.5, -1.786, 2.1, -0.6, -1.701, 2.1, 0.5, -0.101, 2.1, 0.5, -1.786, 2.1, 0.6, -1.786, 2.1, 0.6, -0.101, 2.1, 0.5, -0.101, 2.1, 0.6, -1.701, 2.1, 0.5, -1.701, 2.1, -0.5, -1.701, 0, 0.5, -1.701, 0, 0.5, -1.701, 2.1, -0.5, -1.701, 0, -0.5, -0.101, 2.1, 0.5, -1.701, 2.1, 0.5, -0.101, 0, 0.5, -0.101, 0, 0.5, -1.701, 2.1, 0.5, -1.701, 0, 0.5, -1.701, 2.1, -0.5, -0.101, 2.1, -0.5, -1.701, 0, -0.5, -1.701, 0, -0.5, -0.101, 2.1, -0.5, -0.101, 0, -0.5)
+
+[node name="ChioteFurnitursCabine" type="StaticBody3D"]
+
+[node name="ChioteFurnitursCabine" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_xaa1t")
+surface_material_override/0 = ExtResource("2_lmk52")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_q65g2")

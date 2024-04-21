@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://h0yvhkpq5xqg"
+path="res://.godot/imported/Chiote_Structure_floor.obj-e84138076532f3a3ff354d1b104818af.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Chiote_Structure_floor.obj-e84138076532f3a3ff354d1b104818af.mesh"]
+
+source_file="res://Assets/Meshes/chiote/Chiote_Structure/OBJ/Chiote_Structure_floor.obj"
+dest_files=["res://.godot/imported/Chiote_Structure_floor.obj-e84138076532f3a3ff354d1b104818af.mesh", "res://.godot/imported/Chiote_Structure_floor.obj-e84138076532f3a3ff354d1b104818af.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

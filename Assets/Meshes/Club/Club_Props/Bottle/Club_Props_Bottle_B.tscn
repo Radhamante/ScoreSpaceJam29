@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckbyukbncait3"]
+
+[ext_resource type="ArrayMesh" uid="uid://b7ss8bkhalkgn" path="res://Assets/Meshes/Club/Club_Props/Bottle/OBJ/Club_Props_Bottle_B.obj" id="1_84k63"]
+[ext_resource type="Material" uid="uid://coryajqlywk10" path="res://Assets/Material/Club/Club_Props/M_ClubProps.tres" id="1_j2udq"]
+
+[node name="ClubPropsBottleB" type="Node3D"]
+
+[node name="ClubPropsBottleB" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_84k63")
+surface_material_override/0 = ExtResource("1_j2udq")

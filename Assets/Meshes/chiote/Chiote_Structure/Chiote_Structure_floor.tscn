@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://de8tfw41qrow7"]
+
+[ext_resource type="Material" uid="uid://j1otbjmoin67" path="res://Assets/Material/Chiote/Chiote_Structure/M_ChioteStructure.tres" id="1_aybxi"]
+[ext_resource type="ArrayMesh" uid="uid://h0yvhkpq5xqg" path="res://Assets/Meshes/chiote/Chiote_Structure/OBJ/Chiote_Structure_floor.obj" id="2_fkojf"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ir3u3"]
+data = PackedVector3Array(-2, 0.1, 2, -2, 0, 2, -2, 0.1, 0, -2, 0.1, 0, -2, 0, 2, -2, 0, 0, 0, 0.1, 2, 0, 0, 2, -2, 0.1, 2, -2, 0.1, 2, 0, 0, 2, -2, 0, 2, 0, 0.1, 0, 0, 0, 0, 0, 0.1, 2, 0, 0.1, 2, 0, 0, 0, 0, 0, 2, -2, 0.1, 0, 0, 0.1, 0, -2, 0.1, 2, -2, 0.1, 2, 0, 0.1, 0, 0, 0.1, 2, -2, 0.1, 0, -2, 0, 0, 0, 0.1, 0, 0, 0.1, 0, -2, 0, 0, 0, 0, 0)
+
+[node name="ChioteStructureFloor" type="StaticBody3D"]
+
+[node name="ChioteStructureFloor" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_fkojf")
+surface_material_override/0 = ExtResource("1_aybxi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_ir3u3")

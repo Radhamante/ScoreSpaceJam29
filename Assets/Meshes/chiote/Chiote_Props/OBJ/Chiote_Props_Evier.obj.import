@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bpj8h5ol7a1as"
+path="res://.godot/imported/Chiote_Props_Evier.obj-02f7f46362b46c2c87266e79f1f2dbb9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Chiote_Props_Evier.obj-02f7f46362b46c2c87266e79f1f2dbb9.mesh"]
+
+source_file="res://Assets/Meshes/chiote/Chiote_Props/OBJ/Chiote_Props_Evier.obj"
+dest_files=["res://.godot/imported/Chiote_Props_Evier.obj-02f7f46362b46c2c87266e79f1f2dbb9.mesh", "res://.godot/imported/Chiote_Props_Evier.obj-02f7f46362b46c2c87266e79f1f2dbb9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

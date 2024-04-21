@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://0wpkii4a5s3i"
+path="res://.godot/imported/Club_Structures_Exit.obj-1fcf56027597c7df50550bf6a272641b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Club_Structures_Exit.obj-1fcf56027597c7df50550bf6a272641b.mesh"]
+
+source_file="res://Assets/Meshes/Club/Club_Structure/OBJ/Club_Structures_Exit.obj"
+dest_files=["res://.godot/imported/Club_Structures_Exit.obj-1fcf56027597c7df50550bf6a272641b.mesh", "res://.godot/imported/Club_Structures_Exit.obj-1fcf56027597c7df50550bf6a272641b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
