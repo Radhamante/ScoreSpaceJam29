@@ -1,72 +1,33 @@
-[gd_scene load_steps=13 format=3 uid="uid://dnwp340g2g511"]
+[gd_scene load_steps=12 format=3 uid="uid://dnwp340g2g511"]
 
 [ext_resource type="PackedScene" uid="uid://cl5iidi7tnkrv" path="res://Player/B0by/b0by.tscn" id="1_w47eh"]
 [ext_resource type="Script" path="res://Player/Scripts/player.gd" id="2_ocfix"]
-[ext_resource type="PackedScene" uid="uid://d1uue5ypbl6q7" path="res://PNJ/Woman_B/scene/woman_B.tscn" id="3_vg86m"]
-[ext_resource type="PackedScene" uid="uid://mpkr8w1c52vl" path="res://PNJ/Woman_A/scene/woman_A.tscn" id="4_luopc"]
-[ext_resource type="PackedScene" uid="uid://c1gaf8nob54qj" path="res://PNJ/Men_B/scene/men_B.tscn" id="5_fw30w"]
-[ext_resource type="PackedScene" uid="uid://df7ha0eqrnqe7" path="res://PNJ/Men_A/scene/men_A.tscn" id="6_t10ld"]
+[ext_resource type="PackedScene" uid="uid://i6rxufkcmlht" path="res://Assets/Paterns/Bathroom/Bathroom_1.tscn" id="6_u4irm"]
 [ext_resource type="Script" path="res://Levels/Scripts/Level_manager.gd" id="7_dvurq"]
 [ext_resource type="Script" path="res://Levels/Area3D.gd" id="7_ga7pg"]
+[ext_resource type="PackedScene" uid="uid://buujpg55ubg74" path="res://Assets/Paterns/DanceFloor/DanceFloor_1.tscn" id="7_mwuip"]
+[ext_resource type="PackedScene" uid="uid://y841h8lnc7fx" path="res://Assets/Paterns/Outside/Outside_1.tscn" id="8_fqq6w"]
 [ext_resource type="Texture2D" uid="uid://b3op4hyeljwww" path="res://icon.svg" id="8_ywr5k"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_q6hwb"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_lyouh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dffdd"]
 size = Vector3(1.48975, 5.37061, 9.60791)
 
+[sub_resource type="Environment" id="Environment_xaqwb"]
+ambient_light_source = 1
+ambient_light_energy = 11.85
+
+[sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_ue00r"]
+
 [node name="main" type="Node3D"]
-
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
-use_collision = true
-
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-size = Vector3(17, 5, 10)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-operation = 2
-size = Vector3(16, 2, 9)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.965926, 0.201319, 0.162659, -0.258819, 0.751333, 0.607051, 0, -0.628465, 0.777837, 0, 6.79624, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 19.7194, 0)
 fov = 35.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.37419, 0, 0, 0, 1, 2.32636, 3.69713, -3.92254)
-mesh = SubResource("BoxMesh_q6hwb")
-
 [node name="B0by" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_w47eh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 script = ExtResource("2_ocfix")
 camera = NodePath("../Camera3D")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.37419, 0, 0, 0, 1, 2.32636, 3.69713, -3.92254)
-mesh = SubResource("BoxMesh_q6hwb")
-
-[node name="Rigidbody3D" type="RigidBody3D" parent="MeshInstance3D2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/Rigidbody3D"]
-shape = SubResource("BoxShape3D_lyouh")
-
-[node name="Woman_B2" parent="." instance=ExtResource("3_vg86m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.80334, 2.5, 1.9185)
-
-[node name="Woman_A2" parent="." instance=ExtResource("4_luopc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64479, 2.5, 2.19176)
-
-[node name="Men_B2" parent="." instance=ExtResource("5_fw30w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 3, -2)
-
-[node name="Men_A" parent="." instance=ExtResource("6_t10ld")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, -1)
 
 [node name="Area3D" type="Area3D" parent="." node_paths=PackedStringArray("player")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.44835, 4.72001, 1.67911)
@@ -85,6 +46,21 @@ texture = ExtResource("8_ywr5k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 script = ExtResource("7_dvurq")
 camera = NodePath("../Camera3D")
+
+[node name="Bathroom1" parent="." instance=ExtResource("6_u4irm")]
+
+[node name="DanceFloor1" parent="." instance=ExtResource("7_mwuip")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 0)
+
+[node name="Outside_1" parent="." instance=ExtResource("8_fqq6w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xaqwb")
+camera_attributes = SubResource("CameraAttributesPhysical_ue00r")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.965926, 0.201319, 0.162659, -0.258819, 0.751333, 0.607051, 0, -0.628465, 0.777837, 0, 6.79624, 0)
 
 [connection signal="boby_entered" from="Area3D" to="LevelManager" method="_on_area_3d_boby_entered"]
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
