@@ -1,22 +1,26 @@
-[gd_scene load_steps=7 format=3 uid="uid://i6rxufkcmlht"]
+[gd_scene load_steps=16 format=3 uid="uid://i6rxufkcmlht"]
 
 [ext_resource type="PackedScene" uid="uid://d1uue5ypbl6q7" path="res://PNJ/Woman_B/scene/woman_B.tscn" id="1_r48w7"]
 [ext_resource type="PackedScene" uid="uid://mpkr8w1c52vl" path="res://PNJ/Woman_A/scene/woman_A.tscn" id="2_tabnu"]
 [ext_resource type="PackedScene" uid="uid://c1gaf8nob54qj" path="res://PNJ/Men_B/scene/men_B.tscn" id="3_r88ym"]
 [ext_resource type="PackedScene" uid="uid://df7ha0eqrnqe7" path="res://PNJ/Men_A/scene/men_A.tscn" id="4_ssnn7"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_t506w"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_a6mjv"]
+[ext_resource type="PackedScene" uid="uid://de8tfw41qrow7" path="res://Assets/Meshes/chiote/Chiote_Structure/Chiote_Structure_floor.tscn" id="5_606m6"]
+[ext_resource type="PackedScene" uid="uid://ha6blkjp454" path="res://Assets/Meshes/chiote/Chiote_Structure/Chiote_Structure_Wall.tscn" id="6_54cek"]
+[ext_resource type="PackedScene" uid="uid://3gxexlq6qab8" path="res://Assets/Meshes/chiote/Chiote_Structure/Chiote_Structure_WallCorner.tscn" id="7_p0yrn"]
+[ext_resource type="PackedScene" uid="uid://ddtwgn0lf34ys" path="res://Assets/Meshes/chiote/Chiote_Structure/Chiote_Structure_Exit.tscn" id="8_as80r"]
+[ext_resource type="PackedScene" uid="uid://c77wuugghkjuj" path="res://Assets/Meshes/chiote/Chiote_Furniturs/Chiote_Furniturs_Cabine.tscn" id="9_1wnw4"]
+[ext_resource type="PackedScene" uid="uid://bak2kkvhdd1tm" path="res://Assets/Meshes/chiote/Chiote_Furniturs/Chiote_Furniturs_DoorArchobj.tscn" id="10_c4ll1"]
+[ext_resource type="PackedScene" uid="uid://q5sy2yk7cxkn" path="res://Assets/Meshes/chiote/Chiote_Furniturs/Chiote_Furniturs_Door.tscn" id="11_tto4d"]
+[ext_resource type="PackedScene" uid="uid://dmeaimr0gnb4p" path="res://Assets/Meshes/chiote/Chiote_Props/Chiote_Props_Chiote.tscn" id="12_axfaw"]
+[ext_resource type="PackedScene" uid="uid://48acsbvv3wsg" path="res://Assets/Meshes/chiote/Chiote_Props/Chiote_Props_Evier.tscn" id="13_w5ecv"]
+[ext_resource type="PackedScene" uid="uid://dpemrlblkvehp" path="res://Assets/Meshes/chiote/Chiote_Props/Chiote_Props_Mirror.tscn" id="14_0b8ff"]
+[ext_resource type="Material" uid="uid://bcsfcsau1b2jv" path="res://Assets/Material/M_BlackUnlit.tres" id="15_qqshh"]
 
 [node name="Bathroom1" type="Node3D"]
 
 [node name="room" type="CSGCombiner3D" parent="."]
+visible = false
 use_collision = true
-
-[node name="Ground" type="CSGBox3D" parent="room"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-size = Vector3(19, 2, 10)
 
 [node name="Walls" type="CSGBox3D" parent="room"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
@@ -25,20 +29,6 @@ size = Vector3(19, 4, 10)
 [node name="Walls_extruder" type="CSGBox3D" parent="room/Walls"]
 operation = 2
 size = Vector3(18, 4, 9)
-
-[node name="door" type="CSGBox3D" parent="room/Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, -0.5, -1.5)
-operation = 2
-size = Vector3(1, 3, 4)
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.37419, 0, 0, 0, 1, 2.32636, 1, -3.92254)
-mesh = SubResource("BoxMesh_t506w")
-
-[node name="Rigidbody3D" type="RigidBody3D" parent="MeshInstance3D2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/Rigidbody3D"]
-shape = SubResource("BoxShape3D_a6mjv")
 
 [node name="grp_PNJ" type="Node" parent="."]
 
@@ -55,3 +45,545 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -1)
 
 [node name="grp_Lighting" type="Node" parent="."]
+
+[node name="grp_LightEnvir" type="Node" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="grp_LightEnvir"]
+transform = Transform3D(0.965926, -0.224144, 0.12941, 0, 0.5, 0.866025, -0.258819, -0.836516, 0.482963, 7.92983, 7.60368, 6.88948)
+
+[node name="grp_Environement" type="Node" parent="."]
+
+[node name="grp_Ground" type="Node" parent="grp_Environement"]
+
+[node name="ChioteStructureFloor" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, -0.1, -5)
+
+[node name="ChioteStructureFloor2" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, -0.1, -3)
+
+[node name="ChioteStructureFloor3" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, -0.1, -1)
+
+[node name="ChioteStructureFloor4" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, -0.1, 1)
+
+[node name="ChioteStructureFloor5" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, -0.1, 3)
+
+[node name="ChioteStructureFloor6" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, -0.1, -5)
+
+[node name="ChioteStructureFloor7" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, -0.1, -3)
+
+[node name="ChioteStructureFloor8" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, -0.1, -0.987262)
+
+[node name="ChioteStructureFloor9" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, -0.1, 1)
+
+[node name="ChioteStructureFloor10" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, -0.1, 3)
+
+[node name="ChioteStructureFloor11" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, -0.1, -5)
+
+[node name="ChioteStructureFloor12" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, -0.1, -3)
+
+[node name="ChioteStructureFloor13" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, -0.1, -1)
+
+[node name="ChioteStructureFloor14" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, -0.1, 1)
+
+[node name="ChioteStructureFloor15" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, -0.1, 3)
+
+[node name="ChioteStructureFloor16" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, -0.1, -5)
+
+[node name="ChioteStructureFloor17" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, -0.1, -3)
+
+[node name="ChioteStructureFloor18" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, -0.1, -1)
+
+[node name="ChioteStructureFloor19" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, -0.1, 1)
+
+[node name="ChioteStructureFloor20" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, -0.1, 3)
+
+[node name="ChioteStructureFloor21" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, -0.1, -5)
+
+[node name="ChioteStructureFloor22" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, -0.1, -3)
+
+[node name="ChioteStructureFloor23" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, -0.1, -1)
+
+[node name="ChioteStructureFloor24" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, -0.1, 1)
+
+[node name="ChioteStructureFloor25" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, -0.1, 3)
+
+[node name="ChioteStructureFloor26" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, -0.1, -5)
+
+[node name="ChioteStructureFloor27" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, -0.1, -3)
+
+[node name="ChioteStructureFloor28" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, -0.1, -1)
+
+[node name="ChioteStructureFloor29" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, -0.1, 1)
+
+[node name="ChioteStructureFloor30" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, -0.1, 3)
+
+[node name="ChioteStructureFloor31" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, -0.1, -5)
+
+[node name="ChioteStructureFloor32" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, -0.1, -3)
+
+[node name="ChioteStructureFloor33" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, -0.1, -1)
+
+[node name="ChioteStructureFloor34" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, -0.1, 1)
+
+[node name="ChioteStructureFloor35" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, -0.1, 3)
+
+[node name="ChioteStructureFloor36" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5, -0.1, -5)
+
+[node name="ChioteStructureFloor37" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5, -0.1, -3)
+
+[node name="ChioteStructureFloor38" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5, -0.1, -1)
+
+[node name="ChioteStructureFloor39" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5, -0.1, 1)
+
+[node name="ChioteStructureFloor40" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5, -0.1, 3)
+
+[node name="ChioteStructureFloor41" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, -0.1, -5)
+
+[node name="ChioteStructureFloor42" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, -0.1, -3)
+
+[node name="ChioteStructureFloor43" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, -0.1, -1)
+
+[node name="ChioteStructureFloor44" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, -0.1, 1)
+
+[node name="ChioteStructureFloor45" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, -0.1, 3)
+
+[node name="grp_Walls" type="Node" parent="grp_Environement"]
+
+[node name="ChioteStructureWall" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 9, 0, 2)
+
+[node name="ChioteStructureWall2" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 7, 0, 2)
+
+[node name="ChioteStructureWall3" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9, 0, -4.0012)
+
+[node name="ChioteStructureWall6" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.6, 0, -2.001)
+
+[node name="ChioteStructureWall7" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.6, 0, -2.001)
+
+[node name="ChioteStructureWall8" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.6, 0, -2.001)
+
+[node name="ChioteStructureWall9" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.6, 0, -2.001)
+
+[node name="ChioteStructureWall14" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1.95, 0, -2.001)
+
+[node name="ChioteStructureWall16" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.95, 0, -4.001)
+
+[node name="ChioteStructureWall17" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.95, 0, -4.001)
+
+[node name="ChioteStructureWall18" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.95, 0, -4.001)
+
+[node name="ChioteStructureWall22" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, -7.95, 0, -4.001)
+
+[node name="ChioteStructureWall23" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, -7.95, 0, -2.001)
+
+[node name="ChioteStructureWall24" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, -7.95, 0, -0.000999928)
+
+[node name="ChioteStructureWall25" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, -7.95, 0, 1.999)
+
+[node name="ChioteStructureWall15" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1.95, 0, 3.999)
+
+[node name="ChioteStructureWall19" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(5.96046e-08, 0, 1, 0, 1, 0, -1, 0, 5.96046e-08, -3.95, 0, 3.999)
+
+[node name="ChioteStructureWall20" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(5.96046e-08, 0, 1, 0, 1, 0, -1, 0, 5.96046e-08, -5.95, 0, 3.999)
+
+[node name="ChioteStructureWall21" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(5.96046e-08, 0, 1, 0, 1, 0, -1, 0, 5.96046e-08, -7.95, 0, 3.999)
+
+[node name="ChioteStructureWall10" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.4, 0, 1.999)
+
+[node name="ChioteStructureWall11" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.6, 0, 1.999)
+
+[node name="ChioteStructureWall12" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.6, 0, 1.999)
+
+[node name="ChioteStructureWall13" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.6, 0, 1.999)
+
+[node name="ChioteStructureWall4" parent="grp_Environement/grp_Walls" instance=ExtResource("6_54cek")]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 7.15, 0, -4.001)
+
+[node name="ChioteStructureWallCorner" parent="grp_Environement/grp_Walls" instance=ExtResource("7_p0yrn")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -2.05301, 0, 4.1708)
+
+[node name="ChioteStructureWallCorner11" parent="grp_Environement/grp_Walls" instance=ExtResource("7_p0yrn")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -8.1236, 0, 3.88982)
+
+[node name="ChioteStructureWallCorner12" parent="grp_Environement/grp_Walls" instance=ExtResource("7_p0yrn")]
+transform = Transform3D(1, -4.37114e-08, -1.74846e-07, 4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, -7.84663, 0, -4.17531)
+
+[node name="ChioteStructureWallCorner2" parent="grp_Environement/grp_Walls" instance=ExtResource("7_p0yrn")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 8.89825, -0.00663495, 2.17392)
+
+[node name="ChioteStructureWallCorner4" parent="grp_Environement/grp_Walls" instance=ExtResource("7_p0yrn")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.17624, -0.00663495, -3.9025)
+
+[node name="ChioteStructureWallCorner5" parent="grp_Environement/grp_Walls" instance=ExtResource("7_p0yrn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.14973, -0.00663495, -4.17782)
+
+[node name="ChioteStructureWallCorner6" parent="grp_Environement/grp_Walls" instance=ExtResource("7_p0yrn")]
+transform = Transform3D(-4.37114e-08, -4.37114e-08, -1, 4.37114e-08, 1, -4.37114e-08, 1, -4.37114e-08, -4.37114e-08, 6.80868, -0.00663495, -1.90348)
+
+[node name="ChioteStructureWallCorner7" parent="grp_Environement/grp_Walls" instance=ExtResource("7_p0yrn")]
+transform = Transform3D(-1, 4.37114e-08, 8.74228e-08, 4.37114e-08, 1, -4.37114e-08, -8.74228e-08, -4.37114e-08, -1, 6.49563, -0.00663495, 2.17372)
+
+[node name="ChioteStructureWallCorner3" parent="grp_Environement/grp_Walls" instance=ExtResource("7_p0yrn")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 6.97236, -0.00663495, 1.89648)
+
+[node name="ChioteStructureWallCorner8" parent="grp_Environement/grp_Walls" instance=ExtResource("7_p0yrn")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -1.58077, -0.00663495, 1.89648)
+
+[node name="ChioteStructureWallCorner9" parent="grp_Environement/grp_Walls" instance=ExtResource("7_p0yrn")]
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -1.32471, -0.00663495, -2.17335)
+
+[node name="ChioteStructureWallCorner10" parent="grp_Environement/grp_Walls" instance=ExtResource("7_p0yrn")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, -1.77376, -0.00663495, -3.90095)
+
+[node name="ChioteStructureExit" parent="grp_Environement/grp_Walls" instance=ExtResource("8_as80r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.075, 0, -2)
+
+[node name="ChioteStructureExit2" parent="grp_Environement/grp_Walls" instance=ExtResource("8_as80r")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.675, 0, 2)
+
+[node name="ChioteStructureExit3" parent="grp_Environement/grp_Walls" instance=ExtResource("8_as80r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48, 0, -2)
+
+[node name="ChioteStructureExit5" parent="grp_Environement/grp_Walls" instance=ExtResource("8_as80r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48, 0, -2)
+
+[node name="ChioteStructureExit4" parent="grp_Environement/grp_Walls" instance=ExtResource("8_as80r")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.88, 0, 2)
+
+[node name="grp_Exit" type="Node" parent="grp_Environement/grp_Walls"]
+
+[node name="ChioteStructureExit" parent="grp_Environement/grp_Walls/grp_Exit" instance=ExtResource("8_as80r")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 9.075, 0, 0)
+
+[node name="grp_Cabinets" type="Node" parent="grp_Environement"]
+
+[node name="grp_Cabine_00" type="Node3D" parent="grp_Environement/grp_Cabinets"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, 0.28)
+
+[node name="ChioteFurnitursCabine" parent="grp_Environement/grp_Cabinets/grp_Cabine_00" instance=ExtResource("9_1wnw4")]
+
+[node name="ChioteFurnitursDoorArchobj" parent="grp_Environement/grp_Cabinets/grp_Cabine_00" instance=ExtResource("10_c4ll1")]
+
+[node name="ChioteFurnitursDoor" parent="grp_Environement/grp_Cabinets/grp_Cabine_00" instance=ExtResource("11_tto4d")]
+
+[node name="ChiotePropsChiote" parent="grp_Environement/grp_Cabinets/grp_Cabine_00" instance=ExtResource("12_axfaw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20555, 0, 0)
+
+[node name="grp_Cabine_05" type="Node3D" parent="grp_Environement/grp_Cabinets"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.235, 0, -3)
+
+[node name="ChioteFurnitursCabine" parent="grp_Environement/grp_Cabinets/grp_Cabine_05" instance=ExtResource("9_1wnw4")]
+
+[node name="ChioteFurnitursDoorArchobj" parent="grp_Environement/grp_Cabinets/grp_Cabine_05" instance=ExtResource("10_c4ll1")]
+
+[node name="ChioteFurnitursDoor" parent="grp_Environement/grp_Cabinets/grp_Cabine_05" instance=ExtResource("11_tto4d")]
+transform = Transform3D(0.076806, 0, -0.997046, 0, 1, 0, 0.997046, 0, 0.076806, 0.581965, 0, 0.467665)
+
+[node name="ChiotePropsChiote" parent="grp_Environement/grp_Cabinets/grp_Cabine_05" instance=ExtResource("12_axfaw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20555, 0, 0)
+
+[node name="grp_Cabine_06" type="Node3D" parent="grp_Environement/grp_Cabinets"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.235, 0, -1.7903)
+
+[node name="ChioteFurnitursCabine" parent="grp_Environement/grp_Cabinets/grp_Cabine_06" instance=ExtResource("9_1wnw4")]
+
+[node name="ChioteFurnitursDoorArchobj" parent="grp_Environement/grp_Cabinets/grp_Cabine_06" instance=ExtResource("10_c4ll1")]
+
+[node name="ChioteFurnitursDoor" parent="grp_Environement/grp_Cabinets/grp_Cabine_06" instance=ExtResource("11_tto4d")]
+
+[node name="ChiotePropsChiote" parent="grp_Environement/grp_Cabinets/grp_Cabine_06" instance=ExtResource("12_axfaw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20555, 0, 0)
+
+[node name="grp_Cabine_07" type="Node3D" parent="grp_Environement/grp_Cabinets"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.235, 0, -0.585)
+
+[node name="ChioteFurnitursCabine" parent="grp_Environement/grp_Cabinets/grp_Cabine_07" instance=ExtResource("9_1wnw4")]
+
+[node name="ChioteFurnitursDoorArchobj" parent="grp_Environement/grp_Cabinets/grp_Cabine_07" instance=ExtResource("10_c4ll1")]
+
+[node name="ChioteFurnitursDoor" parent="grp_Environement/grp_Cabinets/grp_Cabine_07" instance=ExtResource("11_tto4d")]
+
+[node name="ChiotePropsChiote" parent="grp_Environement/grp_Cabinets/grp_Cabine_07" instance=ExtResource("12_axfaw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20555, 0, 0)
+
+[node name="grp_Cabine_08" type="Node3D" parent="grp_Environement/grp_Cabinets"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.235, 0, 0.61229)
+
+[node name="ChioteFurnitursCabine" parent="grp_Environement/grp_Cabinets/grp_Cabine_08" instance=ExtResource("9_1wnw4")]
+
+[node name="ChioteFurnitursDoorArchobj" parent="grp_Environement/grp_Cabinets/grp_Cabine_08" instance=ExtResource("10_c4ll1")]
+
+[node name="ChioteFurnitursDoor" parent="grp_Environement/grp_Cabinets/grp_Cabine_08" instance=ExtResource("11_tto4d")]
+
+[node name="ChiotePropsChiote" parent="grp_Environement/grp_Cabinets/grp_Cabine_08" instance=ExtResource("12_axfaw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20555, 0, 0)
+
+[node name="grp_Cabine_09" type="Node3D" parent="grp_Environement/grp_Cabinets"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.8, 0, 0.28)
+
+[node name="ChioteFurnitursCabine" parent="grp_Environement/grp_Cabinets/grp_Cabine_09" instance=ExtResource("9_1wnw4")]
+
+[node name="ChioteFurnitursDoorArchobj" parent="grp_Environement/grp_Cabinets/grp_Cabine_09" instance=ExtResource("10_c4ll1")]
+
+[node name="ChioteFurnitursDoor" parent="grp_Environement/grp_Cabinets/grp_Cabine_09" instance=ExtResource("11_tto4d")]
+transform = Transform3D(0.946666, 0, -0.322216, 0, 1, 0, 0.322216, 0, 0.946666, 0.242131, 0, 0.00764203)
+
+[node name="ChiotePropsChiote" parent="grp_Environement/grp_Cabinets/grp_Cabine_09" instance=ExtResource("12_axfaw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20555, 0, 0)
+
+[node name="grp_Cabine_10" type="Node3D" parent="grp_Environement/grp_Cabinets"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.6, 0, 0.28)
+
+[node name="ChioteFurnitursCabine" parent="grp_Environement/grp_Cabinets/grp_Cabine_10" instance=ExtResource("9_1wnw4")]
+
+[node name="ChioteFurnitursDoorArchobj" parent="grp_Environement/grp_Cabinets/grp_Cabine_10" instance=ExtResource("10_c4ll1")]
+
+[node name="ChioteFurnitursDoor" parent="grp_Environement/grp_Cabinets/grp_Cabine_10" instance=ExtResource("11_tto4d")]
+
+[node name="ChiotePropsChiote" parent="grp_Environement/grp_Cabinets/grp_Cabine_10" instance=ExtResource("12_axfaw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20555, 0, 0)
+
+[node name="grp_Cabine_11" type="Node3D" parent="grp_Environement/grp_Cabinets"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.4, 0, 0.28)
+
+[node name="ChioteFurnitursCabine" parent="grp_Environement/grp_Cabinets/grp_Cabine_11" instance=ExtResource("9_1wnw4")]
+
+[node name="ChioteFurnitursDoorArchobj" parent="grp_Environement/grp_Cabinets/grp_Cabine_11" instance=ExtResource("10_c4ll1")]
+
+[node name="ChioteFurnitursDoor" parent="grp_Environement/grp_Cabinets/grp_Cabine_11" instance=ExtResource("11_tto4d")]
+
+[node name="ChiotePropsChiote" parent="grp_Environement/grp_Cabinets/grp_Cabine_11" instance=ExtResource("12_axfaw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20555, 0, 0)
+
+[node name="grp_Cabine_12" type="Node3D" parent="grp_Environement/grp_Cabinets"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.2, 0, 0.28)
+
+[node name="ChioteFurnitursCabine" parent="grp_Environement/grp_Cabinets/grp_Cabine_12" instance=ExtResource("9_1wnw4")]
+
+[node name="ChioteFurnitursDoorArchobj" parent="grp_Environement/grp_Cabinets/grp_Cabine_12" instance=ExtResource("10_c4ll1")]
+
+[node name="ChioteFurnitursDoor" parent="grp_Environement/grp_Cabinets/grp_Cabine_12" instance=ExtResource("11_tto4d")]
+
+[node name="ChiotePropsChiote" parent="grp_Environement/grp_Cabinets/grp_Cabine_12" instance=ExtResource("12_axfaw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20555, 0, 0)
+
+[node name="grp_Evier" type="Node" parent="grp_Environement"]
+
+[node name="Evier_00" type="Node3D" parent="grp_Environement/grp_Evier"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.475, 0.56, -2.082)
+
+[node name="ChiotePropsEvier" parent="grp_Environement/grp_Evier/Evier_00" instance=ExtResource("13_w5ecv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.447639, 0)
+
+[node name="ChiotePropsMirror" parent="grp_Environement/grp_Evier/Evier_00" instance=ExtResource("14_0b8ff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.0141177)
+
+[node name="Evier_01" type="Node3D" parent="grp_Environement/grp_Evier"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1.475, 0.56, -2.082)
+
+[node name="ChiotePropsEvier" parent="grp_Environement/grp_Evier/Evier_01" instance=ExtResource("13_w5ecv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.447639, 0)
+
+[node name="ChiotePropsMirror" parent="grp_Environement/grp_Evier/Evier_01" instance=ExtResource("14_0b8ff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.0141177)
+
+[node name="Evier_02" type="Node3D" parent="grp_Environement/grp_Evier"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 2.475, 0.56, -2.082)
+
+[node name="ChiotePropsEvier" parent="grp_Environement/grp_Evier/Evier_02" instance=ExtResource("13_w5ecv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.447639, 0)
+
+[node name="ChiotePropsMirror" parent="grp_Environement/grp_Evier/Evier_02" instance=ExtResource("14_0b8ff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.0141177)
+
+[node name="Evier_03" type="Node3D" parent="grp_Environement/grp_Evier"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3.475, 0.56, -2.082)
+
+[node name="ChiotePropsEvier" parent="grp_Environement/grp_Evier/Evier_03" instance=ExtResource("13_w5ecv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.447639, 0)
+
+[node name="ChiotePropsMirror" parent="grp_Environement/grp_Evier/Evier_03" instance=ExtResource("14_0b8ff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.0141177)
+
+[node name="Evier_04" type="Node3D" parent="grp_Environement/grp_Evier"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4.475, 0.56, -2.082)
+
+[node name="ChiotePropsEvier" parent="grp_Environement/grp_Evier/Evier_04" instance=ExtResource("13_w5ecv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.447639, 0)
+
+[node name="ChiotePropsMirror" parent="grp_Environement/grp_Evier/Evier_04" instance=ExtResource("14_0b8ff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.0141177)
+
+[node name="Evier_05" type="Node3D" parent="grp_Environement/grp_Evier"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.47049, 0.56, 4.08584)
+
+[node name="ChiotePropsEvier" parent="grp_Environement/grp_Evier/Evier_05" instance=ExtResource("13_w5ecv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.447639, 0)
+
+[node name="ChiotePropsMirror" parent="grp_Environement/grp_Evier/Evier_05" instance=ExtResource("14_0b8ff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.0141177)
+
+[node name="Evier_06" type="Node3D" parent="grp_Environement/grp_Evier"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.47049, 0.56, 4.08584)
+
+[node name="ChiotePropsEvier" parent="grp_Environement/grp_Evier/Evier_06" instance=ExtResource("13_w5ecv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.447639, 0)
+
+[node name="ChiotePropsMirror" parent="grp_Environement/grp_Evier/Evier_06" instance=ExtResource("14_0b8ff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.0141177)
+
+[node name="Evier_07" type="Node3D" parent="grp_Environement/grp_Evier"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.47049, 0.56, 4.08584)
+
+[node name="ChiotePropsEvier" parent="grp_Environement/grp_Evier/Evier_07" instance=ExtResource("13_w5ecv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.447639, 0)
+
+[node name="ChiotePropsMirror" parent="grp_Environement/grp_Evier/Evier_07" instance=ExtResource("14_0b8ff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.0141177)
+
+[node name="Evier_08" type="Node3D" parent="grp_Environement/grp_Evier"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47049, 0.56, 4.08584)
+
+[node name="ChiotePropsEvier" parent="grp_Environement/grp_Evier/Evier_08" instance=ExtResource("13_w5ecv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.447639, 0)
+
+[node name="ChiotePropsMirror" parent="grp_Environement/grp_Evier/Evier_08" instance=ExtResource("14_0b8ff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.0141177)
+
+[node name="grp_BlackBox" type="Node" parent="grp_Environement"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6285, 1.07418, -2.59547)
+size = Vector3(0.228516, 2.10913, 1)
+material = ExtResource("15_qqshh")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.67403, 1.07418, -2.05029)
+size = Vector3(0.182739, 2.10913, 0.203979)
+material = ExtResource("15_qqshh")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57535, 1.07418, -3.81342)
+size = Vector3(8.67817, 2.10913, 3.24799)
+material = ExtResource("15_qqshh")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.50062, 1.07418, -8.3536)
+size = Vector3(23, 2.10913, 8.353)
+material = ExtResource("15_qqshh")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72649, 1.07418, 6.56285)
+size = Vector3(11, 2.10913, 8.76177)
+material = ExtResource("15_qqshh")
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
+transform = Transform3D(0.0970236, 0, 0, 0, 1, 0, 0, 0, 0.234433, -1.20039, 1.07418, 4.74444)
+size = Vector3(13.9883, 2.10913, 5.70348)
+material = ExtResource("15_qqshh")
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
+transform = Transform3D(0.0970236, 0, 0, 0, 1, 0, 0, 0, 0.234433, -1.6177, 1.07418, 2.62729)
+size = Vector3(3.41163, 2.10913, 5.38934)
+material = ExtResource("15_qqshh")
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
+transform = Transform3D(0.0970236, 0, 0, 0, 1, 0, 0, 0, 0.234433, -8.18723, 1.07418, -4.705)
+size = Vector3(3.41163, 2.10913, 5.38934)
+material = ExtResource("15_qqshh")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.51351, 1.07418, 7.05708)
+size = Vector3(13.9883, 2.10913, 5.80014)
+material = ExtResource("15_qqshh")
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -11.0172, 1.07418, 2.80247)
+size = Vector3(13.9883, 2.10913, 5.79623)
+material = ExtResource("15_qqshh")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.97644, 1.07418, 2.46979)
+size = Vector3(0.191927, 2.10913, 0.786797)
+material = ExtResource("15_qqshh")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.87576, 1.07418, 2.25634)
+size = Vector3(0.198616, 2.10913, 0.786797)
+material = ExtResource("15_qqshh")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.77485, 1.07418, 2.47257)
+size = Vector3(0.198616, 2.10913, 0.786797)
+material = ExtResource("15_qqshh")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.8124, 1.04384, -2.6318)
+visible = false
+size = Vector3(20.4367, 2.10913, 3.24803)
+material = ExtResource("15_qqshh")
