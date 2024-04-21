@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://i6rxufkcmlht"]
+[gd_scene load_steps=18 format=3 uid="uid://i6rxufkcmlht"]
 
 [ext_resource type="PackedScene" uid="uid://d1uue5ypbl6q7" path="res://PNJ/Woman_B/scene/woman_B.tscn" id="1_r48w7"]
 [ext_resource type="PackedScene" uid="uid://mpkr8w1c52vl" path="res://PNJ/Woman_A/scene/woman_A.tscn" id="2_tabnu"]
@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://48acsbvv3wsg" path="res://Assets/Meshes/chiote/Chiote_Props/Chiote_Props_Evier.tscn" id="13_w5ecv"]
 [ext_resource type="PackedScene" uid="uid://dpemrlblkvehp" path="res://Assets/Meshes/chiote/Chiote_Props/Chiote_Props_Mirror.tscn" id="14_0b8ff"]
 [ext_resource type="Material" uid="uid://bcsfcsau1b2jv" path="res://Assets/Material/M_BlackUnlit.tres" id="15_qqshh"]
+[ext_resource type="ArrayMesh" uid="uid://c2lo0ugkhivhp" path="res://Assets/Meshes/Club/Club_Props/Bottle/TRES/Club_Props_Bottle_B.tres" id="16_yp5qp"]
+[ext_resource type="ArrayMesh" uid="uid://d20o7m70frujc" path="res://Assets/Meshes/Club/Club_Props/Bottle/TRES/Club_Props_Bottle_D.tres" id="17_yhh3u"]
 
 [node name="Bathroom1" type="Node3D"]
 
@@ -46,10 +48,140 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -1)
 
 [node name="grp_Lighting" type="Node" parent="."]
 
-[node name="grp_LightEnvir" type="Node" parent="."]
+[node name="grp_Room_1" type="Node" parent="grp_Lighting"]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="grp_LightEnvir"]
-transform = Transform3D(0.965926, -0.224144, 0.12941, 0, 0.5, 0.866025, -0.258819, -0.836516, 0.482963, 7.92983, 7.60368, 6.88948)
+[node name="SpotLight3D" type="SpotLight3D" parent="grp_Lighting/grp_Room_1"]
+transform = Transform3D(0.862886, -0.301952, 0.405281, -0.0320212, 0.76763, 0.640093, -0.504383, -0.565305, 0.652708, -2.53193, 4.66416, 4.38313)
+light_color = Color(1, 0, 0, 1)
+spot_range = 18.6025
+spot_angle = 36.8522
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="grp_Lighting/grp_Room_1"]
+transform = Transform3D(0.00230615, 0.710421, -0.703773, -0.0323856, 0.703459, 0.709997, 0.999473, 0.0211548, 0.0246297, -2.34768, 1.76065, -0.0179441)
+light_color = Color(1, 0, 0, 1)
+spot_range = 6.32288
+spot_angle = 35.5007
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="grp_Lighting/grp_Room_1"]
+transform = Transform3D(0.684163, -0.370942, 0.627951, -0.719014, -0.198757, 0.665968, -0.122226, -0.907137, -0.402695, -1.52761, 4.09822, 1.22134)
+light_color = Color(0, 0.823529, 0.882353, 1)
+spot_range = 33.3048
+spot_attenuation = 1.07177
+spot_angle = 28.4477
+spot_angle_attenuation = 1.62451
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="grp_Lighting/grp_Room_1"]
+transform = Transform3D(0.651847, 3.31486e-08, -0.758351, 0.758351, -2.84931e-08, 0.651847, 0, -1, -4.37114e-08, -9.1831, 2.56775, -3.09667)
+light_color = Color(1, 1, 0, 1)
+light_energy = 0.473
+spot_range = 7.1013
+spot_angle = 9.59172
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="grp_Lighting/grp_Room_1"]
+transform = Transform3D(0.995386, 4.19411e-09, -0.09595, 0.09595, -4.35097e-08, 0.995386, 0, -1, -4.37114e-08, -7.55215, 2.55995, -3.0155)
+light_color = Color(1, 1, 0, 1)
+light_energy = 0.473
+spot_range = 7.1013
+spot_angle = 14.1698
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="grp_Lighting/grp_Room_1"]
+transform = Transform3D(0.995386, 4.19411e-09, -0.09595, 0.09595, -4.35097e-08, 0.995386, 0, -1, -4.37114e-08, -7.55215, 2.76059, 0.657683)
+light_color = Color(1, 1, 0, 1)
+light_energy = 0.21
+spot_range = 7.1013
+spot_attenuation = 1.68179
+spot_angle = 14.1698
+spot_angle_attenuation = 0.90125
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="grp_Lighting/grp_Room_1"]
+transform = Transform3D(0.995386, 4.19411e-09, -0.09595, 0.09595, -4.35097e-08, 0.995386, 0, -1, -4.37114e-08, -7.55215, 2.76059, -1.7929)
+light_color = Color(1, 1, 0, 1)
+light_energy = 0.21
+spot_range = 7.1013
+spot_attenuation = 1.68179
+spot_angle = 14.1698
+spot_angle_attenuation = 0.90125
+
+[node name="grp_Room_2" type="Node" parent="grp_Lighting"]
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="grp_Lighting/grp_Room_2"]
+transform = Transform3D(1, 0, 0, 0, 0.72721, 0.686415, 0, -0.686415, 0.72721, 2.60966, 5.52566, 3.44165)
+light_color = Color(0.952941, 0, 0.72549, 1)
+spot_range = 11.9995
+spot_angle = 39.1558
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="grp_Lighting/grp_Room_2"]
+transform = Transform3D(-0.804656, -0.584273, 0.105612, -0.135686, 0.354121, 0.925304, -0.57803, 0.730221, -0.364223, -0.485805, 3.63256, 0.469999)
+light_color = Color(0.952941, 0, 0.72549, 1)
+spot_range = 4.52588
+spot_attenuation = 0.707107
+spot_angle = 16.8926
+spot_angle_attenuation = 2.37841
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="grp_Lighting/grp_Room_2"]
+transform = Transform3D(-0.00230624, -0.710421, 0.703773, -0.0323856, 0.703459, 0.709997, -0.999473, -0.0211547, -0.0246298, -1.11616, 1.76065, -0.0179441)
+light_color = Color(0.945098, 0, 0.580392, 1)
+light_energy = 1.527
+spot_range = 6.32288
+spot_angle = 35.5007
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="grp_Lighting/grp_Room_2"]
+transform = Transform3D(0.995386, 4.19411e-09, -0.09595, 0.09595, -4.35097e-08, 0.995386, 0, -1, -4.37114e-08, 0.3624, 2.76059, 1.53014)
+light_color = Color(1, 1, 0, 1)
+light_energy = 0.21
+spot_range = 7.1013
+spot_attenuation = 1.68179
+spot_angle = 14.1698
+spot_angle_attenuation = 0.90125
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="grp_Lighting/grp_Room_2"]
+transform = Transform3D(0.995386, 4.19411e-09, -0.09595, 0.09595, -4.35097e-08, 0.995386, 0, -1, -4.37114e-08, 2.74808, 2.76059, 1.53014)
+light_color = Color(1, 1, 0, 1)
+light_energy = 0.21
+spot_range = 7.1013
+spot_attenuation = 1.68179
+spot_angle = 14.1698
+spot_angle_attenuation = 0.90125
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="grp_Lighting/grp_Room_2"]
+transform = Transform3D(0.995386, 4.19411e-09, -0.09595, 0.09595, -4.35097e-08, 0.995386, 0, -1, -4.37114e-08, 3.9187, 2.76059, 1.53014)
+light_color = Color(1, 1, 0, 1)
+light_energy = 0.21
+spot_range = 7.1013
+spot_attenuation = 1.68179
+spot_angle = 14.1698
+spot_angle_attenuation = 0.90125
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="grp_Lighting/grp_Room_2"]
+transform = Transform3D(-0.015971, 0.980807, -0.194325, -0.0282679, 0.193829, 0.980628, 0.999473, 0.0211548, 0.0246297, 7.81092, 1.76063, -0.0508999)
+light_color = Color(0.945098, 0, 0.580392, 1)
+light_energy = 0.605
+spot_range = 6.32288
+spot_angle = 40.1586
+
+[node name="grp_Room_3" type="Node" parent="grp_Lighting"]
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="grp_Lighting/grp_Room_3"]
+transform = Transform3D(0.182442, -0.978608, -0.0950902, -0.719014, -0.198757, 0.665969, -0.670622, -0.0531294, -0.739894, 7.87635, 4.25361, -5.38421)
+light_color = Color(0, 0.823529, 0.882353, 1)
+spot_range = 33.3048
+spot_attenuation = 1.07177
+spot_angle = 28.4477
+spot_angle_attenuation = 1.62451
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="grp_Lighting/grp_Room_3"]
+transform = Transform3D(0.238255, -0.730685, 0.639791, -0.0193819, 0.655054, 0.755334, -0.971009, -0.192363, 0.141908, 8.18381, 1.66217, -0.0403531)
+light_color = Color(0, 0.607843, 0.627451, 1)
+light_energy = 1.527
+spot_range = 6.32288
+spot_angle = 24.8914
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="grp_Lighting/grp_Room_3"]
+transform = Transform3D(0.00663992, -0.875741, 0.482735, -0.0317814, 0.482317, 0.87542, -0.999473, -0.0211547, -0.0246298, 10.0721, 1.76065, -2.18152)
+light_color = Color(1, 0, 0, 1)
+light_energy = 3.305
+spot_range = 6.32288
+spot_angle = 35.5007
 
 [node name="grp_Environement" type="Node" parent="."]
 
@@ -181,6 +313,9 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, -0.
 [node name="ChioteStructureFloor42" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, -0.1, -3)
 
+[node name="ChioteStructureFloor46" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9, -0.1, -3)
+
 [node name="ChioteStructureFloor43" parent="grp_Environement/grp_Ground" instance=ExtResource("5_606m6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, -0.1, -1)
 
@@ -283,7 +418,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.1762
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.14973, -0.00663495, -4.17782)
 
 [node name="ChioteStructureWallCorner6" parent="grp_Environement/grp_Walls" instance=ExtResource("7_p0yrn")]
-transform = Transform3D(-4.37114e-08, -4.37114e-08, -1, 4.37114e-08, 1, -4.37114e-08, 1, -4.37114e-08, -4.37114e-08, 6.80868, -0.00663495, -1.90348)
+transform = Transform3D(-4.37114e-08, -4.37114e-08, -1, 4.37114e-08, 1, -4.37114e-08, 1, -4.37114e-08, -4.37114e-08, 6.77348, -0.00663495, -1.90348)
 
 [node name="ChioteStructureWallCorner7" parent="grp_Environement/grp_Walls" instance=ExtResource("7_p0yrn")]
 transform = Transform3D(-1, 4.37114e-08, 8.74228e-08, 4.37114e-08, 1, -4.37114e-08, -8.74228e-08, -4.37114e-08, -1, 6.49563, -0.00663495, 2.17372)
@@ -527,19 +662,34 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.67403, 1.07418, -2.05029)
 size = Vector3(0.182739, 2.10913, 0.203979)
 material = ExtResource("15_qqshh")
 
+[node name="CSGBox3D16" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.87631, 1.07418, -2.08817)
+size = Vector3(0.191902, 2.10913, 0.222626)
+material = ExtResource("15_qqshh")
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.77249, 1.07418, -2.19375)
+size = Vector3(0.191902, 2.10913, 0.222626)
+material = ExtResource("15_qqshh")
+
 [node name="CSGBox3D3" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57535, 1.07418, -3.81342)
 size = Vector3(8.67817, 2.10913, 3.24799)
 material = ExtResource("15_qqshh")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.50062, 1.07418, -8.3536)
-size = Vector3(23, 2.10913, 8.353)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.26082, 1.07418, -8.3536)
+size = Vector3(23.4796, 2.10913, 8.353)
 material = ExtResource("15_qqshh")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72649, 1.07418, 6.56285)
 size = Vector3(11, 2.10913, 8.76177)
+material = ExtResource("15_qqshh")
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2649, -5.32554, -1.19322)
+size = Vector3(2.15137, 14.9086, 23.7798)
 material = ExtResource("15_qqshh")
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="grp_Environement/grp_BlackBox"]
@@ -587,3 +737,30 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.812
 visible = false
 size = Vector3(20.4367, 2.10913, 3.24803)
 material = ExtResource("15_qqshh")
+
+[node name="grp_Props" type="Node" parent="grp_Environement"]
+
+[node name="ClubPropsBottleB" type="MeshInstance3D" parent="grp_Environement/grp_Props"]
+transform = Transform3D(1.02678, -1.50452, 6.57647e-08, 0, -7.96202e-08, -1.8215, 1.50452, 1.02678, -4.48818e-08, -2.43976, 0.0323585, 0.785572)
+mesh = ExtResource("16_yp5qp")
+skeleton = NodePath("../../..")
+
+[node name="ClubPropsBottleB2" type="MeshInstance3D" parent="grp_Environement/grp_Props"]
+transform = Transform3D(-1.28996, -0.837807, 3.66217e-08, 0, -6.72349e-08, -1.53816, 0.837807, -1.28996, 5.6386e-08, -5.57132, 0.032358, -3.20233)
+mesh = ExtResource("16_yp5qp")
+skeleton = NodePath("../../..")
+
+[node name="ClubPropsBottleB3" type="MeshInstance3D" parent="grp_Environement/grp_Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.42807, 0.032358, -3.46641)
+mesh = ExtResource("16_yp5qp")
+skeleton = NodePath("../../..")
+
+[node name="ClubPropsBottleD" type="MeshInstance3D" parent="grp_Environement/grp_Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.85848, -0.00209684, -0.917614)
+mesh = ExtResource("17_yhh3u")
+skeleton = NodePath("../../..")
+
+[node name="ClubPropsBottleD2" type="MeshInstance3D" parent="grp_Environement/grp_Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.298009, 1.03895, -2.02677)
+mesh = ExtResource("17_yhh3u")
+skeleton = NodePath("../../..")

@@ -3,4 +3,5 @@
 [ext_resource type="Texture2D" uid="uid://di38x6c0mmux6" path="res://PNJ/Woman_B/Material/T_WomanB_D.png" id="1_dfs2s"]
 
 [resource]
+albedo_color = Color(8, 8, 8, 1)
 albedo_texture = ExtResource("1_dfs2s")
