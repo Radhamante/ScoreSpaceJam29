@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b1fjjnu6i7uyy"
+path="res://.godot/imported/Street_Structure_WallCorner.obj-7dc61c01307e645821db0bb26cb2a99f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Street_Structure_WallCorner.obj-7dc61c01307e645821db0bb26cb2a99f.mesh"]
+
+source_file="res://Assets/Meshes/Street/Street_Structure/OBJ/Street_Structure_WallCorner.obj"
+dest_files=["res://.godot/imported/Street_Structure_WallCorner.obj-7dc61c01307e645821db0bb26cb2a99f.mesh", "res://.godot/imported/Street_Structure_WallCorner.obj-7dc61c01307e645821db0bb26cb2a99f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

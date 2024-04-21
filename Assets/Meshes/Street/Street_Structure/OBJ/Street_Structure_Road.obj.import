@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c27b0wcomwtt1"
+path="res://.godot/imported/Street_Structure_Road.obj-baf0c0b28c05d0b2c1c28084bd5390ee.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Street_Structure_Road.obj-baf0c0b28c05d0b2c1c28084bd5390ee.mesh"]
+
+source_file="res://Assets/Meshes/Street/Street_Structure/OBJ/Street_Structure_Road.obj"
+dest_files=["res://.godot/imported/Street_Structure_Road.obj-baf0c0b28c05d0b2c1c28084bd5390ee.mesh", "res://.godot/imported/Street_Structure_Road.obj-baf0c0b28c05d0b2c1c28084bd5390ee.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
