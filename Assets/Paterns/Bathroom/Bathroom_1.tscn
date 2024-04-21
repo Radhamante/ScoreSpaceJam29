@@ -40,14 +40,18 @@ mesh = SubResource("BoxMesh_t506w")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/Rigidbody3D"]
 shape = SubResource("BoxShape3D_a6mjv")
 
-[node name="Woman_B2" parent="." instance=ExtResource("1_r48w7")]
+[node name="grp_PNJ" type="Node" parent="."]
+
+[node name="Woman_B2" parent="grp_PNJ" instance=ExtResource("1_r48w7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.80334, 0, 1.9185)
 
-[node name="Woman_A2" parent="." instance=ExtResource("2_tabnu")]
+[node name="Woman_A2" parent="grp_PNJ" instance=ExtResource("2_tabnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64479, 0, 2.19176)
 
-[node name="Men_B2" parent="." instance=ExtResource("3_r88ym")]
+[node name="Men_B2" parent="grp_PNJ" instance=ExtResource("3_r88ym")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -2)
 
-[node name="Men_A" parent="." instance=ExtResource("4_ssnn7")]
+[node name="Men_A" parent="grp_PNJ" instance=ExtResource("4_ssnn7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -1)
+
+[node name="grp_Lighting" type="Node" parent="."]
