@@ -11,25 +11,28 @@
 
 [node name="Bathroom1" type="Node3D"]
 
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+[node name="room" type="CSGCombiner3D" parent="."]
 use_collision = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+[node name="Ground" type="CSGBox3D" parent="room"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+size = Vector3(19, 2, 10)
+
+[node name="Walls" type="CSGBox3D" parent="room"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-size = Vector3(17, 5, 10)
+size = Vector3(19, 4, 10)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+[node name="Walls_extruder" type="CSGBox3D" parent="room/Walls"]
 operation = 2
-size = Vector3(16, 2, 9)
+size = Vector3(18, 4, 9)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.11691, 1.5, -1.57053)
+[node name="door" type="CSGBox3D" parent="room/Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, -0.5, -1.5)
 operation = 2
-size = Vector3(2, 2, 3)
+size = Vector3(1, 3, 4)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.37419, 0, 0, 0, 1, 2.32636, 3.69713, -3.92254)
+transform = Transform3D(1, 0, 0, 0, 2.37419, 0, 0, 0, 1, 2.32636, 1, -3.92254)
 mesh = SubResource("BoxMesh_t506w")
 
 [node name="Rigidbody3D" type="RigidBody3D" parent="MeshInstance3D2"]
@@ -38,13 +41,13 @@ mesh = SubResource("BoxMesh_t506w")
 shape = SubResource("BoxShape3D_a6mjv")
 
 [node name="Woman_B2" parent="." instance=ExtResource("1_r48w7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.80334, 2.5, 1.9185)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.80334, 0, 1.9185)
 
 [node name="Woman_A2" parent="." instance=ExtResource("2_tabnu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64479, 2.5, 2.19176)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64479, 0, 2.19176)
 
 [node name="Men_B2" parent="." instance=ExtResource("3_r88ym")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 3, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -2)
 
 [node name="Men_A" parent="." instance=ExtResource("4_ssnn7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -1)

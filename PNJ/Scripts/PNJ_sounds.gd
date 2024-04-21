@@ -1,4 +1,4 @@
-extends AudioStreamPlayer
+extends AudioStreamPlayer3D
 
 var cooldown = randi_range(0,15)
 

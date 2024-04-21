@@ -74,6 +74,8 @@ stream_21/weight = 1.0
 stream_22/stream = ExtResource("16_2jy48")
 stream_22/weight = 1.0
 
-[node name="PnjSounds" type="AudioStreamPlayer"]
+[node name="PnjSounds" type="AudioStreamPlayer3D"]
 stream = SubResource("AudioStreamRandomizer_07pre")
+max_distance = 10.0
+bus = &"SFX"
 script = ExtResource("24_14f17")
