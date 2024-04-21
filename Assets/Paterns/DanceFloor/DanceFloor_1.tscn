@@ -26,14 +26,6 @@
 [node name="DanceFloor1" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 
-[node name="room" type="CSGCombiner3D" parent="."]
-use_collision = true
-
-[node name="door" type="CSGBox3D" parent="room"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 1.5, -1.5)
-operation = 2
-size = Vector3(1, 3, 4)
-
 [node name="grp_PNJ" type="Node3D" parent="."]
 
 [node name="Woman_B2" parent="grp_PNJ" instance=ExtResource("1_wajo7")]
