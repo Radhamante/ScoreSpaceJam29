@@ -69,74 +69,72 @@ size = Vector3(2.05222, 2.17676, 0.587769)
 [node name="grp_Light" type="Node3D" parent="."]
 
 [node name="SpotLight3D" type="SpotLight3D" parent="grp_Light"]
-transform = Transform3D(-0.319361, -0.833081, 0.451646, 0.553271, 0.223021, 0.802591, -0.76935, 0.506199, 0.389696, 1.41652, 8.87621, 1.0443)
+transform = Transform3D(-0.319361, -0.833081, 0.451647, 0.553271, 0.223021, 0.802591, -0.76935, 0.506199, 0.389695, 14.6662, 10.6016, 7.20226)
 light_color = Color(0.682353, 0.619608, 1, 1)
-light_energy = 7.716
-spot_range = 22.1955
-spot_angle = 42.9839
+light_energy = 13.0
+spot_range = 32.345
+spot_angle = 36.73
+spot_angle_attenuation = 0.34151
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="grp_Light"]
-transform = Transform3D(-0.200179, -0.979288, -0.0303998, -0.0399948, -0.0228344, 0.998939, -0.978943, 0.201183, -0.0345955, -6.99203, 4.51568, 1.01104)
+[node name="SpotLight3D2" type="OmniLight3D" parent="grp_Light"]
+transform = Transform3D(-0.200179, -0.979288, -0.0303998, -0.0399948, -0.0228344, 0.998939, -0.978943, 0.201182, -0.0345954, -7, 2, 1)
 light_color = Color(0.811765, 0.670588, 0, 1)
-light_energy = 8.904
-spot_range = 22.1955
-spot_attenuation = 1.07177
-spot_angle = 25.8806
-spot_angle_attenuation = 2.92817
+light_energy = 1.5
+shadow_enabled = true
+omni_range = 3.785
 
-[node name="SpotLight3D3" type="SpotLight3D" parent="grp_Light"]
-transform = Transform3D(-0.200179, -0.979288, -0.0303998, -0.0399948, -0.0228344, 0.998939, -0.978943, 0.201183, -0.0345955, -6.95896, 4.51568, -2.98955)
+[node name="SpotLight3D3" type="OmniLight3D" parent="grp_Light"]
+transform = Transform3D(-0.200179, -0.979288, -0.0303998, -0.0399948, -0.0228344, 0.998939, -0.978943, 0.201183, -0.0345955, -7, 2, -3)
 light_color = Color(0.811765, 0.670588, 0, 1)
-light_energy = 8.904
-spot_range = 22.1955
-spot_attenuation = 1.07177
-spot_angle = 25.8806
-spot_angle_attenuation = 2.92817
+light_energy = 1.5
+shadow_enabled = true
+omni_range = 3.785
 
-[node name="SpotLight3D6" type="SpotLight3D" parent="grp_Light"]
-transform = Transform3D(-0.119374, -0.701659, -0.702442, -0.165593, -0.68352, 0.7109, -0.978943, 0.201183, -0.0345954, -10.2455, 1.43031, -1.0803)
-light_color = Color(0.811765, 0, 0, 1)
-light_energy = 9.214
-spot_range = 6.84317
-spot_attenuation = 1.07177
-spot_angle = 40.0275
-spot_angle_attenuation = 2.92817
-
-[node name="SpotLight3D4" type="SpotLight3D" parent="grp_Light"]
-transform = Transform3D(-0.200179, -0.979288, -0.0303998, -0.0399948, -0.0228344, 0.998939, -0.978943, 0.201183, -0.0345955, -3.06489, 4.51568, -3.061)
+[node name="SpotLight3D4" type="OmniLight3D" parent="grp_Light"]
+transform = Transform3D(-0.200179, -0.979288, -0.0303998, -0.0399948, -0.0228344, 0.998939, -0.978943, 0.201183, -0.0345955, -3, 2, -3)
 light_color = Color(0.811765, 0.670588, 0, 1)
-light_energy = 8.904
-spot_range = 22.1955
-spot_attenuation = 1.07177
-spot_angle = 25.8806
-spot_angle_attenuation = 2.92817
+light_energy = 1.5
+shadow_enabled = true
+omni_range = 3.785
 
-[node name="SpotLight3D5" type="SpotLight3D" parent="grp_Light"]
-transform = Transform3D(-0.200179, -0.979288, -0.0303998, -0.0399948, -0.0228344, 0.998939, -0.978943, 0.201183, -0.0345955, 1.0614, 4.51568, -3.00741)
+[node name="SpotLight3D5" type="OmniLight3D" parent="grp_Light"]
+transform = Transform3D(-0.200179, -0.979288, -0.0303998, -0.0399948, -0.0228344, 0.998939, -0.978943, 0.201183, -0.0345955, 1, 2, -3)
 light_color = Color(0.811765, 0.670588, 0, 1)
-light_energy = 8.904
-spot_range = 22.1955
-spot_attenuation = 1.07177
-spot_angle = 25.8806
-spot_angle_attenuation = 2.92817
+light_energy = 1.5
+shadow_enabled = true
+omni_range = 3.785
 
-[node name="SpotLight3D7" type="SpotLight3D" parent="grp_Light"]
-transform = Transform3D(0.720004, -0.692004, -0.0521999, 0.592058, 0.573289, 0.566399, -0.362024, -0.438715, 0.822477, 8.3184, 4.51568, 7.1235)
+[node name="SpotLight3D8" type="OmniLight3D" parent="grp_Light"]
+transform = Transform3D(-0.288093, -0.505816, 0.813113, 0.592058, 0.573289, 0.566399, -0.752642, 0.644586, 0.134312, 10.5122, 1, 5.0931)
 light_color = Color(0.411765, 0.792157, 0.184314, 1)
-light_energy = 3.073
-spot_range = 22.1955
-spot_attenuation = 0.535885
-spot_angle = 32.61
-spot_angle_attenuation = 2.0
+light_energy = 1.5
+shadow_enabled = true
+omni_range = 3.785
 
-[node name="SpotLight3D8" type="SpotLight3D" parent="grp_Light"]
-transform = Transform3D(-0.288093, -0.505816, 0.813113, 0.592058, 0.573289, 0.566399, -0.752642, 0.644585, 0.134311, 10.0086, 4.73337, 5.0931)
+[node name="SpotLight3D9" type="OmniLight3D" parent="grp_Light"]
+transform = Transform3D(-0.288093, -0.505816, 0.813113, 0.592058, 0.573289, 0.566399, -0.752642, 0.644586, 0.134312, 10.5122, 1, -1.25414)
 light_color = Color(0.411765, 0.792157, 0.184314, 1)
-light_energy = 3.073
-spot_range = 22.1955
-spot_attenuation = 0.535885
-spot_angle = 32.61
-spot_angle_attenuation = 2.0
+light_energy = 1.5
+omni_range = 3.785
+
+[node name="SpotLight3D6" type="OmniLight3D" parent="grp_Light"]
+transform = Transform3D(-0.200179, -0.979288, -0.0303998, -0.0399948, -0.0228344, 0.998939, -0.978943, 0.201182, -0.0345954, 5, 2, -3)
+light_color = Color(0.811765, 0.670588, 0, 1)
+shadow_enabled = true
+omni_range = 3.125
+
+[node name="SpotLight3D7" type="OmniLight3D" parent="grp_Light"]
+transform = Transform3D(-0.200179, -0.979288, -0.0303998, -0.0399948, -0.0228344, 0.998939, -0.978943, 0.201182, -0.0345954, -7, 2, 5)
+light_color = Color(0.811765, 0.670588, 0, 1)
+light_energy = 1.5
+shadow_enabled = true
+omni_range = 3.785
+
+[node name="SpotLight3D10" type="OmniLight3D" parent="grp_Light"]
+transform = Transform3D(-0.200179, -0.979288, -0.0303998, -0.0399948, -0.0228344, 0.998939, -0.978943, 0.201182, -0.0345954, 9, 2, -3)
+light_color = Color(0.811765, 0.670588, 0, 1)
+shadow_enabled = true
+omni_range = 3.125
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_g4nam")
@@ -471,16 +469,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3)
 [node name="StreetPropsLamp5" parent="NavigationRegion3D/grp_Environement/grp_StreetLamp" instance=ExtResource("9_7qj4x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -3)
 
+[node name="StreetPropsLamp6" parent="NavigationRegion3D/grp_Environement/grp_StreetLamp" instance=ExtResource("9_7qj4x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 5)
+
+[node name="StreetPropsLamp7" parent="NavigationRegion3D/grp_Environement/grp_StreetLamp" instance=ExtResource("9_7qj4x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -3)
+
 [node name="EndZone" type="Area3D" parent="."]
 collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="EndZone"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3.18899)
 shape = SubResource("BoxShape3D_ccxra")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="EndZone"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0989, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.52835, 1, 0)
 shape = SubResource("BoxShape3D_b22ff")
 
 [connection signal="body_entered" from="EndZone" to="." method="_on_end_zone_body_entered"]

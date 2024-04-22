@@ -8,7 +8,7 @@ extends Control
 func _ready():
 	MenuMusic.play_music()
 	ScoreManager.stop_score()
-	LootLocker.score = ScoreManager.seconds * 1000
+	LootLocker.score = (ScoreManager.min * 60 + ScoreManager.seconds) * 1000
 	_send()
 	score_label.text = LootLocker.convert_time(LootLocker.score / 1000)
 	

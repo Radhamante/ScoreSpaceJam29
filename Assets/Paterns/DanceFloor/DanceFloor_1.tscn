@@ -24,8 +24,8 @@
 [ext_resource type="Material" uid="uid://bcsfcsau1b2jv" path="res://Assets/Material/M_BlackUnlit.tres" id="22_gluuu"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_8qw7a"]
-vertices = PackedVector3Array(-2.5255, 0.4, 0.25, -2.7755, 0.4, -0.25, -3.5255, 0.4, -0.5, -3.2755, 0.4, 1.25, -2.5255, 0.4, 0.25, -3.5255, 0.4, -0.5, -6.0255, 0.4, -1.5, -6.7755, 0.4, -1.5, -8.5255, 0.4, 1.25, -7.2755, 0.4, -4.75, -8.5255, 0.4, -4.75, -8.5255, 0.4, -3, -7.5255, 0.4, -2.25, -9.0255, 0.4, -2.75, -8.5255, 0.4, 1.25, -6.7755, 0.4, -1.5, -7.5255, 0.4, -2.25, -8.5255, 0.4, -3, -3.5255, 0.4, -1.5, -5.2755, 0.4, -2.5, -6.0255, 0.4, -1.5, -3.5255, 0.4, -0.5, -2.2755, 0.4, -0.5, -2.7755, 0.4, -0.25, -2.5255, 0.4, 0.25, -1.7755, 0.4, 0.75, 0.974502, 0.4, 0.25, 0.974502, 0.4, -0.25, 0.474502, 0.4, -0.5, -1.7755, 0.4, 0.75, 0.474502, 0.4, 0.75, 0.474502, 0.4, -1.5, 0.974502, 0.4, -1.75, 0.974502, 0.4, -4, -4.5255, 0.4, -4.75, -4.5255, 0.4, -4, -2.2755, 0.4, -1.5, -2.2755, 0.4, -1.5, -2.2755, 0.4, -0.5, -1.7755, 0.4, 0.75, 0.474502, 0.4, -0.5, 0.474502, 0.4, -1.5, -4.5255, 0.4, -4, -5.5255, 0.4, -3.5, -5.2755, 0.4, -2.5, -3.5255, 0.4, -1.5, -2.2755, 0.4, -1.5, 0.974502, 0.4, -4, 2.7245, 0.4, -4, 2.7245, 0.4, -4.75, -4.5255, 0.4, -4.75, 5.2245, 0.4, -3.75, 4.4745, 0.4, -3.75, 4.9745, 0.4, -3.25, -5.7755, 0.4, 4.25, -5.5255, 0.4, 4.75, -5.0255, 0.4, 4.25, 4.2245, 0.4, 1.25, 4.7245, 0.4, 1.75, 4.9745, 0.4, 1.25, 5.4745, 0.4, -0.25, 4.4745, 0.4, -0.5, 3.2245, 0.4, -1.75, 2.7245, 0.4, -2.25, 2.4745, 0.4, -1.5, -8.5255, 0.4, 3.5, -8.5255, 0.4, 4.75, -8.0255, 0.4, 4.25, 0.974502, 0.4, -0.25, 0.974502, 0.4, 0.25, 1.7245, 0.4, 0.5, 1.7245, 0.4, -0.5, -8.5255, 0.4, 3.5, -5.7755, 0.4, 4.25, -5.0255, 0.4, 4.25, -2.0255, 0.4, 3.5, -1.7755, 0.4, 0.75, -2.5255, 0.4, 1.5, -1.7755, 0.4, 2, 0.474502, 0.4, 1.5, 0.474502, 0.4, 0.75, 2.4745, 0.4, -1.5, 1.7245, 0.4, -1.5, 1.7245, 0.4, -0.5, 4.9745, 0.4, 1.25, 5.9745, 0.4, 1.25, 5.4745, 0.4, -0.25, 4.4745, 0.4, -0.5, 4.4745, 0.4, -1.5, 3.2245, 0.4, -1.75, -8.5255, 0.4, 3.5, -8.0255, 0.4, 4.25, -5.7755, 0.4, 4.25, 3.2245, 0.4, -1.75, 2.4745, 0.4, -1.5, 1.7245, 0.4, -0.5, 2.7245, 0.4, 4.75, 3.2245, 0.4, 3.25, 2.4745, 0.4, 2.75, 4.4745, 0.4, -1.75, 5.7245, 0.4, -1.5, 6.4745, 0.4, -2.5, 6.4745, 0.4, -3.5, 5.2245, 0.4, -3.75, 4.9745, 0.4, -3.25, -2.0255, 0.4, 3.5, -5.0255, 0.4, 4.25, -2.7755, 0.4, 4.25, 7.4745, 0.4, -3.75, 7.4745, 0.4, -2.25, 8.7245, 0.4, -2, 8.7245, 0.4, -4.75, 2.7245, 0.4, 1.5, 1.7245, 0.4, 0.5, 1.4745, 0.4, 1.75, 2.4745, 0.4, 2.75, 6.4745, 0.4, -3.5, 7.4745, 0.4, -3.75, 8.7245, 0.4, -4.75, 5.4745, 0.4, -4.75, 5.2245, 0.4, -3.75, 2.7245, 0.4, 1.5, 4.2245, 0.4, 1.25, 4.4745, 0.4, -0.5, 3.2245, 0.4, -1.75, 1.7245, 0.4, -0.5, 1.7245, 0.4, 0.5, 0.474502, 0.4, 1.5, -2.0255, 0.4, 3.5, -2.5255, 0.4, 4.75, 2.7245, 0.4, 4.75, 2.4745, 0.4, 2.75, 1.4745, 0.4, 1.75, -2.0255, 0.4, 3.5, -2.7755, 0.4, 4.25, -2.5255, 0.4, 4.75, 0.474502, 0.4, 1.5, -1.7755, 0.4, 2, -2.0255, 0.4, 3.5, 4.4745, 0.4, -1.5, 5.7245, 0.4, -1.5, 4.4745, 0.4, -1.75, 3.2245, 0.4, -1.75, 5.9745, 0.4, 1.25, 6.4745, 0.4, 1.5, 6.7245, 0.4, 0.25, 5.4745, 0.4, -0.25, 7.4745, 0.4, 1.75, 8.7245, 0.4, 4.75, 8.7245, 0.4, -2, 7.7245, 0.4, 0.5, 6.7245, 0.4, 3.75, 5.4745, 0.4, 4, 5.4745, 0.4, 4.75, 8.7245, 0.4, 4.75, 7.4745, 0.4, -2.25, 6.4745, 0.4, -2.5, 5.7245, 0.4, -1.5, 5.7245, 0.4, -1.5, 5.4745, 0.4, -0.25, 6.7245, 0.4, 0.25, 7.7245, 0.4, 0.5, 8.7245, 0.4, -2, 7.4745, 0.4, -2.25, 7.4745, 0.4, 1.75, 6.4745, 0.4, 1.5, 6.7245, 0.4, 3.75, 8.7245, 0.4, 4.75, -8.7755, 1.4, 2.25, -8.7755, 1.4, 3, -8.2755, 1.4, 3, -4.7755, 1.4, 2.25, -4.5255, 1.4, 3, -3.7755, 1.4, 3, -2.7755, 1.4, 2.75, -2.2755, 1.4, 3, -2.2755, 1.4, 2.25, 4.4745, 0.4, 3.25, 3.9745, 0.4, 3.25, 4.2245, 0.4, 3.75, 4.9745, 0.4, 3.75, 4.9745, 0.4, 3.75, 4.9745, 0.4, 2.25, 4.4745, 0.4, 3.25)
-polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(4, 3, 5), PackedInt32Array(5, 3, 6), PackedInt32Array(6, 3, 7), PackedInt32Array(7, 3, 8), PackedInt32Array(10, 9, 11), PackedInt32Array(11, 9, 12), PackedInt32Array(17, 16, 13), PackedInt32Array(13, 16, 15), PackedInt32Array(13, 15, 14), PackedInt32Array(18, 21, 19), PackedInt32Array(19, 21, 20), PackedInt32Array(23, 22, 24), PackedInt32Array(24, 22, 25), PackedInt32Array(27, 26, 28), PackedInt32Array(28, 26, 30), PackedInt32Array(28, 30, 29), PackedInt32Array(32, 31, 33), PackedInt32Array(33, 31, 36), PackedInt32Array(33, 36, 35), PackedInt32Array(33, 35, 34), PackedInt32Array(38, 37, 39), PackedInt32Array(39, 37, 40), PackedInt32Array(40, 37, 41), PackedInt32Array(43, 42, 44), PackedInt32Array(44, 42, 45), PackedInt32Array(45, 42, 46), PackedInt32Array(48, 47, 49), PackedInt32Array(49, 47, 50), PackedInt32Array(53, 52, 51), PackedInt32Array(56, 55, 54), PackedInt32Array(58, 57, 59), PackedInt32Array(59, 57, 60), PackedInt32Array(60, 57, 61), PackedInt32Array(64, 63, 62), PackedInt32Array(67, 66, 65), PackedInt32Array(68, 71, 69), PackedInt32Array(69, 71, 70), PackedInt32Array(73, 72, 74), PackedInt32Array(74, 72, 75), PackedInt32Array(77, 76, 78), PackedInt32Array(78, 76, 79), PackedInt32Array(79, 76, 80), PackedInt32Array(83, 82, 81), PackedInt32Array(86, 85, 84), PackedInt32Array(89, 88, 87), PackedInt32Array(92, 91, 90), PackedInt32Array(95, 94, 93), PackedInt32Array(98, 97, 96), PackedInt32Array(103, 102, 104), PackedInt32Array(104, 102, 101), PackedInt32Array(104, 101, 100), PackedInt32Array(104, 100, 99), PackedInt32Array(107, 106, 105), PackedInt32Array(109, 108, 110), PackedInt32Array(110, 108, 111), PackedInt32Array(115, 114, 112), PackedInt32Array(112, 114, 113), PackedInt32Array(120, 119, 116), PackedInt32Array(116, 119, 117), PackedInt32Array(117, 119, 118), PackedInt32Array(126, 125, 121), PackedInt32Array(121, 125, 122), PackedInt32Array(122, 125, 123), PackedInt32Array(123, 125, 124), PackedInt32Array(132, 131, 127), PackedInt32Array(127, 131, 130), PackedInt32Array(127, 130, 128), PackedInt32Array(128, 130, 129), PackedInt32Array(134, 133, 135), PackedInt32Array(138, 137, 136), PackedInt32Array(142, 141, 139), PackedInt32Array(139, 141, 140), PackedInt32Array(144, 143, 145), PackedInt32Array(145, 143, 146), PackedInt32Array(150, 149, 147), PackedInt32Array(147, 149, 148), PackedInt32Array(152, 151, 153), PackedInt32Array(153, 151, 154), PackedInt32Array(157, 156, 155), PackedInt32Array(159, 158, 160), PackedInt32Array(160, 158, 161), PackedInt32Array(161, 158, 163), PackedInt32Array(161, 163, 162), PackedInt32Array(165, 164, 166), PackedInt32Array(166, 164, 167), PackedInt32Array(170, 169, 168), PackedInt32Array(173, 172, 171), PackedInt32Array(176, 175, 174), PackedInt32Array(178, 177, 179), PackedInt32Array(179, 177, 180), PackedInt32Array(183, 182, 181)]
+vertices = PackedVector3Array(1.9745, 0.4, 2.25, 1.7245, 0.4, 2.25, 1.4745, 0.4, 2.75, 1.9745, 0.4, 3, -5.5255, 0.4, 1.25, -3.2755, 0.4, 1.25, -2.5255, 0.4, 0.75, -3.2755, 0.4, -1.25, -5.5255, 0.4, -2, -7.0255, 0.4, 0, -5.7755, 0.4, 4.25, -5.5255, 0.4, 4.75, -5.0255, 0.4, 4.25, 1.9745, 0.4, 3.75, 2.7245, 0.4, 3.25, 1.9745, 0.4, 3, -8.5255, 0.4, 3.5, -8.5255, 0.4, 4.75, -8.0255, 0.4, 4.25, -8.5255, 0.4, -0.25, -8.2755, 0.4, 0, -7.5255, 0.4, -0.5, -7.2755, 0.4, 0.75, -7.2755, 0.4, 1.25, -6.5255, 0.4, 1.5, -6.2755, 0.4, 0.75, -7.0255, 0.4, 0, -3.2755, 0.4, -1.25, -3.5255, 0.4, -2, -5.5255, 0.4, -2, -6.7755, 0.4, -1.5, -7.5255, 0.4, -0.5, -7.0255, 0.4, 0, -5.5255, 0.4, -2, 1.9745, 0.4, 3.75, 1.9745, 0.4, 3, 1.4745, 0.4, 2.75, -1.2755, 0.4, 0.5, -1.5255, 0.4, -0.5, -2.2755, 0.4, -1.5, -3.2755, 0.4, -1.25, -2.5255, 0.4, 0.75, -1.7755, 0.4, 2, -7.0255, 0.4, 0, -6.2755, 0.4, 0.75, -5.5255, 0.4, 1.25, 1.9745, 0.4, 3.75, 1.4745, 0.4, 2.75, 0.474502, 0.4, 2.5, -1.7755, 0.4, 2, -1.7755, 0.4, 3.25, 1.9745, 0.4, 4.75, 0.724502, 0.4, 1.25, -0.275498, 0.4, 0.25, -1.2755, 0.4, 0.5, -1.7755, 0.4, 2, 0.474502, 0.4, 2.5, -7.2755, 0.4, -4.75, -8.5255, 0.4, -4.75, -8.5255, 0.4, -3, -7.5255, 0.4, -2.25, -8.5255, 0.4, 3.5, -5.7755, 0.4, 4.25, -5.0255, 0.4, 4.25, -1.7755, 0.4, 3.25, -7.5255, 0.4, -2.25, -8.5255, 0.4, -3, -9.0255, 0.4, -2.75, -8.5255, 0.4, -0.25, -7.5255, 0.4, -0.5, -6.7755, 0.4, -1.5, -8.5255, 0.4, 3.5, -8.0255, 0.4, 4.25, -5.7755, 0.4, 4.25, -1.7755, 0.4, 3.25, -5.0255, 0.4, 4.25, 1.9745, 0.4, 4.75, 1.7245, 0.4, 2.25, 1.9745, 0.4, 2.25, 1.9745, 0.4, 1.75, 1.4745, 0.4, 1.25, 0.724502, 0.4, 1.25, 1.4745, 0.4, 1.25, 2.4745, 0.4, 0.5, 2.9745, 0.4, 1.25, 2.9745, 0.4, 0.75, 2.4745, 0.4, 0.5, 1.4745, 0.4, 1.25, 1.9745, 0.4, 1.75, 2.4745, 0.4, -0.5, 2.9745, 0.4, -0.75, 2.7245, 0.4, -1.75, 1.2245, 0.4, -2.25, 0.974502, 0.4, -1.5, -4.5255, 0.4, -4, -5.5255, 0.4, -3.5, -5.5255, 0.4, -2, -3.5255, 0.4, -2, -3.2755, 0.4, -2.75, -0.525498, 0.4, -0.75, -0.275498, 0.4, 0.25, 0.724502, 0.4, 1.25, 2.4745, 0.4, 0.5, 2.4745, 0.4, -0.5, 0.974502, 0.4, -1.5, -0.275498, 0.4, -4, 1.2245, 0.4, -4.25, 1.2245, 0.4, -4.75, -4.5255, 0.4, -4.75, -0.525498, 0.4, -0.75, 0.974502, 0.4, -1.5, -0.525498, 0.4, -1.75, -2.2755, 0.4, -1.5, -1.5255, 0.4, -0.5, -0.525498, 0.4, -1.75, -0.275498, 0.4, -4, -2.5255, 0.4, -2.75, -2.2755, 0.4, -1.5, -4.5255, 0.4, -4.75, -4.5255, 0.4, -4, -3.2755, 0.4, -2.75, -2.5255, 0.4, -2.75, -0.275498, 0.4, -4, 5.4745, 0.4, 1, 5.9745, 0.4, 1.5, 6.4745, 0.4, 1.25, 6.7245, 0.4, 0.25, 5.7245, 0.4, -1.5, 4.9745, 0.4, -1.25, 3.4745, 0.4, -2.5, 4.4745, 0.4, -2.25, 4.7245, 0.4, -2.75, 3.9745, 0.4, -4, 3.2245, 0.4, -3.75, 3.9745, 0.4, -4.75, 3.9745, 0.4, -4, 4.7245, 0.4, -2.75, 5.7245, 0.4, -2.5, 8.7245, 0.4, -4.75, 7.4745, 0.4, 0.25, 7.7245, 0.4, 1, 8.7245, 0.4, 1, 5.7245, 0.4, -2.5, 5.7245, 0.4, -1.5, 7.4745, 0.4, 0.25, 8.7245, 0.4, 1, 8.7245, 0.4, -4.75, 5.7245, 0.4, -1.5, 6.7245, 0.4, 0.25, 7.4745, 0.4, 0.25, 3.7245, 0.4, 0.5, 2.9745, 0.4, 0.75, 2.9745, 0.4, 1.25, 4.2245, 0.4, 1.75, 4.4745, 0.4, 1, 4.4745, 0.4, -1.5, 4.4745, 0.4, -2.25, 3.4745, 0.4, -2.5, 2.7245, 0.4, -1.75, 2.9745, 0.4, -0.75, 3.7245, 0.4, -0.5, 3.7245, 0.4, -0.5, 3.7245, 0.4, 0.5, 4.4745, 0.4, 1, 5.4745, 0.4, 1, 4.9745, 0.4, -1.25, 4.4745, 0.4, -1.5, -7.2755, 0.4, 1.25, -7.2755, 0.4, 0.75, -8.0255, 0.4, 0.75, -8.5255, 0.4, 1.25, -8.0255, 0.4, 0.75, -8.2755, 0.4, 0, -8.5255, 0.4, -0.25, -8.5255, 0.4, 1.25, 6.7245, 0.4, 1.75, 6.4745, 0.4, 1.25, 5.9745, 0.4, 1.5, 5.9745, 0.4, 3.75, 3.9745, 0.4, 2.75, 3.4745, 0.4, 3.75, 4.4745, 0.4, 3.75, 4.7245, 0.4, 3.75, 3.9745, 0.4, 2.75, 4.4745, 0.4, 3.75, 4.7245, 0.4, 3.75, 4.4745, 0.4, 3.75, 4.7245, 0.4, 4.75, 8.7245, 0.4, 1, 7.7245, 0.4, 1, 7.4745, 0.4, 1.75, 5.9745, 0.4, 3.75, 4.7245, 0.4, 3.75, 4.7245, 0.4, 4.75, 8.7245, 0.4, 4.75, 8.7245, 0.4, 4.75, 8.7245, 0.4, 1, 7.4745, 0.4, 1.75, 5.9745, 0.4, 3.75, 7.4745, 0.4, 1.75, 6.7245, 0.4, 1.75, 5.9745, 0.4, 3.75, -8.7755, 1.4, 2.25, -8.7755, 1.4, 3, -8.2755, 1.4, 3, -4.7755, 1.4, 2.25, -4.5255, 1.4, 3, -3.7755, 1.4, 3, -2.7755, 1.4, 2.75, -2.2755, 1.4, 3, -2.2755, 1.4, 2.25)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(6, 5, 7), PackedInt32Array(7, 5, 4), PackedInt32Array(7, 4, 8), PackedInt32Array(8, 4, 9), PackedInt32Array(12, 11, 10), PackedInt32Array(15, 14, 13), PackedInt32Array(18, 17, 16), PackedInt32Array(21, 20, 19), PackedInt32Array(23, 22, 24), PackedInt32Array(24, 22, 25), PackedInt32Array(25, 22, 26), PackedInt32Array(29, 28, 27), PackedInt32Array(31, 30, 32), PackedInt32Array(32, 30, 33), PackedInt32Array(36, 35, 34), PackedInt32Array(39, 38, 40), PackedInt32Array(40, 38, 37), PackedInt32Array(40, 37, 41), PackedInt32Array(41, 37, 42), PackedInt32Array(45, 44, 43), PackedInt32Array(47, 46, 48), PackedInt32Array(48, 46, 51), PackedInt32Array(48, 51, 50), PackedInt32Array(48, 50, 49), PackedInt32Array(53, 52, 54), PackedInt32Array(54, 52, 56), PackedInt32Array(54, 56, 55), PackedInt32Array(58, 57, 59), PackedInt32Array(59, 57, 60), PackedInt32Array(62, 61, 63), PackedInt32Array(63, 61, 64), PackedInt32Array(66, 65, 67), PackedInt32Array(67, 65, 70), PackedInt32Array(67, 70, 69), PackedInt32Array(67, 69, 68), PackedInt32Array(73, 72, 71), PackedInt32Array(76, 75, 74), PackedInt32Array(78, 77, 79), PackedInt32Array(79, 77, 80), PackedInt32Array(83, 82, 81), PackedInt32Array(85, 84, 86), PackedInt32Array(86, 84, 88), PackedInt32Array(86, 88, 87), PackedInt32Array(90, 89, 91), PackedInt32Array(91, 89, 93), PackedInt32Array(91, 93, 92), PackedInt32Array(98, 97, 94), PackedInt32Array(94, 97, 95), PackedInt32Array(95, 97, 96), PackedInt32Array(100, 99, 101), PackedInt32Array(101, 99, 104), PackedInt32Array(101, 104, 103), PackedInt32Array(101, 103, 102), PackedInt32Array(106, 105, 107), PackedInt32Array(107, 105, 108), PackedInt32Array(113, 112, 109), PackedInt32Array(109, 112, 111), PackedInt32Array(109, 111, 110), PackedInt32Array(117, 116, 114), PackedInt32Array(114, 116, 115), PackedInt32Array(119, 118, 120), PackedInt32Array(120, 118, 121), PackedInt32Array(121, 118, 122), PackedInt32Array(124, 123, 125), PackedInt32Array(125, 123, 126), PackedInt32Array(126, 123, 127), PackedInt32Array(127, 123, 128), PackedInt32Array(130, 129, 131), PackedInt32Array(131, 129, 132), PackedInt32Array(132, 129, 133), PackedInt32Array(135, 134, 136), PackedInt32Array(136, 134, 137), PackedInt32Array(137, 134, 138), PackedInt32Array(141, 140, 139), PackedInt32Array(143, 142, 144), PackedInt32Array(144, 142, 145), PackedInt32Array(145, 142, 146), PackedInt32Array(149, 148, 147), PackedInt32Array(151, 150, 152), PackedInt32Array(152, 150, 154), PackedInt32Array(152, 154, 153), PackedInt32Array(156, 155, 157), PackedInt32Array(157, 155, 158), PackedInt32Array(158, 155, 159), PackedInt32Array(159, 155, 160), PackedInt32Array(166, 165, 161), PackedInt32Array(161, 165, 162), PackedInt32Array(162, 165, 163), PackedInt32Array(163, 165, 164), PackedInt32Array(168, 167, 169), PackedInt32Array(169, 167, 170), PackedInt32Array(172, 171, 173), PackedInt32Array(173, 171, 174), PackedInt32Array(176, 175, 177), PackedInt32Array(177, 175, 178), PackedInt32Array(181, 180, 179), PackedInt32Array(184, 183, 182), PackedInt32Array(187, 186, 185), PackedInt32Array(190, 189, 188), PackedInt32Array(192, 191, 193), PackedInt32Array(193, 191, 194), PackedInt32Array(197, 196, 198), PackedInt32Array(198, 196, 195), PackedInt32Array(201, 200, 199), PackedInt32Array(204, 203, 202), PackedInt32Array(207, 206, 205), PackedInt32Array(210, 209, 208)]
 agent_radius = 0.25
 agent_max_climb = 0.0
 
@@ -37,92 +37,111 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 [node name="Woman_B2" parent="grp_PNJ" instance=ExtResource("1_wajo7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.96996, 0, 0.158628)
 
+[node name="Woman_B3" parent="grp_PNJ" instance=ExtResource("1_wajo7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.07074, 0, -0.229468)
+
+[node name="Woman_B4" parent="grp_PNJ" instance=ExtResource("1_wajo7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.19239, -9.68575e-08, -0.339371)
+
+[node name="Woman_B5" parent="grp_PNJ" instance=ExtResource("1_wajo7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.17855, -5.73695e-07, 3.57262)
+
 [node name="Woman_A2" parent="grp_PNJ" instance=ExtResource("2_anrwh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.148647, 0, 3.16509)
-
-[node name="Men_B2" parent="grp_PNJ" instance=ExtResource("3_gvsvf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.24327, 0, -2)
-
-[node name="Men_A" parent="grp_PNJ" instance=ExtResource("4_7aqjj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.60036, 0, -1)
-
-[node name="Woman_B3" parent="grp_PNJ" instance=ExtResource("1_wajo7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.18145, 0, -0.705033)
-
-[node name="Men_B3" parent="grp_PNJ" instance=ExtResource("3_gvsvf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.13391, 0, 3.85796)
-
-[node name="Men_A2" parent="grp_PNJ" instance=ExtResource("4_7aqjj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.55306, 0, -2.6499)
 
 [node name="Woman_A3" parent="grp_PNJ" instance=ExtResource("2_anrwh")]
 transform = Transform3D(0.999928, 0, 0.012025, 0, 1, 0, -0.012025, 0, 0.999928, 7.92028, 0, 3.80778)
 
+[node name="Woman_A4" parent="grp_PNJ" instance=ExtResource("2_anrwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.13404, -9.68575e-08, -4.34738)
+
+[node name="Men_A" parent="grp_PNJ" instance=ExtResource("4_7aqjj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.75689, 0, -0.219716)
+
+[node name="Men_A3" parent="grp_PNJ" instance=ExtResource("4_7aqjj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.23384, -9.68575e-08, -0.219865)
+
+[node name="Men_A2" parent="grp_PNJ" instance=ExtResource("4_7aqjj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.55306, 0, -2.6499)
+
+[node name="Men_A4" parent="grp_PNJ" instance=ExtResource("4_7aqjj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02168, 0, -3.19914)
+
+[node name="Men_B2" parent="grp_PNJ" instance=ExtResource("3_gvsvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.24327, 0, -2)
+
+[node name="Men_B3" parent="grp_PNJ" instance=ExtResource("3_gvsvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.13391, 0, 3.85796)
+
 [node name="Men_B4" parent="grp_PNJ" instance=ExtResource("3_gvsvf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.45006, 0, -3.36717)
 
+[node name="Men_B5" parent="grp_PNJ" instance=ExtResource("3_gvsvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.18475, 3.7998e-07, 1.68183)
+
+[node name="Men_B6" parent="grp_PNJ" instance=ExtResource("3_gvsvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.29005, 3.7998e-07, 4.14814)
+
+[node name="Men_A5" parent="grp_PNJ" instance=ExtResource("4_7aqjj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.04637, 0, -3.93768)
+
 [node name="grp_Light" type="Node3D" parent="."]
 
-[node name="SpotLight3D" type="SpotLight3D" parent="grp_Light"]
-transform = Transform3D(0.10996, 0.847669, 0.519005, -7.71341e-09, -0.522171, 0.852841, 0.993936, -0.0937783, -0.0574179, -2.84947, 5.11, -2.24203)
+[node name="SpotLight3D" type="OmniLight3D" parent="grp_Light"]
+transform = Transform3D(0.10996, 0.847669, 0.519005, -7.71341e-09, -0.522171, 0.852841, 0.993936, -0.0937784, -0.0574179, -3.89886, 2, -2.242)
 light_color = Color(1, 0.258824, 0.2, 1)
-light_energy = 8.976
-spot_range = 21.0144
-spot_angle = 40.2204
-
-[node name="SpotLight3D2" type="SpotLight3D" parent="grp_Light"]
-transform = Transform3D(0.653179, -0.438268, -0.617477, 0.244249, -0.649932, 0.719674, -0.716728, -0.620895, -0.317475, 2.67667, 5.34406, -1.64262)
-light_color = Color(1, 0, 0, 1)
-light_energy = 5.188
-spot_range = 21.0144
-spot_attenuation = 0.784584
-spot_angle = 40.2204
-spot_angle_attenuation = 0.68302
-
-[node name="SpotLight3D3" type="SpotLight3D" parent="grp_Light"]
-transform = Transform3D(0.367077, 0.869055, 0.331661, 0.243472, -0.433886, 0.867447, 0.897762, -0.237669, -0.37086, -0.391927, 5.68517, 2.20388)
-light_color = Color(0, 0.870588, 0.913725, 1)
-light_energy = 4.478
-spot_range = 15.0032
-spot_attenuation = 0.784584
-spot_angle = 44.6902
-spot_angle_attenuation = 0.68302
-
-[node name="SpotLight3D5" type="SpotLight3D" parent="grp_Light"]
-transform = Transform3D(0.367077, 0.869055, 0.331661, 0.243472, -0.433886, 0.867447, 0.897762, -0.237669, -0.37086, -4.79852, 5.68517, 3.41902)
-light_color = Color(0, 0.870588, 0.913725, 1)
-light_energy = 4.478
-spot_range = 15.0032
-spot_attenuation = 0.784584
-spot_angle = 44.6902
-spot_angle_attenuation = 0.68302
-
-[node name="SpotLight3D6" type="SpotLight3D" parent="grp_Light"]
-transform = Transform3D(0.450064, -0.741701, -0.497315, 0.243509, -0.433866, 0.867446, -0.859154, -0.511507, -0.0146564, -9.63939, 1.9833, -2.04967)
-light_color = Color(0, 0.870588, 0.913725, 1)
-light_energy = 6.783
-spot_range = 15.0032
-spot_attenuation = 0.784584
-spot_angle = 30.7662
-spot_angle_attenuation = 0.68302
+light_energy = 5.0
+shadow_enabled = true
+shadow_bias = 0.0
+omni_range = 6.265
 
 [node name="SpotLight3D7" type="SpotLight3D" parent="grp_Light"]
-transform = Transform3D(-0.450064, 0.741701, 0.497315, 0.243509, -0.433866, 0.867446, 0.859154, 0.511507, 0.0146564, 9.75552, 1.9833, -0.791707)
+transform = Transform3D(-0.450064, 0.741701, 0.497314, 0.243509, -0.433866, 0.867447, 0.859154, 0.511507, 0.0146566, 8.97212, 1.9833, -0.791707)
 light_color = Color(0.85098, 0.780392, 0, 1)
 light_energy = 6.783
-spot_range = 15.0032
-spot_attenuation = 0.784584
-spot_angle = 30.7662
+shadow_enabled = true
+shadow_bias = 0.0
+spot_range = 4.728
 spot_angle_attenuation = 0.68302
 
-[node name="SpotLight3D4" type="SpotLight3D" parent="grp_Light"]
-transform = Transform3D(-0.584266, -0.726377, -0.361953, 0.449678, -0.661026, 0.600694, -0.675591, 0.188203, 0.712851, -1.37271, 4.77119, 2.62407)
+[node name="SpotLight3D2" type="OmniLight3D" parent="grp_Light"]
+transform = Transform3D(0.10996, 0.847669, 0.519005, -7.71341e-09, -0.522171, 0.852841, 0.993936, -0.0937784, -0.0574179, 5.51393, 2, 1.35184)
+light_color = Color(1, 0.258824, 0.2, 1)
+light_energy = 5.0
+shadow_enabled = true
+shadow_bias = 0.0
+omni_range = 6.265
+
+[node name="SpotLight3D6" type="OmniLight3D" parent="grp_Light"]
+transform = Transform3D(0.10996, 0.847669, 0.519005, -7.71341e-09, -0.522171, 0.852841, 0.993936, -0.0937784, -0.0574179, -6.74298, 2, 3.70532)
+light_color = Color(0, 0.870588, 0.913725, 1)
+light_energy = 5.0
+shadow_opacity = 0.7
+omni_range = 6.265
+
+[node name="SpotLight3D8" type="OmniLight3D" parent="grp_Light"]
+transform = Transform3D(0.10996, 0.847669, 0.519005, -7.71341e-09, -0.522171, 0.852841, 0.993936, -0.0937784, -0.0574179, 3.54693, 2, -3.23028)
 light_color = Color(0.894118, 0.34902, 1, 1)
-light_energy = 6.651
-spot_range = 15.0032
-spot_attenuation = 0.784584
-spot_angle = 44.6902
-spot_angle_attenuation = 0.68302
+light_energy = 6.0
+shadow_enabled = true
+shadow_bias = 0.0
+omni_range = 6.265
+
+[node name="SpotLight3D9" type="OmniLight3D" parent="grp_Light"]
+transform = Transform3D(0.10996, 0.847669, 0.519005, -7.71341e-09, -0.522171, 0.852841, 0.993936, -0.0937784, -0.0574179, -0.274665, 2, 2.27772)
+light_color = Color(0.894118, 0.34902, 1, 1)
+light_energy = 6.0
+shadow_enabled = true
+shadow_bias = 0.0
+omni_range = 4.345
+
+[node name="SpotLight3D3" type="OmniLight3D" parent="grp_Light"]
+transform = Transform3D(0.10996, 0.847669, 0.519005, -7.71341e-09, -0.522171, 0.852841, 0.993936, -0.0937784, -0.0574179, 0.862186, 2, -1.42818)
+light_color = Color(1, 0.258824, 0.2, 1)
+light_energy = 4.0
+shadow_enabled = true
+shadow_bias = 0.0
+omni_range = 6.265
 
 [node name="grp_BlackBox" type="Node3D" parent="."]
 
@@ -403,7 +422,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0024
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00249946, -2.44156e-05, 0.281789)
 
 [node name="Pillar_01" type="Node3D" parent="NavigationRegion3D/grp_Environement/grp_Pillars"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -2)
 
 [node name="ClubStructuresWallCorner" parent="NavigationRegion3D/grp_Environement/grp_Pillars/Pillar_01" instance=ExtResource("8_h8c41")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.279765, -2.44156e-05, 0.00452292)
@@ -418,7 +437,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0024
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00249946, -2.44156e-05, 0.281789)
 
 [node name="Pillar_02" type="Node3D" parent="NavigationRegion3D/grp_Environement/grp_Pillars"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -0.183998)
 
 [node name="ClubStructuresWallCorner" parent="NavigationRegion3D/grp_Environement/grp_Pillars/Pillar_02" instance=ExtResource("8_h8c41")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.279765, -2.44156e-05, 0.00452292)
@@ -433,7 +452,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0024
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00249946, -2.44156e-05, 0.281789)
 
 [node name="Pillar_03" type="Node3D" parent="NavigationRegion3D/grp_Environement/grp_Pillars"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -2)
 
 [node name="ClubStructuresWallCorner" parent="NavigationRegion3D/grp_Environement/grp_Pillars/Pillar_03" instance=ExtResource("8_h8c41")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.279765, -2.44156e-05, 0.00452292)
@@ -442,13 +461,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.279765, -2.44156e-05, 0.004
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.274767, -2.44156e-05, 0.00452292)
 
 [node name="ClubStructuresWallCorner3" parent="NavigationRegion3D/grp_Environement/grp_Pillars/Pillar_03" instance=ExtResource("8_h8c41")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.00249946, -2.44156e-05, -0.272743)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.00249934, -2.44156e-05, -0.272743)
 
 [node name="ClubStructuresWallCorner4" parent="NavigationRegion3D/grp_Environement/grp_Pillars/Pillar_03" instance=ExtResource("8_h8c41")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00249946, -2.44156e-05, 0.281789)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00249934, -2.44156e-05, 0.281789)
 
 [node name="Pillar_04" type="Node3D" parent="NavigationRegion3D/grp_Environement/grp_Pillars"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
 
 [node name="ClubStructuresWallCorner" parent="NavigationRegion3D/grp_Environement/grp_Pillars/Pillar_04" instance=ExtResource("8_h8c41")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.279765, -2.44156e-05, 0.00452292)
@@ -463,7 +482,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0024
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00249946, -2.44156e-05, 0.281789)
 
 [node name="Pillar_05" type="Node3D" parent="NavigationRegion3D/grp_Environement/grp_Pillars"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
 
 [node name="ClubStructuresWallCorner" parent="NavigationRegion3D/grp_Environement/grp_Pillars/Pillar_05" instance=ExtResource("8_h8c41")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.279765, -2.44156e-05, 0.00452292)
@@ -472,7 +491,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.279765, -2.44156e-05, 0.004
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.274767, -2.44156e-05, 0.00452292)
 
 [node name="ClubStructuresWallCorner3" parent="NavigationRegion3D/grp_Environement/grp_Pillars/Pillar_05" instance=ExtResource("8_h8c41")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.00249946, -2.44156e-05, -0.272743)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0401933, -2.44156e-05, -0.272743)
 
 [node name="ClubStructuresWallCorner4" parent="NavigationRegion3D/grp_Environement/grp_Pillars/Pillar_05" instance=ExtResource("8_h8c41")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00249946, -2.44156e-05, 0.281789)
@@ -511,16 +530,16 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 1.
 transform = Transform3D(0.999339, 0, -0.0363646, 0, 1, 0, 0.0363646, 0, 0.999339, -6, 0, -4.94118)
 
 [node name="ClubFurnitursSeats5" parent="NavigationRegion3D/grp_Environement/grp_Seats" instance=ExtResource("12_yb0ak")]
-transform = Transform3D(0.0363648, 0, 0.999339, 0, 1, 0, -0.999339, 0, 0.0363648, 1.41247, 0, -2.86831)
+transform = Transform3D(0.0363648, 0, 0.999339, 0, 1, 0, -0.999339, 0, 0.0363648, -0.0174216, 0, -2.86831)
 
 [node name="ClubFurnitursSeats2" parent="NavigationRegion3D/grp_Environement/grp_Seats" instance=ExtResource("12_yb0ak")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57011, 0, -5)
 
 [node name="ClubFurnitursSeats3" parent="NavigationRegion3D/grp_Environement/grp_Seats" instance=ExtResource("12_yb0ak")]
-transform = Transform3D(-0.999709, 0, 0.0241182, 0, 1, 0, -0.0241182, 0, -0.999709, 4, 0, 5)
+transform = Transform3D(-0.999709, 0, 0.0241182, 0, 1, 0, -0.0241182, 0, -0.999709, 3.40223, 0, 5)
 
 [node name="ClubFurnitursSeats4" parent="NavigationRegion3D/grp_Environement/grp_Seats" instance=ExtResource("12_yb0ak")]
-transform = Transform3D(0.0506975, 0, -0.998714, 0, 1, 0, 0.998714, 0, 0.0506975, 6.25357, 0, 2.65597)
+transform = Transform3D(0.0981387, 0, -0.995173, 0, 1, 0, 0.995173, 0, 0.0981387, 5.6558, 0, 2.32337)
 
 [node name="grp_Stool" type="Node3D" parent="NavigationRegion3D/grp_Environement"]
 
@@ -531,7 +550,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.15766, 0, 1.75493)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.03319, 0, 1.82131)
 
 [node name="ClubFurnitursStool3" parent="NavigationRegion3D/grp_Environement/grp_Stool" instance=ExtResource("13_wbsdy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96129, 0, 1.91945)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96129, 0, 1.34389)
 
 [node name="ClubFurnitursStool4" parent="NavigationRegion3D/grp_Environement/grp_Stool" instance=ExtResource("13_wbsdy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 1.69684)
@@ -540,18 +559,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 1.69684)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.84515, 0, 1.57103)
 
 [node name="ClubFurnitursStool6" parent="NavigationRegion3D/grp_Environement/grp_Stool" instance=ExtResource("13_wbsdy")]
-transform = Transform3D(0.844019, 0.536313, 2.3443e-08, 0, -4.37114e-08, 1, 0.536313, -0.844019, -3.68933e-08, -2.73793, 0.134435, 1.25781)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.73793, 0.134435, 1.29911)
+
+[node name="ClubFurnitursStool7" parent="NavigationRegion3D/grp_Environement/grp_Stool" instance=ExtResource("13_wbsdy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.66862, 0, 0.168731)
 
 [node name="grp_Tables" type="Node3D" parent="NavigationRegion3D/grp_Environement"]
 
 [node name="ClubFurnitursTable" parent="NavigationRegion3D/grp_Environement/grp_Tables" instance=ExtResource("14_u02ti")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.80809, 0, -2.81938)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3782, 0, -2.81938)
 
 [node name="ClubFurnitursTable2" parent="NavigationRegion3D/grp_Environement/grp_Tables" instance=ExtResource("14_u02ti")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.38865, 0, -2.69401)
 
 [node name="ClubFurnitursTable3" parent="NavigationRegion3D/grp_Environement/grp_Tables" instance=ExtResource("14_u02ti")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.66182, 0, 2.32078)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06405, 0, 2.32078)
 
 [node name="grp_Tireuses" type="Node3D" parent="NavigationRegion3D/grp_Environement"]
 
@@ -582,7 +604,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.05254, 0.352233, -2.5505)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.93886, 0.352233, -2.80966)
 
 [node name="ClubPropsBottleB7" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("16_8xy3a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.80962, 0.352233, 2.00257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.15073, 0.352233, 2.00257)
 
 [node name="ClubPropsBottleA" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("17_evokg")]
 transform = Transform3D(0.519221, 0, 0.85464, 0, 1, 0, -0.85464, 0, 0.519221, -3.25978, 1.56204, 4.89284)
@@ -597,7 +619,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.58859, 1.56204, 4.87212)
 transform = Transform3D(0.722786, 0, -0.691072, 0, 1, 0, 0.691072, 0, 0.722786, -3.01682, 1.07917, 2.49148)
 
 [node name="ClubPropsBottleA5" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("17_evokg")]
-transform = Transform3D(0.722786, 0, -0.691072, 0, 1, 0, 0.691072, 0, 0.722786, 3.64138, 0.359385, -2.80716)
+transform = Transform3D(0.722786, 0, -0.691072, 0, 1, 0, 0.691072, 0, 0.722786, 2.14396, 0.359385, -2.80716)
 
 [node name="ClubPropsBottleC" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("18_wel81")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.08424, 1.06392, 2.84586)
@@ -618,10 +640,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.42933, 1.55475, 4.79801)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.12412, 1.0472, 2.53131)
 
 [node name="ClubPropsBottleC7" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("18_wel81")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.37325, 0.373136, 2.25679)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.71436, 0.373136, 2.25679)
 
 [node name="ClubPropsBottleC8" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("18_wel81")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.65239, 0.373136, 2.8371)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9935, 0.373136, 2.8371)
 
 [node name="ClubPropsBottleD" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("19_gkkwg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9957, 1.54663, 4.82464)
@@ -633,7 +655,7 @@ transform = Transform3D(0.818731, 0, -0.574177, 0, 1, 0, 0.574177, 0, 0.818731, 
 transform = Transform3D(0.818731, 0, -0.574177, 0, 1, 0, 0.574177, 0, 0.818731, -6.42042, 1.09538, 2.46795)
 
 [node name="ClubPropsBottleD4" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("19_gkkwg")]
-transform = Transform3D(0.818731, 0, -0.574177, 0, 1, 0, 0.574177, 0, 0.818731, 4.08471, 0.371551, 2.28522)
+transform = Transform3D(0.818731, 0, -0.574177, 0, 1, 0, 0.574177, 0, 0.818731, 3.42582, 0.371551, 2.28522)
 
 [node name="ClubPropsBottleE" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("20_2emjl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.21056, 1.54709, 4.69409)
@@ -645,7 +667,7 @@ transform = Transform3D(0.616088, 0, -0.787678, 0, 1, 0, 0.787678, 0, 0.616088, 
 transform = Transform3D(0.616088, 0, -0.787678, 0, 1, 0, 0.787678, 0, 0.616088, -3.58215, 1.05247, 2.65516)
 
 [node name="ClubPropsBottleE5" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("20_2emjl")]
-transform = Transform3D(0.616088, 0, -0.787678, 0, 1, 0, 0.787678, 0, 0.616088, 4.02544, 0.377468, -2.77815)
+transform = Transform3D(0.616088, 0, -0.787678, 0, 1, 0, 0.787678, 0, 0.616088, 2.52802, 0.377468, -2.77815)
 
 [node name="ClubPropsBottleE4" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("20_2emjl")]
 transform = Transform3D(-0.742199, -0.334876, -0.580516, 0.616088, 0, -0.787678, 0.263774, -0.942262, 0.206313, -4.52892, 1.08482, 2.65257)
@@ -690,49 +712,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.31228, 0.380425, -2.2177)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.65515, 0.380425, -2.87735)
 
 [node name="ClubPropsBottleF14" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.76282, 0.380425, -3.29103)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2654, 0.380425, -3.29103)
 
 [node name="ClubPropsBottleF15" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.46467, 0.380425, -2.43758)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.96725, 0.380425, -2.43758)
 
 [node name="ClubPropsBottleF16" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.12805, 0.380425, -2.54566)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.63063, 0.380425, -2.54566)
 
 [node name="ClubPropsBottleF17" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.29949, 0.380425, -2.60156)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.80207, 0.380425, -2.60156)
 
 [node name="ClubPropsBottleF18" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.25476, 0.380425, -3.13078)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75734, 0.380425, -3.13078)
 
 [node name="ClubPropsBottleF19" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.09588, 0.380425, 2.07627)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.43699, 0.380425, 2.07627)
 
 [node name="ClubPropsBottleF20" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.45889, 0.380425, 2.03484)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8, 0.380425, 2.03484)
 
 [node name="ClubPropsBottleF21" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.48305, 0.380425, 2.1574)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82416, 0.380425, 2.1574)
 
 [node name="ClubPropsBottleF22" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97066, 0.380425, 2.70253)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.31177, 0.380425, 2.70253)
 
 [node name="ClubPropsBottleF23" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.27486, 0.380425, 2.54365)
-
-[node name="Men_A" parent="." instance=ExtResource("4_7aqjj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.23384, -9.68575e-08, -0.219865)
-
-[node name="Men_B2" parent="." instance=ExtResource("3_gvsvf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.18475, 3.7998e-07, 1.68183)
-
-[node name="Woman_A2" parent="." instance=ExtResource("2_anrwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.13404, -9.68575e-08, -4.34738)
-
-[node name="Woman_B2" parent="." instance=ExtResource("1_wajo7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.37434, -9.68575e-08, 0.632108)
-
-[node name="Woman_B3" parent="." instance=ExtResource("1_wajo7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.17855, -5.73695e-07, 3.57262)
-
-[node name="Men_B3" parent="." instance=ExtResource("3_gvsvf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7414, 3.7998e-07, 3.53908)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.61597, 0.380425, 2.54365)

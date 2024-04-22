@@ -14,7 +14,6 @@ var currentMusicIndex = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print("REDY")
 	MenuMusic.stop_music()
 	ScoreManager.reset_score()
 	ScoreManager.start_score()

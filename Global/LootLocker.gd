@@ -49,11 +49,9 @@ func _authentication_request():
 	var file = FileAccess.open("user://LootLocker.data", FileAccess.READ)
 	if file != null:
 		player_identifier = file.get_as_text()
-		print("player ID="+player_identifier)
 		file.close()
  
 	if player_identifier != null and player_identifier.length() > 1:
-		print("player session exists, id="+player_identifier)
 		player_session_exists = true
 	if(player_identifier.length() > 1):
 		player_session_exists = true
@@ -76,12 +74,10 @@ func _authentication_request():
 	var res = await auth_http.request_completed
 	_on_authentication_request_completed(res[3])
 	# Print what we're sending, for debugging purposes:
-	print(data)
 
 
 func _on_authentication_request_completed(body):
 	var json = JSON.new()
-	print("AUTH COMPLETE : ", body.get_string_from_utf8())
 	json.parse(body.get_string_from_utf8())
 	
 	# Save the player_identifier to file
@@ -93,7 +89,6 @@ func _on_authentication_request_completed(body):
 	session_token = json.get_data().session_token
 	
 	# Print server response
-	print(json.get_data())
 	
 	# Clear node
 	auth_http.queue_free()
@@ -117,7 +112,6 @@ func get_leaderboards():
 
 func _on_leaderboard_request_completed( body):
 	var json = JSON.new()
-	print(body.get_string_from_utf8())
 	json.parse(body.get_string_from_utf8())
 	
 	# Formatting as a leaderboard
@@ -141,7 +135,6 @@ func _upload_score():
 	# Send request
 	submit_score_http.request("https://api.lootlocker.io/game/leaderboards/"+leaderboard_key+"/submit", headers, HTTPClient.METHOD_POST, JSON.stringify(data))
 	# Print what we're sending, for debugging purposes:
-	print(data)
 
 
 func _on_upload_score_request_completed(result, response_code, headers, body) :
@@ -149,7 +142,6 @@ func _on_upload_score_request_completed(result, response_code, headers, body) :
 	json.parse(body.get_string_from_utf8())
 	
 	# Print data
-	print(json.get_data())
 	
 	# Clear node
 	submit_score_http.queue_free()
