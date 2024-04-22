@@ -1,6 +1,6 @@
 extends Node
 
-var scoreRunning: bool = true
+var scoreRunning: bool = false
 
 var seconds: float = 0.0
 var min: int = 0

@@ -14,6 +14,8 @@ var currentMusicIndex = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	ScoreManager.reset_score()
+	ScoreManager.start_score()
 	camera_target_position = camera.position
 
 	
