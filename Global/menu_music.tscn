@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca4cu5kcgieya"]
+
+[ext_resource type="Script" path="res://Global/menu_music.gd" id="1_y4buc"]
+
+[node name="MenuMusic" type="AudioStreamPlayer"]
+bus = &"Music"
+script = ExtResource("1_y4buc")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

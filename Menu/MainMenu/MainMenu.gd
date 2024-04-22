@@ -1,5 +1,8 @@
 extends Control
 
+func _ready():
+	MenuMusic.play_music()
+
 func _on_start_pressed():
 	get_tree().change_scene_to_packed(Preloads.level_scene)
 

@@ -43,9 +43,6 @@ func _ready():
 	_authentication_request()
 	pass
 
-func _process(_delta):
-	pass
-
 func _authentication_request():
 	# Check if a player session exists
 	var player_session_exists = false
