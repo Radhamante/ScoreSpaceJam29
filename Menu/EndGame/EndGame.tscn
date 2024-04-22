@@ -97,9 +97,11 @@ theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 400
 theme_override_constants/margin_bottom = 15
 
-[node name="Send score" type="Button" parent="HBoxContainer/VBoxContainer/MarginContainer6"]
+[node name="MainMenu" type="Button" parent="HBoxContainer/VBoxContainer/MarginContainer6"]
 layout_mode = 2
 theme = ExtResource("3_h3vue")
 text = "Main Menu"
 
 [connection signal="text_submitted" from="HBoxContainer/VBoxContainer/MarginContainer/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/MarginContainer4/Leaderboard" to="." method="_on_leaderboard_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/MarginContainer6/MainMenu" to="." method="_on_main_menu_pressed"]
