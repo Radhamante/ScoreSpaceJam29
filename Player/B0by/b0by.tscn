@@ -1,7 +1,6 @@
-[gd_scene load_steps=38 format=3 uid="uid://cl5iidi7tnkrv"]
+[gd_scene load_steps=37 format=3 uid="uid://cl5iidi7tnkrv"]
 
 [ext_resource type="Material" uid="uid://jso7cy1be1kn" path="res://Player/B0by/Material/M_B0by.tres" id="1_6lhqv"]
-[ext_resource type="Texture2D" uid="uid://d3s1f66b05ydh" path="res://Player/halo2.png" id="2_oc712"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t12lu"]
 resource_name = "GRID.001"
@@ -4491,7 +4490,7 @@ skin = SubResource("Skin_g7pld")
 surface_material_override/0 = ExtResource("1_6lhqv")
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(0.982427, -0.0583275, -0.177297, 0.160514, 0.748773, 0.643098, 0.0952448, -0.660255, 0.744977, 10.919, 17.474, -124.719)
+transform = Transform3D(0.982428, -0.0583265, -0.177297, 0.160513, 0.748774, 0.643097, 0.0952454, -0.660254, 0.744978, 10.919, 17.474, -124.719)
 bone_name = "mixamorig_Head"
 bone_idx = 5
 
@@ -4513,9 +4512,6 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_l5xba")
-}
 tree_root = SubResource("AnimationNodeStateMachine_7620i")
 anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/IsIdle = false
@@ -4531,4 +4527,3 @@ shape = SubResource("CylinderShape3D_s2t1e")
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.385, 0, 0, 0, -1.68289e-08, -0.385, 0, 0.385, -1.68289e-08, 0, 0.0833405, 0)
 modulate = Color(1, 1, 1, 0.2)
-texture = ExtResource("2_oc712")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dnwp340g2g511"]
+[gd_scene load_steps=21 format=3 uid="uid://dnwp340g2g511"]
 
 [ext_resource type="Script" path="res://Player/B0by/AudioListener3D.gd" id="1_a0j1y"]
 [ext_resource type="PackedScene" uid="uid://cl5iidi7tnkrv" path="res://Player/B0by/b0by.tscn" id="1_w47eh"]
@@ -13,6 +13,10 @@
 [ext_resource type="AudioStream" uid="uid://d4cocxvqbwkkc" path="res://Assets/Sounds/Music/ETB_Dubstep_etouff2.mp3" id="10_xsqrk"]
 [ext_resource type="Script" path="res://Levels/Reverb_bath.gd" id="11_fcyne"]
 [ext_resource type="Script" path="res://Levels/Reverb_Out.gd" id="13_g3423"]
+[ext_resource type="FontFile" uid="uid://bphhg0ru26gbt" path="res://Assets/Fonts/neo-retro.ttf" id="14_eejbg"]
+[ext_resource type="FontFile" uid="uid://eve2vwxliuug" path="res://Assets/Fonts/RETROTECH.ttf" id="15_ticop"]
+[ext_resource type="Script" path="res://Levels/Scripts/Score_Minutes.gd" id="16_xjnbw"]
+[ext_resource type="Script" path="res://Levels/Scripts/Score_Secondes.gd" id="17_pscia"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dffdd"]
 size = Vector3(1, 4, 10)
@@ -96,6 +100,37 @@ volume_db = -80.0
 autoplay = true
 bus = &"Music"
 script = ExtResource("13_g3423")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Texte" type="Label" parent="CanvasLayer"]
+offset_left = 13.0
+offset_top = 8.0
+offset_right = 62.0
+offset_bottom = 31.0
+theme_override_fonts/font = ExtResource("14_eejbg")
+theme_override_font_sizes/font_size = 30
+text = "Time :"
+
+[node name="Minutes" type="Label" parent="CanvasLayer"]
+offset_left = 91.0
+offset_top = 20.0
+offset_right = 131.0
+offset_bottom = 46.0
+theme_override_fonts/font = ExtResource("15_ticop")
+theme_override_font_sizes/font_size = 30
+text = "00."
+script = ExtResource("16_xjnbw")
+
+[node name="Secondes" type="Label" parent="CanvasLayer"]
+offset_left = 134.0
+offset_top = 20.0
+offset_right = 174.0
+offset_bottom = 43.0
+theme_override_fonts/font = ExtResource("15_ticop")
+theme_override_font_sizes/font_size = 30
+text = "00."
+script = ExtResource("17_pscia")
 
 [connection signal="boby_entered" from="Area3D" to="LevelManager" method="_on_area_3d_boby_entered"]
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
