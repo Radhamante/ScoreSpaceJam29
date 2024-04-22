@@ -36,6 +36,7 @@ script = ExtResource("1_a0j1y")
 player = NodePath("../../B0by")
 
 [node name="B0by" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_w47eh")]
+transform = Transform3D(0.250093, 0, -0.968222, 0, 1, 0, 0.968222, 0, 0.250093, -5.65542, 0, -3.33662)
 script = ExtResource("2_ocfix")
 camera = NodePath("../Camera3D")
 
