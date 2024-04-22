@@ -10,12 +10,7 @@ var rng = RandomNumberGenerator.new()
 var isDrunk = randi() % 2
 
 func _ready():
-	nav_agent.get_navigation_map()
-	timer = Timer.new()
-	timer.set_wait_time(3)
-	add_child(timer)
-	timer.timeout.connect(_choose_action)
-	timer.start()
+	_choose_action()
 
 func _choose_action():
 	var action = rng.randi_range(1,3)
@@ -55,6 +50,8 @@ func collide():
 var target_velocity = Vector3.ZERO
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if randf() > .993:
+		_choose_action()
 	if state_machine.get_current_node() == "walk":
 		if target_velocity == Vector3.ZERO:
 			

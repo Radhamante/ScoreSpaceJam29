@@ -4,6 +4,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	MenuMusic.play_music()
 	if not LootLocker.session_token:
 		await LootLocker._authentication_request()
 	var leader_board = await LootLocker.get_leaderboards()

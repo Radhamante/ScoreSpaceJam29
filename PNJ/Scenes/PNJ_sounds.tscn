@@ -26,6 +26,7 @@
 [ext_resource type="Script" path="res://PNJ/Scripts/PNJ_sounds.gd" id="24_14f17"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_07pre"]
+random_volume_offset_db = 5.0
 streams_count = 23
 stream_0/stream = ExtResource("1_lccc7")
 stream_0/weight = 1.0
@@ -76,6 +77,7 @@ stream_22/weight = 1.0
 
 [node name="PnjSounds" type="AudioStreamPlayer3D"]
 stream = SubResource("AudioStreamRandomizer_07pre")
+volume_db = 10.0
 max_distance = 10.0
 bus = &"SFX"
 script = ExtResource("24_14f17")

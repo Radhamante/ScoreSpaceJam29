@@ -718,3 +718,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97066, 0.380425, 2.70253)
 
 [node name="ClubPropsBottleF23" parent="NavigationRegion3D/grp_Environement/grp_Bottles" instance=ExtResource("21_vymsn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.27486, 0.380425, 2.54365)
+
+[node name="Men_A" parent="." instance=ExtResource("4_7aqjj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.23384, -9.68575e-08, -0.219865)
+
+[node name="Men_B2" parent="." instance=ExtResource("3_gvsvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.18475, 3.7998e-07, 1.68183)
+
+[node name="Woman_A2" parent="." instance=ExtResource("2_anrwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.13404, -9.68575e-08, -4.34738)
+
+[node name="Woman_B2" parent="." instance=ExtResource("1_wajo7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.37434, -9.68575e-08, 0.632108)
+
+[node name="Woman_B3" parent="." instance=ExtResource("1_wajo7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.17855, -5.73695e-07, 3.57262)
+
+[node name="Men_B3" parent="." instance=ExtResource("3_gvsvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7414, 3.7998e-07, 3.53908)

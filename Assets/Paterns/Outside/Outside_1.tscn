@@ -120,6 +120,24 @@ spot_attenuation = 1.07177
 spot_angle = 25.8806
 spot_angle_attenuation = 2.92817
 
+[node name="SpotLight3D7" type="SpotLight3D" parent="grp_Light"]
+transform = Transform3D(0.720004, -0.692004, -0.0521999, 0.592058, 0.573289, 0.566399, -0.362024, -0.438715, 0.822477, 8.3184, 4.51568, 7.1235)
+light_color = Color(0.411765, 0.792157, 0.184314, 1)
+light_energy = 3.073
+spot_range = 22.1955
+spot_attenuation = 0.535885
+spot_angle = 32.61
+spot_angle_attenuation = 2.0
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="grp_Light"]
+transform = Transform3D(-0.288093, -0.505816, 0.813113, 0.592058, 0.573289, 0.566399, -0.752642, 0.644585, 0.134311, 10.0086, 4.73337, 5.0931)
+light_color = Color(0.411765, 0.792157, 0.184314, 1)
+light_energy = 3.073
+spot_range = 22.1955
+spot_attenuation = 0.535885
+spot_angle = 32.61
+spot_angle_attenuation = 2.0
+
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_g4nam")
 
@@ -462,7 +480,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
 shape = SubResource("BoxShape3D_ccxra")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="EndZone"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0989, 1, 0)
 shape = SubResource("BoxShape3D_b22ff")
 
 [connection signal="body_entered" from="EndZone" to="." method="_on_end_zone_body_entered"]

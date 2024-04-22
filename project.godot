@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 LootLocker="*res://Global/LootLocker.gd"
 ScoreManager="*res://Global/Score_manager.gd"
 Preloads="*res://Global/Preloads.gd"
+MenuMusic="*res://Global/menu_music.tscn"
 
 [display]
 
