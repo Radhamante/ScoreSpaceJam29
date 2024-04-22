@@ -12,7 +12,5 @@ func _process(delta):
 
 	if score_minutes < 10:
 		text = ("0%s." %str(score_minutes))
-		print("inf a 10")
 	elif score_minutes >= 10:
 		text = str(score_minutes)
-		print("sup a 10")
